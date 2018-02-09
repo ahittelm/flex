@@ -6,7 +6,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">	<link href="./../css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">	
+	<link href="./../css/flex.css" rel="stylesheet">
 	<!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -18,13 +19,15 @@
 
 	<nav class="navbar navbar-toggleable-md navbar-light bg-faded" id="navigation">
 	  <div class="container-fluid">
-	    <a class="navbar-brand" href="./flex.html" id="title">flex</a>
-	    <ul class="navbar-nav navbar-right">
-		   	<button class="btn navbar-btn" id="addWorkoutBtn" onclick="addWorkout()">Add Workout</button>
-		    <p class="navbar-text" id="navText"><a href="./Settings.html">Settings</a></p>
-		    <p class="navbar-text" id="navText"> <a href="./Stats.html">Stats</a></p>
-		    <p class="navbar-text" id="navText"> <a href="./Timer.html">Timer</a></p>
-		    <p class="navbar-text" id="navText"> <a href="./Library.html">Library</a></p>
+	    <ul class="navbar-nav navbar-right" id="navigationBar">
+		   	<li id="navText">
+		   		<a class="navbar-brand" href="./flex.html" id="title">flex</a>
+			   	<button class="btn navbar-btn" id="addWorkoutBtn" onclick="addWorkout()">Add Workout</button>
+			    <p class="navbar-text"><a href="./Settings.html">Settings</a></p>
+			    <p class="navbar-text"> <a href="./Stats.html">Stats</a></p>
+			    <p class="navbar-text"> <a href="./Timer.html">Timer</a></p>
+			    <p class="navbar-text"> <a href="./Library.html">Library</a></p>
+			</li>
  		</ul>
 	  </div>
 	</nav>    
