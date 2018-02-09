@@ -96,19 +96,22 @@ ul{
 
 .dropdown{
      margin: 30px;
+     display: block;
+
 }
 
-.container{
-     white-space: nowrap;
+.container-fluid{
+     min-width: 200px;
+
+
+
 }
 
 .col-sm{
      margin: 10px;
      width: 50px;
-     padding: 50px 50px;
+     padding-top: 5px;
      border: 1px solid black;
-     float: left;
-     display: inline;
-
+ 
 }
 
