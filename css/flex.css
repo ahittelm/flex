@@ -15,7 +15,7 @@
 }
 
 a{
-     color: inherit;
+     color: black;
 }
 .jumbotron:after {
      content:"";
@@ -45,6 +45,7 @@ a{
      font-size: 2.5rem;
      color: black;
      font-weight: bold;
+     margin-left: -50%;
 }
 
 #addWorkoutBtn{
@@ -60,8 +61,10 @@ a{
      color:white;
      background-color: black;
 }
+
 #navText{
-     color:black;
+     color: black!important;
+
 }
 
 #navigation{
