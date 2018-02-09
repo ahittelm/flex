@@ -14,9 +14,11 @@
 	background: none;
 }
 
+a{
+     color: inherit;
+}
 .jumbotron:after {
      content:"";
-     background: url("../images/lorempixel.jumbotron.jpeg");
      opacity: 0.2;
      top: 0;
      left: 0;
@@ -30,22 +32,84 @@
      color: #6e6e6e;
 }
 
+
 .project a {
      text-align: center;
 }
 
-
-/*------*/
-.button{
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+.btn-default{
+     padding: 100px;
 }
 
+#title{
+     font-size: 2.5rem;
+     color: black;
+     font-weight: bold;
+}
+
+#addWorkoutBtn{
+     padding: 5px;
+     background-color: white;
+     border: 1px solid black;
+     vertical-align: right; 
+     white-space: 5px;
+}
+
+#startBtn{
+     padding: 5px;
+     color:white;
+     background-color: black;
+}
+#navText{
+     color:black;
+}
+
+#navigation{
+     background-color: white;
+     border: 1px solid black;
+}
+
+#workoutList{
+     margin: 30px;
+}
+
+h3{
+     margin: 30px;
+}
+
+li{
+     display:inline-block;
+}
+
+ul{
+     white-space: nowrap;
+}
+
+.list-group-item{
+     font-size: 15px;
+     padding-bottom: 50px;
+}
+
+.durationText{
+     font-size: 10px;
+}
+
+.dropdown{
+     margin: 30px;
+}
+
+.container{
+     white-space: nowrap;
+}
+
+.col-sm{
+     margin: 10px;
+     width: 50px;
+     padding: 50px 50px;
+     text-align: center;
+     border: 1px solid black;
+     float: left;
+     display: inline;
+
+}
 
