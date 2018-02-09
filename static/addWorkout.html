@@ -18,15 +18,13 @@
 
 	<nav class="navbar navbar-toggleable-md navbar-light bg-faded" id="navigation">
 	  <div class="container-fluid">
-	    <ul class="navbar-nav navbar-right" id="navigationBar">
-		   	<li id="navText">
-		   		<a class="navbar-brand" href="./flex.html" id="title">flex</a>
-			   	<button class="btn navbar-btn" id="addWorkoutBtn" onclick="addWorkout()">Add Workout</button>
-			    <p class="navbar-text"><a href="./Settings.html">Settings</a></p>
-			    <p class="navbar-text"> <a href="./Stats.html">Stats</a></p>
-			    <p class="navbar-text"> <a href="./Timer.html">Timer</a></p>
-			    <p class="navbar-text"> <a href="./Library.html">Library</a></p>
-			</li>
+	    <a class="navbar-brand" href="./flex.html" id="title">flex</a>
+	    <ul class="navbar-nav navbar-right">
+		   	<button class="btn navbar-btn" id="addWorkoutBtn" onclick="addWorkout()">Add Workout</button>
+		    <p class="navbar-text" id="navText"><a href="./Settings.html">Settings</a></p>
+		    <p class="navbar-text" id="navText"> <a href="./Stats.html">Stats</a></p>
+		    <p class="navbar-text" id="navText"> <a href="./Timer.html">Timer</a></p>
+		    <p class="navbar-text" id="navText"> <a href="./Library.html">Library</a></p>
  		</ul>
 	  </div>
 	</nav>    
@@ -36,8 +34,8 @@
 	<h3>Friday Fun <small> 10 min.</small></h3>
 	<h3>Exercises</h3>
 
-	<div class="container">
-	  <div class="d-flex align-items-stretch align-content-center flex-column flex-wrap">
+	<div class="container-fluid">
+	  <div class="row">
 	    <div class="col-sm">
 	      X <br> Squats
 	      	<div class="dropdown">

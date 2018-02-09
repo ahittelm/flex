@@ -45,7 +45,7 @@ a{
      font-size: 2.5rem;
      color: black;
      font-weight: bold;
-     text-align: left;
+     margin-left: -50%;
 }
 
 #addWorkoutBtn{
@@ -54,32 +54,18 @@ a{
      border: 1px solid black;
      vertical-align: right; 
      white-space: 5px;
-     font-size: 50%;
-
 }
 
 #startBtn{
-     margin-left: 10px;
-     text-align: right;
      padding: 5px;
      color:white;
      background-color: black;
 }
 
-#navigationBar{  
-     white-space:nowrap;
-     text-align: center;
-}
-
 #navText{
      color: black!important;
-     display:inline-block;
-     text-align: center;
-     font-size: 50%;
-     margin-left: 0px;
-     margin-right: 10px;
-}
 
+}
 
 #navigation{
      background-color: white;
@@ -94,6 +80,13 @@ h3{
      margin: 30px;
 }
 
+li{
+     display:inline-block;
+}
+
+ul{
+     white-space: nowrap;
+}
 
 .list-group-item{
      font-size: 15px;
@@ -106,24 +99,22 @@ h3{
 
 .dropdown{
      margin: 30px;
-     width: 130px;
-     height: 130px;
+     display: block;
 
 }
 
 .container-fluid{
      min-width: 200px;
+
+
+
 }
 
 .col-sm{
      margin: 10px;
-     width: 50%;
-     height: 200px;
-     min-height: 200px;
+     width: 50px;
      padding-top: 5px;
      border: 1px solid black;
  
 }
-
-
 
