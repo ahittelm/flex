@@ -41,6 +41,10 @@ a{
      padding: 100px;
 }
 
+.form-group{
+     margin: 30px;
+}
+
 #title{
      font-size: 2.5rem;
      color: black;
@@ -55,9 +59,16 @@ a{
      vertical-align: right; 
      white-space: 5px;
      font-size: 50%;
-
 }
 
+#submit{
+     padding: 5px;
+     background-color: white;
+     border: 1px solid black;
+     vertical-align: right; 
+     white-space: 5px;
+     font-size: 100%;
+}
 #startBtn{
      margin-left: 10px;
      text-align: right;
@@ -122,7 +133,6 @@ h3{
      min-height: 200px;
      padding-top: 5px;
      border: 1px solid black;
- 
 }
 
 
