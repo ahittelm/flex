@@ -1,17 +1,21 @@
 {
-  "name": "cs147-lab-1",
-  "description": "Serving static content via html files",
+  "name": "IntroHCI",
   "version": "0.0.1",
-  "author": "CS147 Staff <cs147@cs.stanford.edu>",
+  "author": "Intro HCI Staff",
   "repository": {
     "type": "git",
-    "url": "https://github.com/StanfordHCI/cs147"
+    "url": "https://github.com/IntroHCI/lab4"
   },
   "license": "MIT",
-  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
     "express": "3.x",
-    "popper.js": "^1.12.9"
+    "express3-handlebars": "*",
+    "mongodb": "*",
+    "mongoose": "*"
   },
   "engines": {
     "node": "0.10.x"
