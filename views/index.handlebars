@@ -4,39 +4,51 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+    <link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/index.css" rel="stylesheet">
-	<link href="../public/css/index.css" rel="stylesheet">
+
+
 	<!-- this is a comment in HTML -->
 
-	<nav class="navbar navbar-toggleable-md navbar-light bg-faded" id="navigation">
-	  <div class="container-fluid">
-	    <ul class="navbar-nav navbar-right" id="navigationBar">
-		   	<li id="navText">
-		   		<a class="navbar-brand" href="library" id="title">flex</a>
-			</li>
- 		</ul>
-	  </div>
-	</nav>    
-</head>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->   
+	<nav class="navbar navbar-toggleable-md navbar-light" id="navigation">
+	  	<div class="container-fluid">
+	  		  <a id="title">flex</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarNav">
+			    <ul class="navbar-nav">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="library">Home<span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="stats">Stats</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="Timer">Timer</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="settings">Settings</a>
+			      </li>
+			    </ul>
+			  </div>	
+		</div>
+	</nav>
+</head>  
 <script type="text/javascript">
 	function home() {
 		location.href = "library"
 	}
 </script>
-	<body>
-		<div class="form-group">
-		  <label for="usr">Username:</label>
-		  <input type="text" class="form-control" id="usr">
-		</div>
-		<div class="form-group">
-		  <label for="pwd">Password:</label>
-		  <input type="password" class="form-control" id="pwd">
-		  <br/>
-		  <button class="btn" id="submit" onclick="home()">Submit</button>
-		</div>
-	</body>
+</script>
 </html>

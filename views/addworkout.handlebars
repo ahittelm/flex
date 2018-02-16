@@ -1,17 +1,18 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html>
 <head>
-	<title>HCI Project Portfolio</title>	
+	<title>Workout</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+    <link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/index.css" rel="stylesheet">
-	<link href="../public/css/index.css" rel="stylesheet">
+
+
 
 	<!-- this is a comment in HTML -->
 
@@ -21,104 +22,137 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->   
-
-	<nav class="navbar navbar-toggleable-md navbar-light bg-faded" id="navigation">
-	  <div class="container-fluid">
-	    <ul class="navbar-nav navbar-right" id="navigationBar">
-		   	<li id="navText">
-		   		<a class="navbar-brand" href="library" id="title">flex</a>
-			   	<button class="btn navbar-btn" id="addWorkoutBtn" onclick="addWorkout()">Add Workout</button>
-			    <p class="navbar-text"><a href="settings">Settings</a></p>
-			    <p class="navbar-text"> <a href="stats">Stats</a></p>
-			    <p class="navbar-text"> <a href="timer">Timer</a></p>
-			    <p class="navbar-text"> <a href="library">Library</a></p>
-			</li>
- 		</ul>
-	  </div>
-	</nav>   
-
-
+	<nav class="navbar navbar-toggleable-md navbar-light" id="navigation">
+	  	<div class="container-fluid">
+	  		  <a id="title">flex</a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarNav">
+			    <ul class="navbar-nav">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="library">Home<span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="stats">Stats</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="Timer">Timer</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="settings">Settings</a>
+			      </li>
+			    </ul>
+			  </div>	
+		</div>
+	</nav>
 </head>
 
 <body>
-	<h3>Friday Fun <small> 10 min.</small></h3>
-	<h3>Exercises</h3>
-	<div class="container">
-      	<button type="btn" id="deletebtn" class="btn-sm pull-right" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-	   	</button> 
-		<div class="d-flex flex-column flex-wrap">
-		    <div class="col-sm">
-		       	<div class="form-group exercise">
-			    	<label for="inputdefault">Name</label>
-			    	<input class="form-control" id="inputdefault" type="text">
-			  	</div>
+
+
+	<h3>Friday Fun <small> 10 min.</small></h3></br>
+	<h3>Exercises
+		<button type="button" class="btn btn-lg" id="addbtn" aria-label="Left Align">
+	  		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+		</button>
+	</h3>
+    
+    {{#each exercise}}
+    <div class="exercise">
+		<div class="container">
+			<div class="container-fluid" id="individual-exercise">
+				<div class="row">
+				     <div class="col-11 form-group name-text-box">
+		  				<input type="text" class="form-control-lg name-text-box" placeholder=" {{ex}}"> 
+					 </div>
+					 <button type="button" class="col-1 close deletebtn" aria-label="Close">
+					  	<span aria-hidden="true">&times;</span>
+					 </button>
+				</div>
+				<div class="row">
+				    <div class="col-4 time-text-box">
+				    	<div class="form-group time-text-box">
+		  					<input type="text" class="form-control-lg" placeholder="{{time}}" >
+						</div>
+					</div>
+				    <div class="col-2">
+						<div class="dropdown">
+						  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    {{unit}}
+						  </button>
+						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						    <a class="dropdown-item" id="unitDrop" href="#">min</a>
+						  </div>
+						</div>
+					</div>
+				    <div class="col-1">
+						<div class="dropdown">
+						  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    {{sound}}
+						  </button>
+						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						    <a class="dropdown-item" href="#">tweet</a>
+						    <a class="dropdown-item" href="#">moo</a>
+						    <a class="dropdown-item" href="#">bark</a>
+						  </div>
+						</div>
+					</div>
+				    <div class="col-5">
+				    </div>
+				</div>
 			</div>
 		</div>
-		
-		<div class="d-flex flex-row">
-		  <div class="p-2">Flex item 1</div>
-		  <div class="p-2">Flex item 2</div>
-		  <div class="p-2">Flex item 3</div>
-		</div>
-<!-- 	       	<div class="form-group exercise-elem">
-		    		<label for="inputdefault">Name</label>
-		    		<input class="form-control" id="inputdefault" type="text">
-
-		    		<label for="inputdefault">Name</label>
-		    		<input class="form-control" id="inputdefault" type="text">
-		  	</div> -->
-
 	</div>
+	{{/each}}
 
-
-					
-<!-- 	      	<div class="dropdown">
-			  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			  	20
-			  </button>
-			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			    <a class="dropdown-item" href="#">Action</a>
-			    <a class="dropdown-item" href="#">Another action</a>
-			    <a class="dropdown-item" href="#">Something else here</a>
-			  </div>
-			  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			  	secs
-			  </button>
-			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			    <a class="dropdown-item" href="#">Action</a>
-			    <a class="dropdown-item" href="#">Another action</a>
-			    <a class="dropdown-item" href="#">Something else here</a>
-			  </div>
-			  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			    Beep
-			  </button>
-			  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-			    <a class="dropdown-item" href="#">Action</a>
-			    <a class="dropdown-item" href="#">Another action</a>
-			    <a class="dropdown-item" href="#">Something else here</a>
-			  </div>
-			</div>
- -->	    </div>
-	  </div>
-	</div>
-
-
+	</br>
 	<h3>Repetitions</h3>
 
 	<div class="dropdown">
 	  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	    Dropdown button
+	    1
 	  </button>
 	  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-	    <a class="dropdown-item" href="#">Action</a>
-	    <a class="dropdown-item" href="#">Another action</a>
-	    <a class="dropdown-item" href="#">Something else here</a>
+	    <a class="dropdown-item" href="#">2</a>
+	    <a class="dropdown-item" href="#">3</a>
+	    <a class="dropdown-item" href="#">4</a>
 	  </div>
 	</div>
-	
 
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
+
+	<script>
+	$( "#dropdownMenuButton1" ).click(function(){
+		var cur = $('#dropdownMenuButton1').text();
+		if(cur == 'min')
+			$('#unitDrop').text('sec');
+		else
+			$('#unitDrop').text('min');
+	});
+	</script>
+	
+	<script>
+	$( "#unitDrop" ).click(function(){
+		$('#dropdownMenuButton1').text($('#unitDrop').text());
+	});
+	</script>
+
+	<script>
+	$( "#unitDrop" ).click(function(){
+		var cur = $('#unitDrop').text();
+		$('#dropdownMenuButton1').text(cur);
+	});
+	</script>
+
+	<script>
+	$( "#dropdownMenuButton2" ).click(function(){
+		var cur = $('#unitDrop').text();
+		if(cur == 'sec')
+			$('#sec').text('sec');
+	});
+
+	</script>
 </body>
+
+
 </html>
