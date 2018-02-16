@@ -4,8 +4,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">	
-	<link href="../public/css/flex.css" rel="stylesheet">
+	<link href="../public/css/index.css" rel="stylesheet">
 	<!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -19,12 +22,12 @@
 	  <div class="container-fluid">
 	    <ul class="navbar-nav navbar-right" id="navigationBar">
 		   	<li id="navText">
-		   		<a class="navbar-brand" href="./home.handlebars" id="title">flex</a>
+		   		<a class="navbar-brand" href="library" id="title">flex</a>
 			   	<button class="btn navbar-btn" id="addWorkoutBtn" onclick="addWorkout()">Add Workout</button>
-			    <p class="navbar-text"><a href="./settings.handlebars">Settings</a></p>
-			    <p class="navbar-text"> <a href="./stats.handlebars">Stats</a></p>
-			    <p class="navbar-text"> <a href="./timer.handlebars">Timer</a></p>
-			    <p class="navbar-text"> <a href="./library.handlebars">Library</a></p>
+			    <p class="navbar-text"><a href="settings">Settings</a></p>
+			    <p class="navbar-text"> <a href="stats">Stats</a></p>
+			    <p class="navbar-text"> <a href="timer">Timer</a></p>
+			    <p class="navbar-text"> <a href="library">Library</a></p>
 			</li>
  		</ul>
 	  </div>
@@ -32,7 +35,7 @@
 </head>
 <script type="text/javascript">
 	function addWorkout() {
-		location.href = "./addWorkout.html"
+		location.href = "addworkout"
 	}
 </script>
 <body>

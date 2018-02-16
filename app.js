@@ -8,10 +8,19 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
+var addworkout = require('./routes/addworkout');
+var workout = require('./routes/workout');
+var settings = require('./routes/settings');
+var library = require('./routes/library');
+var stats = require('./routes/stats');
+var timer = require('./routes/timer');
+
 // Example route
 // var user = require('./routes/user');
 
 var app = express();
+
+
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -34,6 +43,14 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
+app.get('/addworkout', addworkout.view);
+app.get('/workout', workout.view);
+app.get('/settings', settings.view);
+app.get('/library', library.view);
+app.get('/stats', stats.view);
+app.get('/timer', timer.view);
+
+
 // Example route
 // app.get('/users', user.list);
 
