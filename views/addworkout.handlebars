@@ -7,10 +7,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/index.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">	
 	<link href="../public/css/index.css" rel="stylesheet">
+
 	<!-- this is a comment in HTML -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -34,23 +36,44 @@
  		</ul>
 	  </div>
 	</nav>   
+
+
 </head>
 
 <body>
 	<h3>Friday Fun <small> 10 min.</small></h3>
 	<h3>Exercises</h3>
-
 	<div class="container">
-	  <div class="d-flex align-items-stretch align-content-center flex-column flex-wrap">
-	    <div class="col-sm">
-	      	<button type="btn" class="close btn-left" aria-label="Close">
-  				<span aria-hidden="true">&times;</span>
-		   	</button> 
-	       	<div class="form-group exercise">
-		    	<label for="inputdefault">Name</label>
-		    	<input class="form-control" id="inputdefault" type="text">
-		  	</div>
-	      	<div class="dropdown">
+      	<button type="btn" id="deletebtn" class="btn-sm pull-right" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+	   	</button> 
+		<div class="d-flex flex-column flex-wrap">
+		    <div class="col-sm">
+		       	<div class="form-group exercise">
+			    	<label for="inputdefault">Name</label>
+			    	<input class="form-control" id="inputdefault" type="text">
+			  	</div>
+			</div>
+		</div>
+		
+		<div class="d-flex flex-row">
+		  <div class="p-2">Flex item 1</div>
+		  <div class="p-2">Flex item 2</div>
+		  <div class="p-2">Flex item 3</div>
+		</div>
+<!-- 	       	<div class="form-group exercise-elem">
+		    		<label for="inputdefault">Name</label>
+		    		<input class="form-control" id="inputdefault" type="text">
+
+		    		<label for="inputdefault">Name</label>
+		    		<input class="form-control" id="inputdefault" type="text">
+		  	</div> -->
+
+	</div>
+
+
+					
+<!-- 	      	<div class="dropdown">
 			  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 			  	20
 			  </button>
@@ -76,7 +99,7 @@
 			    <a class="dropdown-item" href="#">Something else here</a>
 			  </div>
 			</div>
-	    </div>
+ -->	    </div>
 	  </div>
 	</div>
 
