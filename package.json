@@ -2,19 +2,11 @@
   "name": "IntroHCI",
   "version": "0.0.1",
   "author": "Intro HCI Staff",
-<<<<<<< HEAD
-=======
-
->>>>>>> c39dfc02941167b9a0ea59207ce2f92413add63e
   "repository": {
     "type": "git",
     "url": "https://github.com/IntroHCI/lab4"
   },
   "license": "MIT",
-<<<<<<< HEAD
-=======
-
->>>>>>> c39dfc02941167b9a0ea59207ce2f92413add63e
   "private": true,
   "scripts": {
     "start": "node app.js"
@@ -27,10 +19,6 @@
   },
   "engines": {
     "node": "0.10.x"
-<<<<<<< HEAD
   }
 }
-=======
-  }  
-}
->>>>>>> c39dfc02941167b9a0ea59207ce2f92413add63e
+
