@@ -1,0 +1,159 @@
+/* applies to anything of class "example-class-selector" */
+.example-class-selector {
+	margin-top: 2em;
+}
+
+/* applies to any <p> descendants of an element of class "example-class-selector" */
+.example-class-selector p {
+	/* Colors are in hexadecimal: http://www.colorpicker.com/ */	
+	color: #CC00AA;
+}
+
+.jumbotron {
+	position: relative;
+	background: none;
+}
+
+a{
+     color: black;
+}
+.jumbotron:after {
+     content:"";
+     opacity: 0.2;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     position: absolute;
+     z-index: -1;	
+}
+
+.jumbotron p {
+     color: #6e6e6e;
+}
+
+
+.project a {
+     text-align: center;
+}
+
+.btn-default{
+     padding: 100px;
+}
+
+.exercise{
+     margin: 30px;
+}
+
+#title{
+     font-size: 2.5rem;
+     color: black;
+     font-weight: bold;
+     text-align: left;
+}
+
+#addWorkoutBtn{
+     padding: 5px;
+     background-color: white;
+     border: 1px solid black;
+     vertical-align: right; 
+     white-space: 5px;
+     font-size: 50%;
+}
+
+#submit{
+     padding: 5px;
+     background-color: white;
+     border: 1px solid black;
+     vertical-align: right; 
+     white-space: 5px;
+     font-size: 100%;
+}
+
+#startBtn{
+     margin-left: 10px;
+     text-align: right;
+     padding: 5px;
+     color:white;
+     background-color: black;
+}
+
+#editBtn{
+     margin-left: 10px;
+     text-align: right;
+     padding: 5px;
+     color:white;
+     background-color: black;
+}
+
+#navigationBar{  
+     white-space:nowrap;
+     text-align: center;
+}
+
+#navText{
+     color: black!important;
+     display:inline-block;
+     text-align: center;
+     font-size: 50%;
+     margin-left: 0px;
+     margin-right: 10px;
+}
+
+
+#navigation{
+     background-color: white;
+     border: 1px solid black;
+}
+
+#workoutList{
+     margin: 30px;
+}
+
+h3{
+     margin: 30px;
+}
+
+
+.list-group-item{
+     font-size: 15px;
+     padding-bottom: 50px;
+}
+
+.durationText{
+     font-size: 10px;
+}
+
+.dropdown{
+     margin: 30px;
+     width: 130px;
+     height: 130px;
+     display:inline;
+
+}
+
+.container-fluid{
+     min-width: 200px;
+}
+
+.col-sm{
+     width: 90%;
+     height: 200px;
+     margin-left: auto;
+     margin-right: auto;
+     min-height: 200px;
+     min-width: 300px;
+     padding-top: 5px;
+     padding-bottom:5px;
+     border: 1px solid black;
+}
+
+
+.form-group{
+     margin-left: 30px;
+     margin-right: 30px;
+     padding-top: 5px;
+     padding-bottom:5px;
+}
+
+

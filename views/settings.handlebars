@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>Settings</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">	
+	<link href="../public/css/flex.css" rel="stylesheet">
+	<!-- this is a comment in HTML -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->   
+
+	<nav class="navbar navbar-toggleable-md navbar-light bg-faded" id="navigation">
+	  <div class="container-fluid">
+	    <ul class="navbar-nav navbar-right" id="navigationBar">
+		   	<li id="navText">
+		   		<a class="navbar-brand" href="./home.handlebars" id="title">flex</a>
+			   	<button class="btn navbar-btn" id="addWorkoutBtn" onclick="addWorkout()">Add Workout</button>
+			    <p class="navbar-text"><a href="./settings.handlebars">Settings</a></p>
+			    <p class="navbar-text"> <a href="./stats.handlebars">Stats</a></p>
+			    <p class="navbar-text"> <a href="./timer.handlebars">Timer</a></p>
+			    <p class="navbar-text"> <a href="./library.handlebars">Library</a></p>
+			</li>
+ 		</ul>
+	  </div>
+	</nav>   
+</head>
+<script type="text/javascript">
+	function addWorkout() {
+		location.href = "./addWorkout.html"
+	}
+</script>
+<body>
+	<p>We'll add to this later!</p>
+	</body>
+</html>

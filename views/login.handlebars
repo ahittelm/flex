@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Workout</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">	
+	<link href="./css/flex.css" rel="stylesheet">
+	<!-- this is a comment in HTML -->
+
+	<nav class="navbar navbar-toggleable-md navbar-light bg-faded" id="navigation">
+	  <div class="container-fluid">
+	    <ul class="navbar-nav navbar-right" id="navigationBar">
+		   	<li id="navText">
+		   		<a class="navbar-brand" href="./Login.html" id="title">flex</a>
+			</li>
+ 		</ul>
+	  </div>
+	</nav>    
+</head>
+<script type="text/javascript">
+	function home() {
+		location.href = "./flex.html"
+	}
+</script>
+	<body>
+		<div class="form-group">
+		  <label for="usr">Username:</label>
+		  <input type="text" class="form-control" id="usr">
+		</div>
+		<div class="form-group">
+		  <label for="pwd">Password:</label>
+		  <input type="password" class="form-control" id="pwd">
+		  <br/>
+		  <button class="btn" id="submit" onclick="home()">Submit</button>
+		</div>
+	</body>
+</html>
