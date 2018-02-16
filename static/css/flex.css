@@ -41,7 +41,7 @@ a{
      padding: 100px;
 }
 
-.form-group{
+.exercise{
      margin: 30px;
 }
 
@@ -69,7 +69,16 @@ a{
      white-space: 5px;
      font-size: 100%;
 }
+
 #startBtn{
+     margin-left: 10px;
+     text-align: right;
+     padding: 5px;
+     color:white;
+     background-color: black;
+}
+
+#editBtn{
      margin-left: 10px;
      text-align: right;
      padding: 5px;
@@ -119,6 +128,7 @@ h3{
      margin: 30px;
      width: 130px;
      height: 130px;
+     display:inline;
 
 }
 
@@ -127,11 +137,14 @@ h3{
 }
 
 .col-sm{
-     margin: 10px;
-     width: 50%;
+     width: 90%;
      height: 200px;
+     margin-left: auto;
+     margin-right: auto;
      min-height: 200px;
+     min-width: 300px;
      padding-top: 5px;
+     padding-bottom:5px;
      border: 1px solid black;
 }
 
