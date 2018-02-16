@@ -37,9 +37,9 @@
 			      <li class="nav-item">
 			        <a class="nav-link" href="Timer">Timer</a>
 			      </li>
-			      <li class="nav-item">
+			 <!--      <li class="nav-item">
 			        <a class="nav-link" href="settings">Settings</a>
-			      </li>
+			      </li> -->
 			    </ul>
 			  </div>	
 		</div>
@@ -48,66 +48,13 @@
 <body>
 
 
-	<h3>Friday Fun <small> 10 min.</small></h3></br>
-	<h3>Exercises
-		<button type="button" class="btn btn-lg" id="addbtn" aria-label="Left Align">
-	  		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-		</button>
-	</h3>
-    
-    {{#each exercise}}
-    <div class="exercise">
-		<div class="container">
-			<div class="container-fluid" id="individual-exercise">
-				<div class="row">
-				     <div class="col-11 form-group name-text-box">
-		  				<input type="text" class="form-control name-text-box" placeholder=" {{ex}}" > 
-					 </div>
-					 <button type="button" class="col-1 close" aria-label="Close">
-					  	<span aria-hidden="true">&times;</span>
-					 </button>
-				</div>
-				<div class="row">
-				    <div class="col-4 time-text-box">
-				    	<div class="form-group time-text-box">
-		  					<input type="text" class="form-control" placeholder="{{time}}" >
-						</div>
-					</div>
-				    <div class="col-2">
-						<div class="dropdown">
-						  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						    {{unit}}
-						  </button>
-						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						    <a class="dropdown-item" id="unitDrop" href="#">min</a>
-						  </div>
-						</div>
-					</div>
-				    <div class="col-1">
-						<div class="dropdown">
-						  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						    {{sound}}
-						  </button>
-						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						    <a class="dropdown-item" href="#">Action</a>
-						    <a class="dropdown-item" href="#">Another action</a>
-						    <a class="dropdown-item" href="#">Something else here</a>
-						  </div>
-						</div>
-					</div>
-				    <div class="col-5">
-				    </div>
-				</div>
-			</div>
+	<div class="container">
+		<div class="container-fluid stats">
+			<p> This is a statistics page! </p> 
+			<p> In the past week you have worked out 5 times! </p>
 		</div>
 	</div>
-	{{/each}}
-<script type="text/javascript">
-	function addWorkout() {
-		location.href = "addworkout"
-	}
-</script>
-<body>
-	<p>We'll add to this later!</p>
+
+
 	</body>
 </html>

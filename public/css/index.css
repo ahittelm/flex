@@ -57,6 +57,10 @@ a{
      font-size: 20px;
 }
 
+.input-lg{
+     font-size: 20px;
+}
+
 #submit{
      padding: 5px;
      background-color: white;
@@ -88,18 +92,19 @@ a{
 
 #navigationBar{  
     /* display:none;*/
+    font-size: 50px;
 }
 
 #navText{
      color: black;
      display:inline-block;
      text-align: center;
-     font-size: 50%;
+     font-size: 50px;
      margin-right: 35px;
 }
 
 .navbar-text{
-     font-size: 20px;
+     font-size: 50px;
 }
 
 #navigation{
@@ -166,6 +171,23 @@ body{
      font-size: 15px;
 }
 
+.stats{
+     border: 1px solid black;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     font-size: 15px;
+}
+
 .workoutname{
      font-size: 20px;
+}
+
+.progress{
+     height: 50px;
+}
+
+.timerButton{
+     padding: auto;
+     margin-left:500px ;
+     text-align: center;
 }

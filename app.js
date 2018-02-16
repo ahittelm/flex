@@ -15,6 +15,7 @@ var library = require('./routes/library');
 var stats = require('./routes/stats');
 var timer = require('./routes/timer');
 var add = require('./routes/add.js');
+var custom = require('./routes/custom.js');
 
 
 // Example route
@@ -52,6 +53,7 @@ app.get('/library', library.view);
 app.get('/stats', stats.view);
 app.get('/timer', timer.view);
 app.get('/add', add.addFriend)
+app.get('/custom', custom.view)
 
 // Example route
 // app.get('/users', user.list);

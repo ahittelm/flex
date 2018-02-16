@@ -39,9 +39,9 @@
 			      <li class="nav-item">
 			        <a class="nav-link" href="Timer">Timer</a>
 			      </li>
-			      <li class="nav-item">
+			<!--       <li class="nav-item">
 			        <a class="nav-link" href="settings">Settings</a>
-			      </li>
+			      </li> -->
 			    </ul>
 			  </div>	
 		</div>
@@ -51,7 +51,8 @@
 <body>
 
 
-	<h3>Friday Fun <small> 10 min.</small></h3></br>
+	    <input class="form-control input-lg" id="inputlg" placeholder="Friday Fun" type="text">
+  <large> <!--10 min. --></large></br></br>
 	<h3>Exercises
 		<button type="button" class="btn btn-lg" id="addbtn" aria-label="Left Align">
 	  		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
@@ -130,7 +131,7 @@
 			$('#unitDrop').text('min');
 	});
 	</script>
-	
+
 	<script>
 	$( "#unitDrop" ).click(function(){
 		$('#dropdownMenuButton1').text($('#unitDrop').text());

@@ -37,9 +37,9 @@
 			      <li class="nav-item">
 			        <a class="nav-link" href="Timer">Timer</a>
 			      </li>
-			      <li class="nav-item">
+<!-- 			      <li class="nav-item">
 			        <a class="nav-link" href="settings">Settings</a>
-			      </li>
+			      </li> -->
 			    </ul>
 			  </div>	
 		</div>
@@ -50,5 +50,16 @@
 		location.href = "library"
 	}
 </script>
-</script>
+	<body>
+		<div class="form-group">
+		  <label for="usr">Username:</label>
+		  <input type="text" class="form-control" id="usr">
+		</div>
+		<div class="form-group">
+		  <label for="pwd">Password:</label>
+		  <input type="password" class="form-control" id="pwd">
+		  <br/>
+		  <button class="btn" id="submit" onclick="home()">Submit</button>
+		</div>
+	</body>
 </html>
