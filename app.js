@@ -17,7 +17,6 @@ var timer = require('./routes/timer');
 var add = require('./routes/add.js');
 var custom = require('./routes/custom.js');
 
-
 // Example route
 // var user = require('./routes/user');
 
