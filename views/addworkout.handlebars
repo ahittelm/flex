@@ -59,18 +59,19 @@
 		</button>
 	</h3>
     
-    {{#each exercise}}
+    {{#each workout}}
     <div class="exercise">
 		<div class="container">
 			<div class="container-fluid" id="individual-exercise">
 				<div class="row">
 				     <div class="col-11 form-group name-text-box">
-		  				<input type="text" class="form-control-lg name-text-box" placeholder=" {{ex}}"> 
+		  				<input type="text" class="form-control-lg name-text-box" placeholder=" {{this.name}}"> 
 					 </div>
 					 <button type="button" class="col-1 close deletebtn" aria-label="Close">
 					  	<span aria-hidden="true">&times;</span>
 					 </button>
 				</div>
+				{{#each this.exercises}}
 				<div class="row">
 				    <div class="col-4 time-text-box">
 				    	<div class="form-group time-text-box">
@@ -102,6 +103,7 @@
 				    <div class="col-5">
 				    </div>
 				</div>
+				{{/each}}
 			</div>
 		</div>
 	</div>

@@ -1,4 +1,4 @@
-var data = require("../data.json");
+var data = require("../exercises.json");
 
 exports.addFriend = function(req, res) {    
  }

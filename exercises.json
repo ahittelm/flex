@@ -1,62 +1,28 @@
 {
-    "workouts":
-    [{
-       "routine":
-       [{
-          	"ex": "Squats",
-          	"time": "5",
-          	"unit": "min",
-          	"sound": "Bird"
-          },    
-          { 
-            "ex": "Jumping jacks",
-            "time": "45",
-            "unit": "sec",
-            "sound": "Cow"
-          },      
-          { 
-            "ex": "Exercise",
-            "time": "Time",
-            "unit": "sec",
-            "sound": "Sound"
-        }],
-       "routine":
-       [{
-            "ex": "Squats",
-            "time": "5",
-            "unit": "min",
-            "sound": "Bird"
-          },    
-          { 
-            "ex": "Jumping jacks",
-            "time": "45",
-            "unit": "sec",
-            "sound": "Cow"
-          },      
-          { 
-            "ex": "Exercise",
-            "time": "Time",
-            "unit": "sec",
-            "sound": "Sound"
-        }],
-       "routine":
-       [{
-            "ex": "Squats",
-            "time": "5",
-            "unit": "min",
-            "sound": "Bird"
-          },    
-          { 
-            "ex": "Jumping jacks",
-            "time": "45",
-            "unit": "sec",
-            "sound": "Cow"
-          },      
-          { 
-            "ex": "Exercise",
-            "time": "Time",
-            "unit": "sec",
-            "sound": "Sound"
-        }]
-    }]
+  "workout":[
+    {
+      "name": "friday fun",
+      "exercises":[
+        {
+          "exname":"Squats",
+          "time": 0,
+          "unit": 0,
+          "sound": 1
+        },
+        {
+          "exname":"Lunges",
+          "time": 0,
+          "unit": 0,
+          "sound": 1
+        },
+        {
+          "exname":"Jumping Jacks",
+          "time": 0,
+          "unit": 0,
+          "sound": 1
+        }
+      ]
+    }
+  ]
 }
+
