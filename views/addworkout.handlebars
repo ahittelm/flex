@@ -60,53 +60,54 @@
 	</h3>
     
     {{#each workout}}
+    {{#each this.exercises}}
     <div class="exercise">
 		<div class="container">
 			<div class="container-fluid" id="individual-exercise">
 				<div class="row">
 				     <div class="col-11 form-group name-text-box">
-		  				<input type="text" class="form-control-lg name-text-box" placeholder=" {{this.name}}"> 
+		  				<input type="text" class="form-control-lg name-text-box" placeholder=" {{this.exname}}"> 
 					 </div>
 					 <button type="button" class="col-1 close deletebtn" aria-label="Close">
 					  	<span aria-hidden="true">&times;</span>
 					 </button>
 				</div>
-				{{#each this.exercises}}
 				<div class="row">
 				    <div class="col-4 time-text-box">
 				    	<div class="form-group time-text-box">
-		  					<input type="text" class="form-control-lg" placeholder="{{time}}" >
+		  					<input type="text" class="form-control-lg" placeholder="{{this.time}}" >
 						</div>
 					</div>
 				    <div class="col-2">
 						<div class="dropdown">
 						  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						    {{unit}}
+						    {{this.unit}}
 						  </button>
 						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						    <a class="dropdown-item" id="unitDrop" href="#">min</a>
+						    <a class="dropdown-item" id="unitDrop" href="#">sec</a>
 						  </div>
 						</div>
 					</div>
 				    <div class="col-1">
 						<div class="dropdown">
 						  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						    {{sound}}
+						    {{this.sound}}
 						  </button>
 						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						    <a class="dropdown-item" href="#">tweet</a>
-						    <a class="dropdown-item" href="#">moo</a>
-						    <a class="dropdown-item" href="#">bark</a>
+						    <a class="dropdown-item" href="#">Bell</a>
+						    <a class="dropdown-item" href="#">Horn</a>
+						    <a class="dropdown-item" href="#">Flute</a>
 						  </div>
 						</div>
 					</div>
 				    <div class="col-5">
 				    </div>
 				</div>
-				{{/each}}
 			</div>
 		</div>
 	</div>
+	{{/each}}
 	{{/each}}
 
 	</br>
@@ -117,9 +118,9 @@
 	    1
 	  </button>
 	  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-	    <a class="dropdown-item" href="#">2</a>
-	    <a class="dropdown-item" href="#">3</a>
-	    <a class="dropdown-item" href="#">4</a>
+	  	{{#each time}}
+	    <a class="dropdown-item" href="#">{{@key}} {{this}}</a>
+	    {{/each}}
 	  </div>
 	</div>
 
@@ -153,8 +154,24 @@
 		if(cur == 'sec')
 			$('#sec').text('sec');
 	});
-
 	</script>
+
+
+	<script href="./routes/addworkout.js" type="text/javascript"></script> 
+	<script>
+	document.getElementById("addbtn").onclick = function(){
+			location.href = "addworkout"
+			var length = Object.keys(window.data.workout.exercises).length;
+			var exname = "Exercise Name";
+			var time = "Time"
+			var unit = "Unit"
+			var sound = "Sound"
+			window.data.workout.exercises[length] = {exname, time, unit, sound};
+	};	</script>
+
+	<script>
+	</script>
+
 </body>
 
 

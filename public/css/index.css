@@ -186,8 +186,30 @@ body{
      height: 50px;
 }
 
+.dropdown-item{
+     font-size: 15px;
+}
+
 .timerButton{
      padding: auto;
      margin-left:500px ;
      text-align: center;
+}
+
+#outerProgressBar{
+     border: 1px solid black;
+     height: 50px;
+     width: 100%;
+     margin-top: 20px;
+     margin-bottom: 200px;
+}
+
+#innerProgressBar{
+     text-align: left;
+     border: 1px solid black;
+     background-color: black;
+     height: 48px;
+     width:0%;
+     margin-bottom: 20px;
+
 }
