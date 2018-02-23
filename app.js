@@ -1,6 +1,7 @@
 /**
  * Module dependencies.
  */
+ var jsonfile = require('jsonfile'); 
 
 var express = require('express');
 var http = require('http');
@@ -17,6 +18,7 @@ var timer = require('./routes/timer');
 var add = require('./routes/add.js');
 var custom = require('./routes/custom.js');
 
+var data = require('./exercises.json');
 // Example route
 // var user = require('./routes/user');
 
@@ -45,14 +47,24 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
-app.get('/addworkout', addworkout.view);
+app.get('/addworkout/:id', addworkout.view);
 app.get('/workout', workout.view);
 app.get('/settings', settings.view);
 app.get('/library', library.view);
 app.get('/stats', stats.view);
 app.get('/timer', timer.view);
-app.get('/add', add.addFriend)
-app.get('/custom', custom.view)
+app.get('/add', add.addFriend);
+app.get('/custom', custom.view);
+
+
+app.post('/addworkout', function(req, res){
+	console.log(data);
+	data.workout.push(req.body);
+	jsonfile.writeFile('./exercises.json', data, function(err){
+		console.error(err);
+		res.send("nancy");
+	})
+});
 
 // Example route
 // app.get('/users', user.list);

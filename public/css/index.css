@@ -328,3 +328,9 @@ h3{
      margin-bottom: 20px;
 
 }
+
+.divider{
+    width:35px;
+    height:auto;
+    display:inline-block;
+}
