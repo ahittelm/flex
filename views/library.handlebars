@@ -33,7 +33,11 @@
 			  <div class="collapse navbar-collapse" id="navbarNav">
 			    <ul class="navbar-nav">
 			      <li class="nav-item-active">
+<<<<<<< HEAD
 			        <a class="nav-link" href="library">Home<span class="sr-only">(current)</span></a>
+=======
+			        <a class="nav-link" href="library"><font color="#651fff">Home</font><span class="sr-only">(current)</span></a>
+>>>>>>> 28c1c066c7e83944e3b79c7a550427df92bbc099
 			      </li>
 			      <li class="nav-item">
 			        <a class="nav-link" href="stats">Stats</a>
@@ -64,22 +68,28 @@
 
 	{{#each workout}}
 	<div class="exercise">
-	  <ul class="list-group" id="workoutList">
-	  <li class="list-group-item justify-content-between">
-	  	<p class="workoutname"> {{name}} <small class="durationText"> 5 min.</small>
-		<button type="button" class="start-btn" id="start-btn" onclick="startWorkout()" aria-label="Left Align">
-		<p>Start Workout</p></button>
-		<a href="/addworkout/{{@index}}">
-		<button type="button" class="edit-btn" id="editbtn" aria-label="Left Align">
-	  		<p>Edit</p>
-		</button>	
-		</a>
-		{{#each this.exercises}}
-		<p class="exercise"> {{exname}} ({{this.time}} {{this.unit}}) </p>
-		{{/each}}
+		
+		  <ul class="list-group" id="workoutList">
+		  <li class="list-group-item justify-content-between">
+		  	<p class="workoutname"> {{name}} <small class="durationText"> 5 min.</small>
+		  	<div class="row">
+	    		<div class="col-md-2 col-lg-12">
+				<button type="button" class="start-btn" id="start-btn" onclick="startWorkout()" aria-label="Left Align">
+				<p>Start Workout</p></button>
+				<a href="/addworkout/{{@index}}">
+				<button type="button" class="edit-btn" id="editbtn" aria-label="Left Align">
+			  		<p>Edit</p>
+				</button>	
+				</div>
+			</div>
+				</a>
+				{{#each this.exercises}}
+				<p class="exercise"> {{exname}} ({{this.time}} {{this.unit}}) </p>
+				{{/each}}
+		
 	  </li>
 	  </ul>
-	</div>
+		
 	{{/each}}
 
 </body>
