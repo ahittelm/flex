@@ -72,12 +72,18 @@
 	  		<div class="col-md-2 col-lg-12">
 		<button type="button" class="start-btn" id="start-btn" onclick="startWorkout()" aria-label="Left Align">
 		<p>Start Workout</p></button>
-		<button type="button" class="edit-btn" onclick="editWorkout()" id="editbtn" aria-label="Left Align">
+		<a href="/addworkout/{{@index}}">
+		<button type="button" class="edit-btn" id="editbtn" aria-label="Left Align">
 	  		<p>Edit</p>
+<<<<<<< HEAD
 		</button></p>	
 			</div>
 		</div>
 
+=======
+		</button>	
+		</a>
+>>>>>>> c45a1004d1a940dea01eb218ce4b5d29babfd179
 		{{#each this.exercises}}
 		<p class="exercise"> {{exname}} ({{this.time}} {{this.unit}}) </p>
 		{{/each}}

@@ -306,16 +306,18 @@ h3{
 
 
 #outerProgressBar{
-     border: 1px solid #651fff;
+     border: 2px solid #651fff;
+     background-color: white;
      height: 50px;
      width: 100%;
      margin-top: 20px;
      margin-bottom: 200px;
+     box-shadow: 0px 2px 5px 0px #00000020;
 }
 
 #innerProgressBar{
      text-align: left;
-     border: 1px solid #651fff;
+     border: 2px solid #651fff;
      background-color: #651fff;
      height: 48px;
      width:0%;
@@ -324,6 +326,13 @@ h3{
 
 
 
+
+
+.divider{
+    width:35px;
+    height:auto;
+    display:inline-block;
+}
 
 #individual-exercise{
     background-color: #ffffff;
@@ -337,44 +346,43 @@ h3{
     padding-left: 20px;
 }
 
-.save-btn{
-    background-color: #651fff;
-    border-radius: 4px;
-    color: #ffffff;
-    width: 60px;
-    height: 30px;
-    font-size: 12px;
-    box-shadow: 0px 2px 4px 0px #00000020;
-}
-
 #timerButtonPause{
     width: 150px;
-    height: 40px;
+    height: 46px;
+    font-size: 24px;
+    color: #ffffff;
     background-color: #651fff;
-        border: 2px, #651fff;
-    border-radius: 10px;
-    font-size: 16px;
-    margin-right: 8px;
+    border: 2px solid #651fff;
+    border-radius: 25px;
+    box-shadow: 0px 2px 3px 0px #00000020;
+    margin-right: 10px;
+    margin-top: 5px;
 }
 
 #timerButtonPlay{
     width: 150px;
-    height: 40px;
+    height: 50px;
+    font-size: 24px;
+    color: #ffffff;
     background-color: #651fff;
-    border: 2px, #651fff;
     border: 2px solid #651fff;
-    border-radius: 10px;
-    font-size: 16px;
-    margin-right: 8px;
+    border-radius: 25px;
+    box-shadow: 0px 2px 3px 0px #00000020;
+    margin-right: 10px;
+    margin-top: 5px;
 }
 
 #timerButtonCancel{
     width: 150px;
-    height: 40px;
-    background-color: #ffffff;
-    color: #263238;
+    height: 50px;
+    font-size: 24px;
+    color: #3F4A4F;
+    background-color: white;
     border: 2px solid #651fff;
-    border-radius: 10px;
-    font-size: 16px;
-    box-shadow: 0px 2px 4px 0px #00000020;
+    border-radius: 25px;
+    box-shadow: 0px 2px 3px 0px #00000020;
+    margin-right: 10px;
+    margin-top: 5px;
 }
+
+

@@ -6,7 +6,8 @@ var Handlebars = require('handlebars/runtime');
 
 
 exports.view = function(req, res){
-  res.render('addworkout', data);
+  var workout = data.workout[req.params.id];
+  res.render('addworkout', {workout: workout});
 };
 
 
