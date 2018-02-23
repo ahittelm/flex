@@ -327,6 +327,13 @@ h3{
 
 
 
+
+.divider{
+    width:35px;
+    height:auto;
+    display:inline-block;
+}
+
 #individual-exercise{
     background-color: #ffffff;
     border-color: #ffffff;

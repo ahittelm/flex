@@ -69,9 +69,11 @@
 	  	<p class="workoutname"> {{name}} <small class="durationText"> 5 min.</small>
 		<button type="button" class="start-btn" id="start-btn" onclick="startWorkout()" aria-label="Left Align">
 		<p>Start Workout</p></button>
-		<button type="button" class="edit-btn" onclick="editWorkout()" id="editbtn" aria-label="Left Align">
+		<a href="/addworkout/{{@index}}">
+		<button type="button" class="edit-btn" id="editbtn" aria-label="Left Align">
 	  		<p>Edit</p>
-		</button></p>	
+		</button>	
+		</a>
 		{{#each this.exercises}}
 		<p class="exercise"> {{exname}} ({{this.time}} {{this.unit}}) </p>
 		{{/each}}
