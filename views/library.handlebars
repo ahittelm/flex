@@ -67,8 +67,9 @@
 	  <ul class="list-group" id="workoutList">
 	  <li class="list-group-item justify-content-between">
 	  	<p class="workoutname"> {{name}} <small class="durationText"> 5 min.</small>
-		<button type="button" class="start-btn" id="start-btn" onclick="startWorkout()" aria-label="Left Align">
-		<p>Start Workout</p></button>
+		<!-- <a href="/custom/{{@index}}"> -->
+		<button type="button" class="start-btn" id="start-btn" onclick="startWorkout()" aria-label="Left Align"><p>Start Workout</p></button>
+		<!-- </a> -->
 		<a href="/addworkout/{{@index}}">
 		<button type="button" class="edit-btn" id="editbtn" aria-label="Left Align">
 	  		<p>Edit</p>
@@ -82,6 +83,11 @@
 	</div>
 	{{/each}}
 
+   <form action="/addworkout" method="POST">
+   		<a href = "library">
+			<button type="submit" onclick="refresh()" class="btn-lg savebtn">Save</button>
+		</a>
+    </form>
 </body>
 
 
@@ -100,6 +106,9 @@
 <script type="text/javascript">
 	function editWorkout() {
 		location.href = "addworkout"
+	}
+	function refresh() {
+		location.href = "library"
 	}
 </script>
 </html>

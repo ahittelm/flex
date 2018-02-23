@@ -29,7 +29,7 @@
 			  <div class="collapse navbar-collapse" id="navbarNav">
 			    <ul class="navbar-nav">
 			      <li class="nav-item active">
-			        <a class="nav-link" href="library">Home<span class="sr-only">(current)</span></a>
+			        <a class="nav-link" href="../library"><font color="#651fff">Library</font><span></a>
 			      </li>
 			      <li class="nav-item">
 			        <a class="nav-link" href="stats">Stats</a>
@@ -63,6 +63,13 @@ function cancel() {
 	location.href = "library"
 }
 </script>
+  
+ <form action="/custom">
+{{#each workout.exercises}}
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	addExercise({{exname}}, {{time}}, {{unit}}, {{sound}})</script>
+{{/each}}
+</form> 
 
 <p id="demo"></p>
 
@@ -74,11 +81,8 @@ function cancel() {
 <button type="button" id="timerButtonPlay" onclick="play()" style="display:none" class="btn btn-secondary btn-lg">Play</button>
 <button type="button" id="timerButtonCancel" onclick="cancel()" class="btn btn-secondary btn-lg">Cancel</button>
 
-
-
-
 <audio id="audio">
-	<source src="audio/Blaster.mp3" type="audio/mpeg">
+	<source src="../audio/Whistle.mp3" type="audio/mpeg">
 </audio>
 
 <!--START OF SCRIPT-->
@@ -91,9 +95,21 @@ function playAudio() {
     audio.play(); 
 } 
 
-function pauseAudio() { 
-    audio.pause(); 
-} 
+// var exercises = {
+// 	exname: "",
+// 	time: "",
+// 	unit: "",
+// 	sound: ""
+// };
+
+// function addExercise(exn, tim, un, sd)
+// {
+// 	exercises.exname = exn;
+// 	exercises.time = tim;
+// 	exercises.unit = un;
+// 	exercises.sound = sd; 
+// 	setInterval(myTimer,1000);
+// }
 
 // TIMERS
 var orig = 5;
@@ -101,6 +117,7 @@ var val = orig;
 var increment = 1;
 var lowbounds = -1;
 var myVar = setInterval(myTimer, 1000);
+
 
 function myTimer() {
 	if(val <= lowbounds)

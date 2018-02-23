@@ -1,0 +1,12 @@
+{  
+    "name":"Workout Name",
+    "repetitions":1,
+    "exercises":[  
+    {  
+        "exname":"Exercise name",
+        "time":1,
+        "unit":"sec",
+        "sound":"Whistle"
+    }
+    ]
+}

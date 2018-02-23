@@ -10,7 +10,6 @@ exports.view = function(req, res){
   res.render('addworkout', {workout: workout});
 };
 
-
 Handlebars.registerHelper('ifIsZero', function(value, options) {
   if(value === 0) {
     return options.fn(this);

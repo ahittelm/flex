@@ -15,10 +15,12 @@ var settings = require('./routes/settings');
 var library = require('./routes/library');
 var stats = require('./routes/stats');
 var timer = require('./routes/timer');
-var add = require('./routes/add.js');
-var custom = require('./routes/custom.js');
+var add = require('./routes/add');
+var custom = require('./routes/custom');
 
 var data = require('./exercises.json');
+var newExercise = require('./newExercise.json');
+var newWorkout = require('./newWorkout.json');
 // Example route
 // var user = require('./routes/user');
 
@@ -55,14 +57,14 @@ app.get('/stats', stats.view);
 app.get('/timer', timer.view);
 app.get('/add', add.addFriend);
 app.get('/custom', custom.view);
+// app.get('/custom/:id', custom.view);
 
 
 app.post('/addworkout', function(req, res){
-	console.log(data);
-	data.workout.push(req.body);
+	data.workout.push(newWorkout);
 	jsonfile.writeFile('./exercises.json', data, function(err){
 		console.error(err);
-		res.send("nancy");
+		//res.send("nancy");
 	})
 });
 
