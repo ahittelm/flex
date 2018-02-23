@@ -1,1 +1,64 @@
-{"workout":[{"name":"Friday Fun","repetitions":2,"exercises":[{"exname":"Squats","time":3,"unit":"min","sound":"Blaster"},{"exname":"Lunges","time":5,"unit":"min","sound":"Whistle"},{"exname":"Jumping Jacks","time":45,"unit":"sec","sound":"Squeaks"}]},{"name":"Legs","repetitions":3,"exercises":[{"exname":"Squats","time":1,"unit":"min","sound":"Whistle"},{"exname":"Lunges","time":45,"unit":"sec","sound":"Squeaks"},{"exname":"Burpees","time":2,"unit":"min","sound":"Blaster"}]},{"name":"Workout Name","repetitions":1,"exercises":[{"exname":"Exercise name","time":1,"unit":"sec","sound":"Whistle"}]},{"name":"Workout Name","repetitions":1,"exercises":[{"exname":"Exercise name","time":1,"unit":"sec","sound":"Whistle"}]},{"name":"Workout Name","repetitions":1,"exercises":[{"exname":"Exercise name","time":1,"unit":"sec","sound":"Whistle"}]}],"time":["1","2","3","4","5","6","7","8","9","10"]}
+{  
+    "workout":[  
+        {  
+            "name":"Friday Fun",
+            "repetitions":2,
+            "exercises":[  
+                {  
+                    "exname":"Squats",
+                    "time":3,
+                    "unit":"min",
+                    "sound":"Blaster"
+                },
+                {  
+                    "exname":"Lunges",
+                    "time":5,
+                    "unit":"min",
+                    "sound":"Whistle"
+                },
+                {  
+                    "exname":"Jumping Jacks",
+                    "time":45,
+                    "unit":"sec",
+                    "sound":"Squeaks"
+                }
+            ]
+        },
+        {  
+            "name":"Legs",
+            "repetitions":3,
+            "exercises":[  
+                {  
+                    "exname":"Squats",
+                    "time":1,
+                    "unit":"min",
+                    "sound":"Whistle"
+                },
+                {  
+                    "exname":"Lunges",
+                    "time":45,
+                    "unit":"sec",
+                    "sound":"Squeaks"
+                },
+                {  
+                    "exname":"Burpees",
+                    "time":2,
+                    "unit":"min",
+                    "sound":"Blaster"
+                }
+            ]
+        }
+    ],
+    "time":[  
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+    ]
+}
