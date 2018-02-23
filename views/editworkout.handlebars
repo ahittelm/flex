@@ -42,11 +42,9 @@
 
 <body>
 
-<form action="/addworkout" method="POST">
+<h3>{{workout.name}}</h3>
 
-<h3>New Workout</h3>
-
-	    <input class="form-control input-lg" id="inputlg" placeholder="Workout Name" name="name" type="text">
+	    <input class="form-control input-lg" id="inputlg" placeholder="{{name}}" name="name" type="text">
   <large> <!--10 min. --></large></br></br>
 	<h3>Exercises
 		<button type="button" class="btn btn-lg" id="addbtn" aria-label="Left Align">
@@ -59,12 +57,13 @@
     
 
 
+    {{#each workout.exercises}}
     <div class="exercise">
 		<div class="container">
 			<div class="container-fluid" id="individual-exercise">
 				<div class="row">
 				     <div class="col-11 form-group name-text-box">
-		  				<input type="text" name="exname" class="form-control-lg name-text-box" placeholder="Exercise"> 
+		  				<input type="text" name="exname" class="form-control-lg name-text-box" placeholder=" {{this.exname}}"> 
 		  					<!-- <input type="text" name="nancy{{@index}}" class="form-control-lg name-text-box" placeholder=" {{this.exname}}">  -->
 					 </div>
 					 <button type="button" class="col-1 close deletebtn" aria-label="Close">
@@ -75,12 +74,12 @@
 				<div class="row">
 				    <div class="col-4 time-text-box">
 				    	<div class="form-group time-text-box">
-		  					<input type="text" name="time" class="form-control-lg time-unit" placeholder="Time" >
+		  					<input type="text" name="time" class="form-control-lg time-unit" placeholder="{{this.time}}" >
 						</div>
 					</div>
 				    <div class="col-1">
 				    	<div name="unit">
-					    	<input type="radio" value="min"> min<br>
+					    	<input type="radio" value="min" checked> min<br>
 							<input type="radio" value="sec"> sec<br>
 						</div>
 					</div>
@@ -88,7 +87,7 @@
 				    <div class="col-1">
 						<div class="dropdown">
 						  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						    Sound
+						    {{this.sound}}
 						  </button>
 						  <div class="dropdown-menu" name="sound" aria-labelledby="dropdownMenuButton">
 						    <a class="dropdown-item" href="#">Bell</a>
@@ -105,6 +104,7 @@
 			</div>
 		</div>
 	</div>
+	{{/each}}
 
 	</br>
 	<h3>Repetitions</h3>
@@ -120,10 +120,6 @@
 	  </div>
 	</div>
 
-   		<a href = "library">
-			<button type="submit" class="btn-lg savebtn">Save</button>
-		</a>
-    </form>
 
 	<script>
 	$( "#dropdownMenuButton1" ).click(function(){

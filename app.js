@@ -9,7 +9,6 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
-var addworkout = require('./routes/addworkout');
 var workout = require('./routes/workout');
 var settings = require('./routes/settings');
 var library = require('./routes/library');
@@ -17,6 +16,7 @@ var stats = require('./routes/stats');
 var timer = require('./routes/timer');
 var add = require('./routes/add');
 var custom = require('./routes/custom');
+var editworkout = require('./routes/editworkout');
 
 var data = require('./exercises.json');
 var newExercise = require('./newExercise.json');
@@ -49,7 +49,6 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
-app.get('/addworkout/:id', addworkout.view);
 app.get('/workout', workout.view);
 app.get('/settings', settings.view);
 app.get('/library', library.view);
@@ -57,16 +56,18 @@ app.get('/stats', stats.view);
 app.get('/timer', timer.view);
 app.get('/add', add.addFriend);
 app.get('/custom', custom.view);
+app.get('/editworkout/:id', editworkout.view);
 // app.get('/custom/:id', custom.view);
 
 
-app.post('/addworkout', function(req, res){
+app.post('/library', function(req, res){
 	data.workout.push(newWorkout);
 	jsonfile.writeFile('./exercises.json', data, function(err){
 		console.error(err);
-		//res.send("nancy");
 	})
 });
+
+// app.post('/addworkout', addworkout.add_new_workout);
 
 // Example route
 // app.get('/users', user.list);
