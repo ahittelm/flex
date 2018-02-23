@@ -45,31 +45,39 @@
 		</div>
 	</nav>
 </head>  
-<script type="text/javascript">
-	function home() {
-		location.href = "library"
-	}
-</script>
+
 	<body>
 		<div class="form-group">
 		  <label for="usr">Username:</label>
-		  <input type="text" class="form-control" id="usr">
+		  <input type="user" class="form-control" id="usr">
 		</div>
 		<div class="form-group">
 		  <label for="pwd">Password:</label>
 		  <input type="password" class="form-control" id="pwd">
 		  <br/>
-		  <button class="btn" id="submit" onclick="home()">Submit</button>
+		  <button class="btn" onclick="submitClicked()" id="submit">Submit</button>
 		</div>
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114601752-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-
-		  gtag('config', 'UA-114601752-1');
-		</script>
 	</body>
+	<script type="text/javascript" href="index"></script>
+	<script>
+		function submitClicked(){
+			location.href = "library";
+		};
+	</script>
+
+<!-- SCRIPT -->
+
+	<!-- 	// for(int i = 0; i < Object.keys(data.account).length; i++)
+		// 	if(document.getElementById("usr").value == data.account.username)
+		// 	{
+		// 		if(document.getElementById("pwd").value == data.account.password)
+		// 		{
+		// 			location.href = "library"
+		// 		}
+		// 	}
+		// } -->
+		
+	
+
 </html>
