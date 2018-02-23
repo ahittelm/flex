@@ -184,11 +184,14 @@ a{
      padding-right: 90%;
 }
 
-.time-text-box{
-     width: 100px !important;
-     padding-left: 0!important;
+.time-unit{
+     width: 50px !important;
+     padding-left: 4%!important;
+     text-align: left !important;
 }
-
+.time-text-box{
+    margin: 0px !important;
+}
 .row{
      padding: 10px;
 }
