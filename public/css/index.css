@@ -385,4 +385,29 @@ h3{
     margin-top: 5px;
 }
 
+label{
+    font-size: 18px;
+    color: #263238;
 
+}
+
+button#submit.btn{
+    width: 100px;
+    height: 35px;
+    background-color: #651fff;
+    color: #ffffff;
+    font-size: 14px;
+    border-radius: 25px;
+    border-color: #651fff;
+    box-shadow: 0px 2px 4px 0px #00000020;
+}
+
+#usr.form-control{
+    background-color: #ffffff;
+    border: #999999 2px solid;
+}
+
+#pwd.form-control{
+    background-color: #ffffff;
+    border: #999999 2px solid;
+}
