@@ -73,9 +73,9 @@ a{
 }
 
 .start-btn{
-    width: 107px;
+    width: 60px;
     height: 33px;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: 100;
     color: white;
     background-color: #651FFF;
@@ -89,9 +89,9 @@ a{
 }
 
 .edit-btn{
-    width: 107px;
+    width: 60px;
     height: 33px;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: 100;
     color: #3F4A4F
     background-color: #white;
