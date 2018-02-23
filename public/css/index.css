@@ -292,8 +292,6 @@ body{
 h3{
     font-size:24px;
     color: #3F4A4F;
-    margin-right: 20px;
-    margin-left: 20px; 
 }
 
 .stats{
@@ -385,29 +383,127 @@ h3{
     margin-top: 5px;
 }
 
+
+input.form-control-lg.name-text-box{
+    background-color: #f5f5f5;
+    border: 2px solid #f5f5f5;
+    margin-left: 16px;
+    height: 40px;
+    font-size: 18px;
+}
+
+input.form-control-lg.time-unit{
+    background-color: #f5f5f5;
+    border: 2px solid #f5f5f5;
+    height: 40px;
+    font-size: 18px;
+}
+
+button#dropdownMenuButton1.btn.btn-secondary.dropdown-toggle{
+    background-color: #f5f5f5;
+    font-size: 16px;
+    color: #263238;
+    border: 2px solid #f5f5f5;
+    float: right;
+    margin-right: 10px;
+    width: 80px;
+}
+
+button#dropdownMenuButton1.btn.btn-secondary.dropdown-toggle:hover{
+    background-color: #651fff;
+    font-size: 16px;
+    color: #ffffff;
+    border: 2px solid #f5f5f5;
+    float: right;
+    margin-right: 10px;
+    width: 80px;
+}
+
+button#dropdownMenuButton2.btn.btn-secondary.dropdown-toggle{
+    background-color: #f5f5f5;
+    font-size: 16px;
+    color: #263238;
+    border: 2px solid #f5f5f5;
+    float: right;
+}
+
+button#dropdownMenuButton2.btn.btn-secondary.dropdown-toggle:hover{
+    background-color: #651fff;
+    color: #ffffff;
+    font-size: 16px;
+    border: 2px solid #f5f5f5;
+    float: right;
+}
+
+div.dropdown-menu{
+    background-color: #f5f5f5;
+    font-size: 16px;
+    color: #263238;
+    border: 2px solid #f5f5f5;
+    float: right;
+    width: 80px;
+
+}
+
+a#unitDrop.dropdown-item:hover{
+    background-color: #651fff;
+    color: #ffffff;
+    font-size: 16px;
+    border: 2px solid #f5f5f5;
+    float: right;
+}
+
+a.dropdown-item{
+    background-color: #f5f5f5;
+    color: #263238;
+    font-size: 16px;
+    border: 2px solid #f5f5f5;
+    float: right;
+}
+
+
+a.dropdown-item:hover{
+    background-color: #651fff;
+    color: #ffffff;
+    font-size: 16px;
+    border: 2px solid #f5f5f5;
+    float: right;
+}
+
+button#save-workout-btn{
+    width: 150px;
+    height: 40px;
+    background-color: #651fff;
+    border-radius: 25px;
+    font-size: 20px;
+    color: #ffffff;
+    box-shadow: 0px 2px 4px 0px #00000020;
+
+}
+
 label{
     font-size: 18px;
-    color: #263238;
-
+    color: #263238;  
 }
 
 button#submit.btn{
-    width: 100px;
-    height: 35px;
+    width: 150px;
+    height: 40px;
     background-color: #651fff;
     color: #ffffff;
-    font-size: 14px;
+    border: #651fff 2px solid;  
+    font-size: 16px;
     border-radius: 25px;
-    border-color: #651fff;
-    box-shadow: 0px 2px 4px 0px #00000020;
 }
 
-#usr.form-control{
-    background-color: #ffffff;
-    border: #999999 2px solid;
+input#usr.form-control{
+    font-size: 16px;
+    color: #3F4A4F;
+    height: 40px;
 }
 
-#pwd.form-control{
-    background-color: #ffffff;
-    border: #999999 2px solid;
+input#pwd.form-control{
+    font-size: 16px;
+    color: #3F4A4F;
+    height: 40px;
 }
