@@ -56,7 +56,18 @@
 		  <input type="password" class="form-control" id="pwd">
 		  <br/>
 		  <button class="btn" onclick="submitClicked()" id="submit">Submit</button>
+			<fb:login-button 
+			  scope="public_profile,email"
+			  onlogin="checkLoginState();">
+			</fb:login-button>
 		</div>
+
+
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="/bootstrap.min.js"></script>
+		<script src="../routes/index.js"></script>
+		{{> facebook}}
+		<script src="../public/js/facebook.js"></script>
 
 	</body>
 	<script type="text/javascript" href="index"></script>
