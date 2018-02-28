@@ -6,20 +6,20 @@
             "exercises":[  
                 {  
                     "exname":"Squats",
-                    "min":3,
-                    "sec":30,
+                    "min":0,
+                    "sec":10,
                     "sound":"Blaster"
                 },
                 {  
                     "exname":"Lunges",
-                    "min":4,
-                    "sec":30,
+                    "min":0,
+                    "sec":5,
                     "sound":"Whistle"
                 },
                 {  
                     "exname":"Jumping Jacks",
-                    "min":5,
-                    "sec":30,
+                    "min":0,
+                    "sec":3,
                     "sound":"Squeaks"
                 }
             ]
