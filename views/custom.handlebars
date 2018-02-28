@@ -162,8 +162,31 @@ function myTimer() {
     	clear();
     }
     else{
+    	/* setting the page */
     	document.getElementById("currexercise").innerHTML = exercises[index][0];
 	    document.getElementById("currtime").innerHTML = val;
+
+	    //setting new exercises
+	    var next ="";
+	    for(var i = index + 1; i < exercises.length; i++)
+	    {
+	    	if(i == index+1)
+	    	{
+	    		next += "Up Next: <br>";
+	    	}
+	    	next += "\t" + exercises[i][0] + "<br>";
+	    }
+	    if(next == "")
+	    {
+	  		document.getElementById("upnext").innerHTML = "Final Exercise!";
+	  	}
+	  	else
+	  	{
+	  		document.getElementById("upnext").innerHTML = next;
+	  	}
+
+
+	    /* updating time */
 	    val -= increment;
 	    animate();
 	}
