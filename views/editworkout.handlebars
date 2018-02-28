@@ -10,7 +10,7 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
     <link href="/css/bootstrap.css" rel="stylesheet">
-	<link href="/css/index.css" rel="stylesheet">
+	<link href="/css/editworkout.css" rel="stylesheet">
 
 
 
@@ -44,18 +44,18 @@
 
 <h3>{{workout.name}}</h3>
 
-	    <input class="form-control input-lg" id="inputlg" placeholder="{{name}}" name="name" type="text">
-  <large> <!--10 min. --></large></br></br>
+	<input class="form-control input-lg" id="inputlg" placeholder="{{name}}" name="name" type="text">
+  	<large> <!--10 min. --></large></br></br>
 	<h3>Exercises
-		<button type="button" class="btn btn-lg" id="addbtn" aria-label="Left Align">
-	  		<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-		</button>
+		<form action="/editworkout" id="addingExercise" value="{{@index}}" method="POST">
+			<button type="submit" class="btn btn-lg" id="addbtn" aria-label="Left Align">
+		  		<span class="glyphicon glyphicon-plus"  aria-hidden="true"></span>
+			</button>
+		</form>
 		<button type="button" class="btn btn-lg" id="addbtn" aria-label="Left Align">
 	  		<span class="glyphicon glyphicon-check" aria-hidden="true"></span>
 		</button>
 	</h3>
-    
-
 
     {{#each workout.exercises}}
     <div class="exercise">
@@ -72,19 +72,22 @@
 					 </button>
 				</div>
 				<div class="row">
-				    <div class="col-4 time-text-box">
+				    <div class="col-1 time-text-box">
+				    	<h4> Minutes: </h4>
 				    	<div class="form-group time-text-box">
-		  					<input type="text" name="time" class="form-control-lg time-unit" placeholder="{{this.time}}" >
+		  					<input type="text" name="time" class="form-control-lg time-unit" placeholder="{{this.min}}" >
 						</div>
 					</div>
+					<div class="w-100"></div>
 				    <div class="col-1">
-				    	<div name="unit">
-					    	<input type="radio" value="min" checked> min<br>
-							<input type="radio" value="sec"> sec<br>
+				    	<h4> Seconds: </h4>
+				    	<div class="form-group time-text-box">
+		  					<input type="text" name="time" class="form-control-lg time-unit" placeholder="{{this.sec}}" >
 						</div>
 					</div>
-					<div class="divider"/></div>
+  					<div class="w-100"></div>
 				    <div class="col-1">
+				    	<h4>Sound:</h4>
 						<div class="dropdown">
 						  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						    {{this.sound}}
@@ -155,14 +158,15 @@
 
 	<script href="./routes/addworkout.js" type="text/javascript"></script> 
 	<script>
-	document.getElementById("addbtn").onclick = function(){
-			location.href = "addworkout"
-			var length = Object.keys(window.data.workout.exercises).length;
-			var exname = "Exercise Name";
-			var time = "Time"			
-			var sound = "Sound"
-			window.data.workout.exercises[length] = {exname, time, unit, sound};
-	};	</script>
+	// document.getElementById("addbtn").onclick = function(){
+	// 		location.href = "addworkout"
+	// 		var length = Object.keys(window.data.workout.exercises).length;
+	// 		var exname = "Exercise Name";
+	// 		var time = "Time"			
+	// 		var sound = "Sound"
+	// 		window.data.workout.exercises[length] = {exname, time, unit, sound};
+	// };	
+	 </script>
 
 	<script>
 	</script>

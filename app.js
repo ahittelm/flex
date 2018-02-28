@@ -55,7 +55,8 @@ app.get('/library', library.view);
 app.get('/stats', stats.view);
 app.get('/timer', timer.view);
 app.get('/add', add.addFriend);
-app.get('/custom', custom.view);
+//app.get('/custom', custom.view);
+app.get('/custom/:id', custom.view);
 app.get('/editworkout/:id', editworkout.view);
 // app.get('/custom/:id', custom.view);
 
@@ -67,7 +68,17 @@ app.post('/library', function(req, res){
 	})
 });
 
-// app.post('/addworkout', addworkout.add_new_workout);
+app.post('/editworkout', editworkout.add_new_exercise);
+// app.post('/editworkout/4', function(req, res){
+
+// 	console.log(req);	
+// 	console.log(req.params);	
+// 	console.log(req.params.id);	
+// 	jsonfile.writeFile('./exercises.json', data, function(err){
+// 		console.error(err);
+// 	})
+// });
+
 
 // Example route
 // app.get('/users', user.list);

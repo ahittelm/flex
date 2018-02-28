@@ -6,20 +6,20 @@
             "exercises":[  
                 {  
                     "exname":"Squats",
-                    "time":3,
-                    "unit":"min",
+                    "min":3,
+                    "sec":30,
                     "sound":"Blaster"
                 },
                 {  
                     "exname":"Lunges",
-                    "time":5,
-                    "unit":"min",
+                    "min":4,
+                    "sec":30,
                     "sound":"Whistle"
                 },
                 {  
                     "exname":"Jumping Jacks",
-                    "time":45,
-                    "unit":"sec",
+                    "min":5,
+                    "sec":30,
                     "sound":"Squeaks"
                 }
             ]
@@ -30,20 +30,20 @@
             "exercises":[  
                 {  
                     "exname":"Squats",
-                    "time":1,
-                    "unit":"min",
+                    "min":3,
+                    "sec":30,
                     "sound":"Whistle"
                 },
                 {  
                     "exname":"Lunges",
-                    "time":45,
-                    "unit":"sec",
+                    "min":3,
+                    "sec":30,
                     "sound":"Squeaks"
                 },
                 {  
                     "exname":"Burpees",
-                    "time":2,
-                    "unit":"min",
+                    "min":3,
+                    "sec":30,
                     "sound":"Blaster"
                 }
             ]

@@ -8,18 +8,11 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
-    <link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/index.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/editworkout.css" rel="stylesheet">
 
 
-	<!-- this is a comment in HTML -->
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->   
 	<nav class="navbar navbar-toggleable-md navbar-light" id="navigation">
 	  	<div class="container-fluid">
 	  		  <a id="title">flex</a>
@@ -32,12 +25,12 @@
 			        <a class="nav-link" href="../library"><font color="#651fff">Library</font><span class="sr-only">(current)</span></a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="stats">Stats</a>
+			        <a class="nav-link" href="../stats">Stats</a>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="Timer">Timer</a>
+			        <a class="nav-link" href="../Timer">Timer</a>
 			      </li>
-			   <!--    <li class="nav-item">
+			<!--       <li class="nav-item">
 			        <a class="nav-link" href="settings">Settings</a>
 			      </li> -->
 			    </ul>
@@ -64,12 +57,12 @@ function cancel() {
 }
 </script>
   
- <form action="/custom">
+<!--  <form action="/custom">
 {{#each workout.exercises}}
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
 	addExercise({{exname}}, {{time}}, {{unit}}, {{sound}})</script>
 {{/each}}
-</form> 
+</form>  -->
 
 <p id="demo"></p>
 
@@ -87,6 +80,7 @@ function cancel() {
 
 <!--START OF SCRIPT-->
 <script>
+window.onload = initialize();
 
 //audios
 var audio = document.getElementById("audio"); 
@@ -112,14 +106,55 @@ function playAudio() {
 // }
 
 // TIMERS
-var orig = 5;
+var index = -1;
+//console.log({{workout.exercises.0.min}});
+var orig = 0;//{{workout.exercises.[index].min}};
 var val = orig;
 var increment = 1;
 var lowbounds = -1;
-var myVar = setInterval(myTimer, 1000);
+var myVar;
+var exercises;
 
+
+function initialize(){
+	// var totalMin=0;
+	// var totalSec=0;
+	var exercises2 =[];
+	// {{#each workout.exercises}}
+	// 	totalMin+= {{this.min}};
+	// 	totalSec+={{this.sec}};	
+	// {{/each}}
+	// totalMin += Math.trunc(totalSec/60);
+	// totalSec = totalSec % 60;
+	// orig = totalMin * 60 + totalSec;
+	// val = orig;
+	// myVar = setInterval(myTimer, 1000);
+	{{#each workout.exercises}}
+		var arr = [];
+		arr.push("{{this.exname}}");
+		arr.push({{this.min}});
+		arr.push({{this.sec}});
+		arr.push("{{this.sound}}");
+		exercises2.push(arr);
+	{{/each}}
+
+	exercises = exercises2;
+	myVar =  setInterval(myTimer, 1000)
+}
 
 function myTimer() {
+	if(val == 0)
+	{
+		++index;
+		if(index >= exercises.length)
+		{}
+		else{
+			val = exercises[index][1];
+			orig = val;
+		}
+
+	}
+
 	if(val <= lowbounds)
     {
     	clear();

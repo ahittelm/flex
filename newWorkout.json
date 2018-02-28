@@ -4,8 +4,8 @@
     "exercises":[  
     {  
         "exname":"Exercise name",
-        "time":1,
-        "unit":"sec",
+        "min":0,
+        "sec":0,
         "sound":"Whistle"
     }
     ]
