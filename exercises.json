@@ -3,6 +3,8 @@
         {  
             "name":"Friday",
             "repetitions":2,
+            "totalmin": 0,
+            "totalsec": 18,
             "exercises":[  
                 {  
                     "exname":"Squats",
@@ -27,6 +29,8 @@
         {  
             "name":"Legs",
             "repetitions":3,
+            "totalmin": 10,
+            "totalsec": 30,
             "exercises":[  
                 {  
                     "exname":"Squats",
@@ -45,6 +49,20 @@
                     "min":3,
                     "sec":30,
                     "sound":"Blaster"
+                }
+            ]
+        },
+        {  
+            "name":"Name",
+            "repetitions":1,
+            "totalmin": 0,
+            "totalsec": 0,
+            "exercises":[  
+                {  
+                    "exname":"Exercise name",
+                    "min":0,
+                    "sec":0,
+                    "sound":"Whistle"
                 }
             ]
         }

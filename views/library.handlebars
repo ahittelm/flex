@@ -77,7 +77,7 @@
 			</button>	
 		</a>
 		{{#each this.exercises}}
-		<p class="exercise"> {{exname}} ({{this.time}} {{this.unit}}) </p>
+		<p class="exercise"> {{exname}} </p>
 		{{/each}}
 	  </li>
 	  </ul>
@@ -93,7 +93,7 @@
 <script type="text/javascript">
 	function addWorkout(val) {
 		document.getElementById("libraryForm").submit();
-		//window.location.reload()
+//		location.href = "/editworkout/".concat(val);
 	}
 	function startWorkout() {
 		location.href = "custom"

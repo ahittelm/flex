@@ -53,7 +53,7 @@ p {
 <body>
 <script>
 function cancel() {
-	location.href = "library"
+	location.href = "../library"
 }
 </script>
   
@@ -69,11 +69,14 @@ function cancel() {
 <div id="outerProgressBar">
 	<div id="innerProgressBar">		  
 </div>
-
-<button type="button" id="timerButtonPause" onclick="pause()" class="btn btn-secondary btn-lg">Pause</button>
-<button type="button" id="timerButtonPlay" onclick="play()" style="display:none" class="btn btn-secondary btn-lg">Play</button>
-<button type="button" id="timerButtonCancel" onclick="cancel()" class="btn btn-secondary btn-lg">Cancel</button>
-
+<div class="custombtns">
+	<button type="button" id="timerButtonPause" onclick="pause()" class="btn btn-secondary btn-lg">Pause</button>
+	<button type="button" id="timerButtonPlay" onclick="play()" style="display:none" class="btn btn-secondary btn-lg">Play</button>
+	<button type="button" id="timerButtonCancel" onclick="cancel()" class="btn btn-secondary btn-lg">Cancel</button>
+</div>
+</br>
+<!-- <small id="currsets"></small>
+ -->
 <p id="upnext"></p>
 
 <audio id="audio">
@@ -91,6 +94,7 @@ var origtt = -1;
 var currtt = origtt;
 var min;
 var sec; 
+var reps;
 var increment = 1;
 var lowbounds = -1;
 var myVar;
@@ -102,15 +106,6 @@ function initialize(){
 	// var totalMin=0;
 	// var totalSec=0;
 	var exercises2 =[];
-	// {{#each workout.exercises}}
-	// 	totalMin+= {{this.min}};
-	// 	totalSec+={{this.sec}};	
-	// {{/each}}
-	// totalMin += Math.trunc(totalSec/60);
-	// totalSec = totalSec % 60;
-	// orig = totalMin * 60 + totalSec;
-	// val = orig;
-	// myVar = setInterval(myTimer, 1000);
 	{{#each workout.exercises}}
 		var arr = [];
 		arr.push("{{this.exname}}");
@@ -120,6 +115,7 @@ function initialize(){
 		exercises2.push(arr);
 	{{/each}}
 
+	reps = {{workout.repetitions}};
 	exercises = exercises2;
 
 	myVar =  setInterval(myTimer, 1000)
@@ -155,7 +151,8 @@ function myTimer() {
 
 
 
-	    document.getElementById("currtime").innerHTML = "<b>" + min + "</b>" + " min " + "<b>" + sec + "</b>" + " s";
+	    document.getElementById("currtime").innerHTML = "<b>" + min + "</b> min " + "<b>" + sec + "</b> s </br>";
+	    // document.getElementById("currsets").innerHTML = "<b>" + reps + "</b> sets left";
 
     	sec--
     	if(sec < 0)
@@ -178,7 +175,13 @@ function myTimer() {
 	    }
 	    if(next == "")
 	    {
-	  		document.getElementById("upnext").innerHTML = "<b>Final Exercise!</b>";
+	    	if(reps-1 == 1)
+	    		document.getElementById("upnext").innerHTML = "<b>" + (reps-1) + "</b> set left!";
+	    	else if(reps-1 > 0)
+	    		document.getElementById("upnext").innerHTML = "<b>" + (reps-1) + "</b> sets left!";	    		
+	  		else
+	  			document.getElementById("upnext").innerHTML = "<b>Final Exercise!</b>";
+
 	  	}
 	  	else
 	  	{
@@ -191,9 +194,24 @@ function myTimer() {
 	    animate();
 	}
 	else{
-		document.getElementById("upnext").innerHTML = "<b>Done!</b>";
-		document.getElementById("timerButtonCancel").style.display = "none";
-		document.getElementById("timerButtonPause").style.display = "none";
+		reps--;
+		if(reps > 0)
+		{
+			console.log(reps);
+
+			currtt = -1;
+			end = false;
+			index= -1;
+			myVar = setInterval(myTimer, 1000);
+		}
+		else{
+			document.getElementById("upnext").innerHTML = "<b>Done!</b>";
+			document.getElementById("timerButtonCancel").style.display = "none";
+			document.getElementById("timerButtonPause").style.display = "none";
+			document.getElementById("currtime").innerHTML = "<b>0</b> min " + "<b>0</b> s";
+			// document.getElementById("currsets").innerHTML = "<b>0</b> sets left";
+
+		}
 	}
 }
 

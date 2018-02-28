@@ -428,7 +428,6 @@ button#dropdownMenuButton2.btn.btn-secondary.dropdown-toggle:hover{
     background-color: #651fff;
     color: #ffffff;
     font-size: 16px;
-    border: 2px solid #f5f5f5;
     float: right;
 }
 
@@ -442,14 +441,6 @@ div.dropdown-menu{
 
 }
 
-a#unitDrop.dropdown-item:hover{
-    background-color: #651fff;
-    color: #ffffff;
-    font-size: 16px;
-    border: 2px solid #f5f5f5;
-    float: right;
-}
-
 a.dropdown-item{
     background-color: #f5f5f5;
     color: #263238;
@@ -459,12 +450,22 @@ a.dropdown-item{
 }
 
 
-a.dropdown-item:hover{
-    background-color: #651fff;
+#sound-item:hover{
+    background-color: #651fff!important;
     color: #ffffff;
     font-size: 16px;
     border: 2px solid #f5f5f5;
     float: right;
+    z-index: 100;
+}
+
+#sound-item:focus{
+    background-color: #651fff!important;
+    color: #ffffff;
+    font-size: 16px;
+    border: 2px solid #f5f5f5;
+    float: right;
+    z-index: 100;
 }
 
 button#save-workout-btn{
@@ -476,6 +477,9 @@ button#save-workout-btn{
     color: #ffffff;
     box-shadow: 0px 2px 4px 0px #00000020;
 
+}
+
+.form-control-lg{
 }
 
 label{

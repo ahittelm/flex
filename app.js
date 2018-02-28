@@ -68,7 +68,15 @@ app.post('/library', function(req, res){
 	})
 });
 
-app.post('/editworkout', editworkout.add_new_exercise);
+app.post('/editworkout', function(req, res){
+	console.log(req.params.id);
+	data.workout[req.params.id].push(newExercise);
+	
+	// data.workout.push(newWorkout);
+	// jsonfile.writeFile('./exercises.json', data, function(err){
+	// 	console.error(err);
+	// })
+});
 // app.post('/editworkout/4', function(req, res){
 
 // 	console.log(req);	

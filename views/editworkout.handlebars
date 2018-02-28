@@ -10,8 +10,12 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
     <link href="/css/bootstrap.css" rel="stylesheet">
+
 	<link href="/css/editworkout.css" rel="stylesheet">
 
+	<script type="text/javascript">
+
+	</script>
 
 
 	<nav class="navbar navbar-toggleable-md navbar-light" id="navigation">
@@ -75,14 +79,14 @@
 				    <div class="col-1 time-text-box">
 				    	<h4> Minutes: </h4>
 				    	<div class="form-group time-text-box">
-		  					<input type="text" name="time" class="form-control-lg time-unit" placeholder="{{this.min}}" >
+		  					<input type="text" name="time" class="form-control-lg time-unit" placeholder="{{this.min}}" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
 						</div>
 					</div>
 					<div class="w-100"></div>
 				    <div class="col-1">
 				    	<h4> Seconds: </h4>
 				    	<div class="form-group time-text-box">
-		  					<input type="text" name="time" class="form-control-lg time-unit" placeholder="{{this.sec}}" >
+		  					<input type="text" name="time" class="form-control-lg time-unit" placeholder="{{this.sec}}" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
 						</div>
 					</div>
   					<div class="w-100"></div>
@@ -92,10 +96,7 @@
 						  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						    {{this.sound}}
 						  </button>
-						  <div class="dropdown-menu" name="sound" aria-labelledby="dropdownMenuButton">
-						    <a class="dropdown-item" href="#">Bell</a>
-						    <a class="dropdown-item" href="#">Horn</a>
-						    <a class="dropdown-item" href="#">Flute</a>
+						  <div class="dropdown-menu" id="dropdownmenu" name="sound" aria-labelledby="dropdownMenuButton">
 						  </div>
 						</div>
 					</div>
@@ -109,50 +110,30 @@
 	</div>
 	{{/each}}
 
-	</br>
-	<h3>Repetitions</h3>
-
-	<div class="dropdown">
-	  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	    1
-	  </button>
-	  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-	  	{{#each time}}
-	    <a class="dropdown-item" href="#">{{@key}} {{this}}</a>
-	    {{/each}}
-	  </div>
+<h3>Repetitions</h3>
+	<div class="form-group time-text-box">
+			<input type="text" name="repetitions" class="form-control-lg time-unit" placeholder="{{this.repetitions}}" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
 	</div>
 
+</br>
+</br>
+</br>
+</br>
+</br>
+<!-- 	  	{{#each time}}
+	    <a class="dropdown-item" href="#">{{@key}} {{this}}</a>
+	    {{/each}} -->
 
-	<script>
-	$( "#dropdownMenuButton1" ).click(function(){
-		var cur = $('#dropdownMenuButton1').text();
-		if(cur == 'min')
-			$('#unitDrop').text('sec');
-		else
-			$('#unitDrop').text('min');
-	});
-	</script>
 
-	<script>
-	$( "#unitDrop" ).click(function(){
-		$('#dropdownMenuButton1').text($('#unitDrop').text());
-	});
-	</script>
 
-	<script>
-	$( "#unitDrop" ).click(function(){
-		var cur = $('#unitDrop').text();
-		$('#dropdownMenuButton1').text(cur);
-	});
-	</script>
+	<script type="text/javascript">
 
-	<script>
-	$( "#dropdownMenuButton2" ).click(function(){
-		var cur = $('#unitDrop').text();
-		if(cur == 'sec')
-			$('#sec').text('sec');
+	$("sound-item").click(function(){
+		console.log("HI");
+		// var elem = document.getElementById("dropdownMenuButton2");
+		// elem.text = this.text;
 	});
+
 	</script>
 
 
@@ -169,7 +150,28 @@
 	 </script>
 
 	<script>
-	</script>
+	var sounds = ["Squeaks", "Whistle", "Blaster"];
+
+	for(var i = 0; i < sounds.length; i++)
+	{
+		var elem = document.createElement("a");
+		elem.href="javascript:;";
+		elem.text=sounds[i];
+		elem.setAttribute("class", "dropdown-item");
+		elem.setAttribute("id", "sound-item");
+		var dropdown = document.getElementById("dropdownmenu");
+		dropdown.appendChild(elem);
+
+		if(i != sounds.length-1)
+		{
+			var elem2 = document.createElement("div");
+			elem2.setAttribute("class", "dropdown-divider");
+			dropdown.appendChild(elem2);
+		}
+
+	}
+
+</script>
 
 </body>
 
