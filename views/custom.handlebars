@@ -9,7 +9,7 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
     <link href="/css/bootstrap.css" rel="stylesheet">
-	<link href="/css/editworkout.css" rel="stylesheet">
+	<link href="/css/index.css" rel="stylesheet">
 
 
 
@@ -63,8 +63,8 @@ function cancel() {
 	addExercise({{exname}}, {{time}}, {{unit}}, {{sound}})</script>
 {{/each}}
 </form>  -->
-
-<p id="demo"></p>
+<p id="currexercise"><p>
+<p id="currtime"></p>
 
 <div id="outerProgressBar">
 	<div id="innerProgressBar">		  
@@ -73,6 +73,8 @@ function cancel() {
 <button type="button" id="timerButtonPause" onclick="pause()" class="btn btn-secondary btn-lg">Pause</button>
 <button type="button" id="timerButtonPlay" onclick="play()" style="display:none" class="btn btn-secondary btn-lg">Play</button>
 <button type="button" id="timerButtonCancel" onclick="cancel()" class="btn btn-secondary btn-lg">Cancel</button>
+
+<p id="upnext"></p>
 
 <audio id="audio">
 	<source src="../audio/Whistle.mp3" type="audio/mpeg">
@@ -160,7 +162,8 @@ function myTimer() {
     	clear();
     }
     else{
-	    document.getElementById("demo").innerHTML = val;
+    	document.getElementById("currexercise").innerHTML = exercises[index][0];
+	    document.getElementById("currtime").innerHTML = val;
 	    val -= increment;
 	    animate();
 	}
