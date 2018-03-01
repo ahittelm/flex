@@ -7,7 +7,7 @@
         {
           "exname": "Squatsdafd",
           "min": "333",
-          "sec": "30",
+          "sec": "3033",
           "sound": "Whistle"
         },
         {
@@ -18,12 +18,12 @@
         },
         {
           "exname": "Burpees",
-          "min": "3",
+          "min": "33",
           "sec": "30",
           "sound": "Blaster"
         }
       ],
-      "totalmin": "0333335050.5",
+      "totalmin": "0333333505550.5",
       "totalsec": "30"
     },
     {
@@ -67,7 +67,7 @@
       ]
     }
   ],
-  "sounds":[
+  "sounds": [
     "Whistle",
     "Blaster",
     "Squeak"
