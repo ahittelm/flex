@@ -65,19 +65,48 @@ app.get('/editworkout/:id', editworkout.view);
 app.post('/library', function(req, res){
 	data.workout.push(newWorkout);
 	jsonfile.writeFile('./exercises.json', data, function(err){
-		console.error(err);
+		if(err)
+			console.error(err);
+		res.redirect("/library");
 	})
 });
 
-app.post('/editworkout', function(req, res){
+app.post('/editworkout/:id', function(req, res){
 	console.log(req.params.id);
-	data.workout[req.params.id].push(newExercise);
-	
-	// data.workout.push(newWorkout);
-	// jsonfile.writeFile('./exercises.json', data, function(err){
-	// 	console.error(err);
-	// })
+	data.workout[req.params.id].exercises.push(newExercise);
+
+	jsonfile.writeFile('./exercises.json', data, function(err){
+		if(err)
+			console.error(err);
+		res.redirect("/editworkout/" + req.params.id);
+	})
 });
+
+app.post('/editworkout/:id/:exercise/delete', function(req, res){
+	console.log(req.params.id);
+	data.workout[req.params.id].exercises.splice(req.params.exercise,1);
+
+	jsonfile.writeFile('./exercises.json', data, function(err){
+		if(err)
+			console.error(err);
+		res.redirect("/editworkout/" + req.params.id);
+	})
+});
+
+app.post('/editworkout/:id/save', function(req, res){
+	data.workout[req.params.id] = req.body.workout;
+	console.log(req.body.workout);
+
+	jsonfile.writeFile('./exercises.json', data, function(err){
+		if(err)
+			console.error(err);
+		res.redirect("/library");
+	})
+
+});
+
+
+
 // app.post('/editworkout/4', function(req, res){
 
 // 	console.log(req);	

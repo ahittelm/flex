@@ -1,14 +1,5 @@
 <html>
 <head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114946810-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-114946810-1');
-</script>
 	<title>Timer</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,6 +53,7 @@ function cancel() {
 	<button type="button" id="timerButtonPause" onclick="pause()" class="btn btn-secondary btn-lg">Pause</button>
 	<button type="button" id="timerButtonPlay" onclick="play()" style="display:none" class="btn btn-secondary btn-lg">Play</button>
 	<button type="button" id="timerButtonCancel" onclick="cancel()" class="btn btn-secondary btn-lg">Cancel</button>
+	<button type="button" id="timerButtonStartOver" onclick="startover()" class="btn btn-secondary btn-lg">Start Over</button>
 </div>
 </br>
 <!-- <small id="currsets"></small>
@@ -197,6 +189,7 @@ function myTimer() {
 			document.getElementById("upnext").innerHTML = "<b>Done!</b>";
 			document.getElementById("timerButtonCancel").style.display = "none";
 			document.getElementById("timerButtonPause").style.display = "none";
+			document.getElementById("timerButtonStartOver").style.display = "block";
 			document.getElementById("currtime").innerHTML = "<b>0</b> min " + "<b>0</b> s";
 			// document.getElementById("currsets").innerHTML = "<b>0</b> sets left";
 
@@ -214,6 +207,10 @@ function play(){
 	myVar = setInterval(myTimer, 1000);
 	$("#timerButtonPlay").hide();
 	$("#timerButtonPause").show();	 
+}
+
+function startover(){
+	initialize(); 
 }
 
 //ANIMATION

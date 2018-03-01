@@ -7,9 +7,9 @@ exports.view = function(req, res){
   res.render('index', login);
 };
 
-customAlt.view = function(req, res){
-  res.render('index', login);
-};
+// customAlt.view = function(req, res){
+//   res.render('index', login);
+// };
 
 
 function submitClicked() {
