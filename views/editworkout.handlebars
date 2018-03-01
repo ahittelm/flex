@@ -134,7 +134,9 @@
 		{
 			var currex = {};
 			currex.exname = $("#exname-" + i).val();
-			currex.min = $("#min-" + i).val();
+			var min = $("#min-" + i).val();
+			var sec = 
+			currex.min 
 			min += $("#min-"+i).val();
 			currex.sec = $("#sec-" + i).val();
 			sec += $("#sec-"+i).val();
@@ -143,7 +145,7 @@
 			workout.exercises.push(currex);
 		}
 
-		min+= sec/60;
+		min+= Math.trunc(sec/60);
 		sec = sec % 60;
 		workout.totalmin = min;
 		workout.totalsec = sec;

@@ -2,29 +2,35 @@
   "workout": [
     {
       "name": "Friyayy",
-      "repetitions": "11",
+      "repetitions": "2",
       "exercises": [
         {
-          "exname": "Squatsdafd",
-          "min": "333",
-          "sec": "3033",
+          "exname": "Squats",
+          "min": "0",
+          "sec": "3",
           "sound": "Whistle"
         },
         {
           "exname": "Lunges",
-          "min": "3",
-          "sec": "30",
+          "min": "0",
+          "sec": "70",
           "sound": "Squeak"
         },
         {
           "exname": "Burpees",
-          "min": "33",
-          "sec": "30",
+          "min": "0",
+          "sec": "2",
           "sound": "Blaster"
+        },
+        {
+          "exname": "Exercise Name",
+          "min": "",
+          "sec": "",
+          "sound": "Whistle"
         }
       ],
-      "totalmin": "0333333505550.5",
-      "totalsec": "30"
+      "totalmin": "000061",
+      "totalsec": "42"
     },
     {
       "name": "Legs",
@@ -51,6 +57,20 @@
       ],
       "totalmin": "03335050.5",
       "totalsec": "30"
+    },
+    {
+      "name": "Name",
+      "repetitions": 1,
+      "totalmin": 0,
+      "totalsec": 0,
+      "exercises": [
+        {
+          "exname": "Exercise name",
+          "min": 0,
+          "sec": 0,
+          "sound": "Whistle"
+        }
+      ]
     },
     {
       "name": "Name",
