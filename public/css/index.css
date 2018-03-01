@@ -125,13 +125,6 @@ a{
     font-size: 50px;
 }
 
-#navText{
-     color: #3F4A4F
-     display:inline-block;
-     text-align: center;
-     font-size: 50px;
-     margin-right: 35px;
-}
 
 #currtime{
     background-color: #ffffff;
@@ -569,3 +562,13 @@ button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle{
 }
 
 .show {display:block;}
+
+.editingButtons{
+    display: inline-block!important;
+    float:left;
+    z: 100;
+    overflow:hidden;
+}
+.editingButtonsDiv{
+    overflow:hidden;
+}
