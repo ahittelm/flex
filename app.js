@@ -57,7 +57,7 @@ app.get('/timer', timer.view);
 app.get('/add', add.addFriend);
 //app.get('/custom', custom.view);
 app.get('/custom/:id', custom.view);
-app.get('/custom/:id', custom.viewAlt);
+app.get('/customAlt/:id', custom.viewAlt);
 app.get('/editworkout/:id', editworkout.view);
 // app.get('/custom/:id', custom.view);
 
