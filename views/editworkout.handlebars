@@ -30,7 +30,7 @@
 	<div class="editingButtonsDiv">Exercises
 		<div class="editingButtons">
 			<!-- <form action="/editworkout/{{id}}" id="addingExercise" method="POST"> -->
-			<form  id="addExercise" >
+			<form id="addExercise">
 				<button class="btn btn-lg" id="addbtn" aria-label="Left Align">
 			  		<span class="glyphicon glyphicon-plus"  aria-hidden="true"></span>
 				</button>
@@ -177,11 +177,10 @@
 		$.post(window.location.pathname + "/save", {workout:workout}, function(){
 				window.location = '/library';
 		});
-
 	});
 
+
 	$("#addExercise").submit(function(e){
-		console.log("HELLO");
 		e.preventDefault();
 		var workout = {};
 		workout.name = $("#workout-name").val();
@@ -209,13 +208,9 @@
 		workout.totalmin = min;
 		workout.totalsec = sec;
 
-		$.post(window.location.pathname + "/save", {workout:workout}, function(){
-				
-		});
-
 		$.post(window.location.pathname, {workout:workout}, function(){
-		});
-	
+				window.location = '/editworkout/{{id}}';				
+		});	
 	});		
 	
 

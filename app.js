@@ -73,7 +73,7 @@ app.post('/library', function(req, res){
 });
 
 app.post('/editworkout/:id', function(req, res){
-	console.log(req.params.id);
+	data.workout[req.params.id] = req.body.workout;
 	data.workout[req.params.id].exercises.push(newExercise);
 
 	jsonfile.writeFile('./exercises.json', data, function(err){
