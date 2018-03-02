@@ -107,10 +107,24 @@ function initialize(){
 		exercises2.push(arr);
 	{{/each}}
 
-	reps = {{workout.repetitions}};
-	exercises = exercises2;
+	if(exercises2.length == 0)
+	{
+		$("#currtime").hide();
+		$("#upnext").hide();
+		$("#currexercise").text("There are no exercises here!");
 
-	myVar =  setInterval(myTimer, 1000)
+		$("#timerButtonPause").hide();
+		$("#timerButtonStartOver").hide();
+		$("#timerButtonPlay").hide();
+		$("#timerButtonCancel").text("Exit");
+	}
+	else
+	{
+		reps = {{this.workout.repetitions}};
+		exercises = exercises2;
+
+		myVar =  setInterval(myTimer, 1000);
+	}
 }
 
 function myTimer() {

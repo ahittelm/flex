@@ -1,6 +1,6 @@
 {  
-    "exname":"Exercise Name",
-    "time":1,
-    "unit":"sec",
-    "sound":"Whistle"
+  "exname": "Exercise Name",
+  "min": "0",
+  "sec": "0",
+  "sound": "Blaster"
 }

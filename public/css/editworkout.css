@@ -456,6 +456,18 @@ button#addbtn.btn.btn-lg{
     box-shadow: 0px 2px 4px 0px #00000020;
 }
 
+button#savebtn.btn.btn-lg{
+    background-color: #651fff;
+    color: #ffffff;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    box-shadow: 0px 2px 4px 0px #00000020;
+}
 a.dropdown-item{
     background-color: #f5f5f5;
     color: #263238;

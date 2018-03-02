@@ -2,13 +2,5 @@
     "name":"Name",
     "repetitions":1,
     "totalmin": 0,
-    "totalsec": 0,
-    "exercises":[  
-    {  
-        "exname":"Exercise name",
-        "min":0,
-        "sec":0,
-        "sound":"Whistle"
-    }
-    ]
+    "totalsec": 0
 }

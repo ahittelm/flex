@@ -26,15 +26,16 @@
   	<large> <!--10 min. --></large></br></br>
 	<div class="editingButtonsDiv">Exercises
 		<div class="editingButtons">
-			<form action="/editworkout/{{id}}" id="addingExercise" method="POST">
-				<button type="submit" class="btn btn-lg" id="addbtn" aria-label="Left Align">
+			<!-- <form action="/editworkout/{{id}}" id="addingExercise" method="POST"> -->
+			<form  id="addExercise" >
+				<button class="btn btn-lg" id="addbtn" aria-label="Left Align">
 			  		<span class="glyphicon glyphicon-plus"  aria-hidden="true"></span>
 				</button>
 			</form>
 		</div>
 		<div class="editingButtons">
 			<form  id="saveExercise" >
-				<button class="btn btn-lg" id="addbtn" aria-label="Left Align">
+				<button class="btn btn-lg" id="savebtn" aria-label="Left Align">
 			  		<span class="glyphicon glyphicon-check" aria-hidden="true"></span>
 				</button>
 			</form>
@@ -115,6 +116,8 @@
 </br>
 
 <script type="text/javascript">
+	var save = true;
+
 	function updateSound(index, param)
 	{
      	$(".sound-"+index).text(param.innerText);
@@ -126,7 +129,16 @@
 		// elem.text = this.text;
 	});
 
+	$("#addbtn").click(function(){
+		save = false;
+	});
+
+	$("#savebtn").click(function(){
+		save = true;
+	});
+
 	$("#saveExercise").submit(function(e){
+		console.log("HELLO");
 		e.preventDefault();
 		var workout = {};
 		workout.name = $("#workout-name").val();
@@ -140,8 +152,8 @@
 			currex.exname = $("#exname-" + i).val();
 			var currmin = $("#min-" + i).val();
 			var currsec = $("#sec-" + i).val();
-			currex.min = currmin + Math.trunc(currsec/60);
-			currex.sec = currsec % 60;
+			currex.min = +currmin + +Math.trunc(currsec/60);
+			currex.sec = +currsec % 60;
 			min += $("#min-"+i).val();
 			sec += $("#sec-"+i).val();
 			currex.sound = $(".sound-" + i).text();
@@ -155,9 +167,51 @@
 		workout.totalsec = sec;
 
 		$.post(window.location.pathname + "/save", {workout:workout}, function(){
-			window.location = '/library';
+				window.location = '/library';
 		});
+
 	});
+
+	$("#addExercise").submit(function(e){
+		console.log("HELLO");
+		e.preventDefault();
+		var workout = {};
+		workout.name = $("#workout-name").val();
+		workout.repetitions = $("#reps").val();
+		var min = 0;
+		var sec = 0;
+		workout.exercises = [];
+		for(var i = 0; i < $(".exercise").length; i++)
+		{
+			var currex = {};
+			currex.exname = $("#exname-" + i).val();
+			var currmin = $("#min-" + i).val();
+			var currsec = $("#sec-" + i).val();
+			currex.min = +currmin + +Math.trunc(currsec/60);
+			currex.sec = +currsec % 60;
+			min += $("#min-"+i).val();
+			sec += $("#sec-"+i).val();
+			currex.sound = $(".sound-" + i).text();
+
+			workout.exercises.push(currex);
+		}
+
+		min+= Math.trunc(sec/60);
+		sec = sec % 60;
+		workout.totalmin = min;
+		workout.totalsec = sec;
+
+		$.post(window.location.pathname + "/save", {workout:workout}, function(){
+				
+		});
+
+
+		$.post(window.location.pathname, {workout:workout}, function(){
+				
+		});
+	
+	});		
+	
 
 </script>
 
