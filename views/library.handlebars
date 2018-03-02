@@ -41,7 +41,10 @@
 <body>
 	<h3>Workout
 			<button type="button" class="btn btn-lg" id="addbtn" aria-label="Left Align">
-	  		<span class="glyphicon glyphicon-plus" onclick="addWorkout({{workout.length}})" aria-hidden="true"></span></button></h3>
+	  			<span class="glyphicon glyphicon-plus" onclick="addWorkout({{workout.length}})" aria-hidden="true"></span>
+	  		</button>
+	</h3>
+</form>
 
 	{{#each workout}}
 	<div class="exercise">
@@ -56,6 +59,14 @@
 			<button type="button" class="edit-btn" id="editbtn" aria-label="Left Align">
 		  		<p>Edit</p>
 			</button>	
+		</a>
+	</br>
+		<a href="/library">
+			<form action="/library/{{@index}}/delete" id="deletingWorkout" method="POST">
+				 <button type="submit" class="col-1 close deletebtn" aria-label="Close">
+				  	<span aria-hidden="true">&times;</span>
+				 </button>
+			</form>
 		</a>
 		{{#each this.exercises}}
 		<p class="exercise"> {{exname}} </p>
@@ -86,5 +97,5 @@
 		location.href = "library"
 	}
 </script>
-</form>
-</html>
+<!-- </form>
+ --></html>

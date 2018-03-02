@@ -72,9 +72,24 @@ app.post('/library', function(req, res){
 	})
 });
 
+
+app.post('/library/:id/delete', function(req, res){
+	console.log("ONO" + req.params.id);
+	if(req.params.id == 0)
+		data.workout.shift();
+	else
+		data.workout.splice(req.params.id,1);
+
+	jsonfile.writeFile('./exercises.json', data, function(err){
+		if(err)
+			console.error(err);
+		res.redirect("library");
+	})
+});
+
+
 app.post('/editworkout/:id', function(req, res){
 	data.workout[req.params.id] = req.body.workout;
-	data.workout[req.params.id].exercises.push(newExercise);
 
 	jsonfile.writeFile('./exercises.json', data, function(err){
 		if(err)

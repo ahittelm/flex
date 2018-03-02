@@ -50,10 +50,9 @@
 		<div class="container">
 			<div class="container-fluid" id="individual-exercise">
 				<div class="row">
-				     <div class="col-11 form-group name-text-box">
+				    <div class="col-11 form-group name-text-box">
 		  				<input type="text" name="exname" id="exname-{{@index}}" class="form-control-lg name-text-box" value="{{this.exname}}"> 
-		  					<!-- <input type="text" name="nancy{{@index}}" class="form-control-lg name-text-box" placeholder=" {{this.exname}}">  -->
-					 </div>
+					</div>
 					<form action="/editworkout/{{../id}}/{{@index}}/delete" id="deletingExercise" method="POST">
 						 <button type="submit" class="col-1 close deletebtn" aria-label="Close">
 						  	<span aria-hidden="true">&times;</span>
@@ -202,6 +201,15 @@
 
 			workout.exercises.push(currex);
 		}
+			
+		var currex2 = {};
+
+		currex2.exname = "Exercise Name";
+		currex2.min = "0";
+		currex2.sec = "0";
+		currex2.sound = "Blaster";
+
+		workout.exercises.push(currex2);		
 
 		min+= Math.trunc(sec/60);
 		sec = sec % 60;
