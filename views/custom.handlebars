@@ -142,11 +142,21 @@ function myTimer() {
 			clearTimeout(myVar);
 		}
 		else{
-			min = exercises[index][1];
-			sec = exercises[index][2];
-			currtt = min * 60 + sec;
-			origtt = currtt;
-			animate();
+			if(+min + +sec == 0)
+			{
+				index++;
+				myTimer();
+			}
+			else
+			{
+				min = exercises[index][1];
+				sec = exercises[index][2];
+				currtt = min * 60 + sec;
+				origtt = currtt;
+				animate();
+			}
+
+
 		}
 
 	}

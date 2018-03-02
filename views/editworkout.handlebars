@@ -23,6 +23,9 @@
 
 <body>
 	<h3>Workout Name:<h3> <input class="form-control input-lg" id="workout-name" value="{{workout.name}}" name="name" type="text">
+	
+	<button class="btn btn-lg" id="cancelbtn" onclick="gotolibrary()" aria-label="Left Align">Cancel</button>
+
   	<large> <!--10 min. --></large></br></br>
 	<div class="editingButtonsDiv">Exercises
 		<div class="editingButtons">
@@ -123,6 +126,11 @@
      	$(".sound-"+index).text(param.innerText);
 	}
 
+	function gotolibrary()
+	{
+		location.href = "../library";
+	}
+
 	$("sound-item").click(function(){
 		console.log("HI");
 		// var elem = document.getElementById("dropdownMenuButton2");
@@ -204,7 +212,6 @@
 		$.post(window.location.pathname + "/save", {workout:workout}, function(){
 				
 		});
-
 
 		$.post(window.location.pathname, {workout:workout}, function(){
 				
