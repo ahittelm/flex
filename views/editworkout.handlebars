@@ -183,7 +183,7 @@
 		e.preventDefault();
 		var workout = {};
 		workout.name = $("#workout-name").val();
-		workout.repetitions = $("#reps").val();
+		workout.repetitions = Number($("#reps").val());
 		var min = 0;
 		var sec = 0;
 		workout.exercises = [];
