@@ -51,6 +51,13 @@
 	  <ul class="list-group" id="workoutList">
 	  <li class="list-group-item justify-content-between">
 	  	<p class="workoutname"> {{name}} <small class="durationText"> <!-- 5 min. --></small>
+	  		<a href="/library">
+			<form action="/library/{{@index}}/delete" id="deletingWorkout" method="POST">
+				 <button type="submit" class="col-1 close deletebtn" aria-label="Close">
+				  	<span aria-hidden="true">&times;</span>
+				 </button>
+			</form>
+		</a>
 		<a href="/custom/{{@index}}">
 			<button type="button" class="start-btn" id="start-btn" onclick="startWorkout()" aria-label="Left Align">Start</button>
 		</a>
@@ -61,13 +68,7 @@
 			</button>	
 		</a>
 	</br>
-		<a href="/library">
-			<form action="/library/{{@index}}/delete" id="deletingWorkout" method="POST">
-				 <button type="submit" class="col-1 close deletebtn" aria-label="Close">
-				  	<span aria-hidden="true">&times;</span>
-				 </button>
-			</form>
-		</a>
+	
 		{{#each this.exercises}}
 		<p class="exercise"> {{exname}} </p>
 		{{/each}}
