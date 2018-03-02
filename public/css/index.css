@@ -456,25 +456,7 @@ a#unitDrop.dropdown-item:hover{
     font-size: 16px;
     border: 2px solid #f5f5f5;
     float: right;
-}
-
-a.dropdown-item{
-    background-color: #f5f5f5;
-    color: #263238;
-    font-size: 16px;
-    border: 2px solid #f5f5f5;
-    float: right;
-}
-
-
-a.dropdown-item:hover{
-    background-color: #651fff;
-    color: #ffffff;
-    font-size: 16px;
-    border: 2px solid #f5f5f5;
-    float: right;
 }*/
-
 
 button#save-workout-btn{
     width: 150px;

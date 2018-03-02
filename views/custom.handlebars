@@ -87,6 +87,11 @@ var lowbounds = -1;
 var myVar;
 var exercises;
 var end = false;;
+var data = false;
+
+{{#if data}}
+	data = true;
+{{/if}}
 
 
 function initialize(){
@@ -162,10 +167,10 @@ function myTimer() {
 	    }
 	    if(next == "")
 	    {
-	    	if(reps-1 == 1)
-	    		document.getElementById("upnext").innerHTML = "<b>" + (reps-1) + "</b> set left!";
-	    	else if(reps-1 > 0)
-	    		document.getElementById("upnext").innerHTML = "<b>" + (reps-1) + "</b> sets left!";	    		
+	    	if(reps-1 == 1 && !data)
+	    		document.getElementById("upnext").innerHTML = "<b>" + (reps-1) + " set left!</b> ";
+	    	else if(reps-1 > 0 && !data)
+	    		document.getElementById("upnext").innerHTML = "<b>" + (reps-1) + " sets left!</b>";	    		
 	  		else
 	  			document.getElementById("upnext").innerHTML = "<b>Final Exercise!</b>";
 
@@ -182,11 +187,6 @@ function myTimer() {
 	}
 	else{
 		reps--;
-		var data = false;
-
-		{{#if data}}
-			data = true;
-		{{/if}}
 
 		if(reps > 0 && !data)
 		{

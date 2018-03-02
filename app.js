@@ -59,6 +59,7 @@ app.get('/add', add.addFriend);
 app.get('/custom/:id', custom.view);
 app.get('/customAlt/:id', custom.viewAlt);
 app.get('/editworkout/:id', editworkout.view);
+app.get('/editworkoutAlt/:id', editworkout.viewAlt);
 // app.get('/custom/:id', custom.view);
 
 
@@ -83,7 +84,6 @@ app.post('/editworkout/:id', function(req, res){
 });
 
 app.post('/editworkout/:id/:exercise/delete', function(req, res){
-	console.log(req.params.id);
 	data.workout[req.params.id].exercises.splice(req.params.exercise,1);
 
 	jsonfile.writeFile('./exercises.json', data, function(err){

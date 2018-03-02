@@ -20,3 +20,4 @@ exports.viewAlt = function(request, response){
 };
 
 
+//category restart action click

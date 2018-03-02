@@ -456,16 +456,6 @@ button#addbtn.btn.btn-lg{
     box-shadow: 0px 2px 4px 0px #00000020;
 }
 
-div.dropdown-menu{
-    background-color: #f5f5f5;
-    font-size: 16px;
-    color: #263238;
-    border: 2px solid #f5f5f5;
-    float: right;
-    width: 80px;
-
-}
-
 a.dropdown-item{
     background-color: #f5f5f5;
     color: #263238;
@@ -550,4 +540,40 @@ button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle{
 
 .time-text-box{
     position: relative !important;
+}
+
+#dropdown-content{
+    background-color: #f5f5f5;
+    color: #263238;
+    font-size: 16px;
+    border: 2px solid #f5f5f5;
+    text-align: left!important;
+    z:1000;
+}
+
+.dropdown-item{
+    background-color: #f5f5f5;
+    font-size: 16px;
+    border: 2px solid #f5f5f5;
+    padding-top: 5px;
+    text-align:left!important;
+    padding-bottom: 5px;
+    z:10000;
+}
+
+#listElem
+{
+    cursor:pointer!important;
+}
+
+.dropdown-item:hover{
+    background-color: #651fff;
+    color: #ffffff;
+    font-size: 16px;
+    border: 2px solid #f5f5f5;
+    float: right;
+}
+
+#listElem{
+    padding-top: 2px;
 }

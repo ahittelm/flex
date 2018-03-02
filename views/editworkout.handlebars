@@ -75,11 +75,21 @@
 				    	<h4>Sound:</h4>
 						<div class="dropdown">
 						  <button class="btn btn-secondary dropdown-toggle sound-{{@index}}" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{this.sound}}</button>
-						  <ul class="dropdown-menu" id="dropdownmenu" name="sound" aria-labelledby="dropdownMenuButton2">
-						  {{#each ../sounds}}
-						  	<li class="dropdown-item">{{this}}</li>
-						  {{/each}}
-						  </ul>
+						  	<ul class="dropdown-menu" id="dropdown-content" name="sound" aria-labelledby="dropdownMenuButton2">
+<!-- 						  {{#each ../sounds}}
+						  	<li class="dropdown-item" id="listElem"><button id="soundElem">{{this}}</button></li>
+						  {{/each}} -->
+						  		<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Blaster</button></li>
+								<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Confident</button></li>	
+								<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Definite</button></li>
+								<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Ding Ding</button></li
+						  		<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Glass</button></li>
+								<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Pluck</button></li
+						  		<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Spring</button></li>
+								<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Squeaks</button></li
+						  		<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Unconvinced</button></li>
+								<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Whistle</button></li>
+						  	</ul>
 					</div>
 				    <div class="divider"/></div>
 				    <div class="col-1">
@@ -90,21 +100,25 @@
 		</div>
 	</div>
 	{{/each}}
+{{#if data}}
 <div class="repetition-box">
 <h3>Repetitions</h3>
 	<div class="form-group time-text-box">
 			<input type="text" name="repetitions" id="reps" class="form-control-lg time-unit" value="{{workout.repetitions}}" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
 	</div>
+</div>
+{{/if}}
 </br>
 </br>
 </br>
 </br>
 </br>
-
-
-
 
 <script type="text/javascript">
+	function updateSound(index, param)
+	{
+     	$(".sound-"+index).text(param.innerText);
+	}
 
 	$("sound-item").click(function(){
 		console.log("HI");

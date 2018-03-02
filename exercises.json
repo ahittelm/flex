@@ -1,7 +1,7 @@
 {
   "workout": [
     {
-      "name": "Friyayy",
+      "name": "Friyay",
       "repetitions": "2",
       "exercises": [
         {
@@ -14,7 +14,7 @@
           "exname": "Lunges",
           "min": "0",
           "sec": "2",
-          "sound": "Squeak"
+          "sound": "Squeaks"
         },
         {
           "exname": "Burpees",
@@ -28,25 +28,25 @@
     },
     {
       "name": "Legs",
-      "repetitions": "",
+      "repetitions": "2",
       "exercises": [
         {
-          "exname": "Squatsdafd",
+          "exname": "Squats",
           "min": "3",
           "sec": "30",
-          "sound": ""
+          "sound": "Blaster"
         },
         {
           "exname": "Lunges",
           "min": "3",
           "sec": "30",
-          "sound": ""
+          "sound": "Blaster"
         },
         {
           "exname": "Burpees",
           "min": "3",
           "sec": "30",
-          "sound": ""
+          "sound": "Blaster"
         }
       ],
       "totalmin": "03335050.5",
