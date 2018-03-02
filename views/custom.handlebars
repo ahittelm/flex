@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -46,12 +47,6 @@ function cancel() {
 }
 </script>
   
-<!--  <form action="/custom">
-{{#each workout.exercises}}
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-	addExercise({{exname}}, {{time}}, {{unit}}, {{sound}})</script>
-{{/each}}
-</form>  -->
 <p id="currexercise"><p>
 <p id="currtime"></p>
 
@@ -62,6 +57,9 @@ function cancel() {
 	<button type="button" id="timerButtonPause" onclick="pause()" class="btn btn-secondary btn-lg">Pause</button>
 	<button type="button" id="timerButtonPlay" onclick="play()" style="display:none" class="btn btn-secondary btn-lg">Play</button>
 	<button type="button" id="timerButtonCancel" onclick="cancel()" class="btn btn-secondary btn-lg">Cancel</button>
+	{{#if data}}
+	<button type="button" style="display: none" id="timerButtonStartOver" onclick="startover()" class="btn btn-secondary btn-lg">Restart</button>
+	{{/if}}
 </div>
 </br>
 <!-- <small id="currsets"></small>
@@ -184,10 +182,14 @@ function myTimer() {
 	}
 	else{
 		reps--;
-		if(reps > 0)
-		{
-			console.log(reps);
+		var data = false;
 
+		{{#if data}}
+			data = true;
+		{{/if}}
+
+		if(reps > 0 && !data)
+		{
 			currtt = -1;
 			end = false;
 			index= -1;
@@ -195,14 +197,34 @@ function myTimer() {
 		}
 		else{
 			document.getElementById("upnext").innerHTML = "<b>Done!</b>";
-			document.getElementById("timerButtonCancel").style.display = "none";
 			document.getElementById("timerButtonPause").style.display = "none";
 			document.getElementById("currtime").innerHTML = "<b>0</b> min " + "<b>0</b> s";
 			// document.getElementById("currsets").innerHTML = "<b>0</b> sets left";
 
+
+			if(data)
+			{
+				$("#timerButtonStartOver").show();
+				document.getElementById("timerButtonCancel").style.display = "none";
+
+			}
+			else
+			{
+				$("#timerButtonStartOver").hide();
+				$("#timerButtonCancel").text("Exit");
+			}
+
 		}
 	}
 }
+
+function startover(){
+	currtt = -1;
+	index = -1;
+	myVar = setInterval(myTimer,1000);
+	initialize(); 
+}
+
 
 function pause(){
 	clearTimeout(myVar); 

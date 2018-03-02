@@ -1,18 +1,22 @@
 /*
  * GET home page.
  */
-var data2 = require('../exercises.json');
+var data = require('../exercises.json');
 
 // exports.view = function(req, res){
 //   res.render('custom', data2);
 // };
 
 exports.view = function(req, res){
-  var workout = data2.workout[req.params.id];
-  res.render('custom', {workout: workout});
+  var workout = data.workout[req.params.id];
+  data.viewAlt = false;
+  res.render('custom', {workout: workout, data:data.viewAlt});
 };
 
 exports.viewAlt = function(request, response){
-	custom.viewAlt = true;
-  	response.render('custom', {workout: workout});
+  var workout = data.workout[request.params.id];
+  data.viewAlt = true;
+  response.render('custom', {workout: workout, data:data.viewAlt});
 };
+
+

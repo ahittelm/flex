@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-
 	<title>Workout</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -126,11 +124,11 @@
 		{
 			var currex = {};
 			currex.exname = $("#exname-" + i).val();
-			var min = $("#min-" + i).val();
-			var sec = 
-			currex.min 
+			var currmin = $("#min-" + i).val();
+			var currsec = $("#sec-" + i).val();
+			currex.min = currmin + Math.trunc(currsec/60);
+			currex.sec = currsec % 60;
 			min += $("#min-"+i).val();
-			currex.sec = $("#sec-" + i).val();
 			sec += $("#sec-"+i).val();
 			currex.sound = $(".sound-" + i).text();
 
@@ -155,26 +153,7 @@
  </script>
 
 <script>
-// var sounds = ["Squeaks", "Whistle", "Blaster"];
 
-// for(var i = 0; i < sounds.length; i++)
-// {
-// 	var elem = document.createElement("a");
-// 	elem.href="javascript:;";
-// 	elem.text=sounds[i];
-// 	elem.setAttribute("class", "dropdown-item");
-// 	elem.setAttribute("id", "sound-item");
-// 	var dropdown = document.getElementById("dropdownmenu");
-// 	dropdown.appendChild(elem);
-
-// 	if(i != sounds.length-1)
-// 	{
-// 		var elem2 = document.createElement("div");
-// 		elem2.setAttribute("class", "dropdown-divider");
-// 		dropdown.appendChild(elem2);
-// 	}
-
-// }
 
 </script>
 

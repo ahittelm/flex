@@ -13,7 +13,7 @@
         {
           "exname": "Lunges",
           "min": "0",
-          "sec": "70",
+          "sec": "2",
           "sound": "Squeak"
         },
         {
@@ -21,12 +21,6 @@
           "min": "0",
           "sec": "2",
           "sound": "Blaster"
-        },
-        {
-          "exname": "Exercise Name",
-          "min": "",
-          "sec": "",
-          "sound": "Whistle"
         }
       ],
       "totalmin": "000061",
@@ -57,34 +51,6 @@
       ],
       "totalmin": "03335050.5",
       "totalsec": "30"
-    },
-    {
-      "name": "Name",
-      "repetitions": 1,
-      "totalmin": 0,
-      "totalsec": 0,
-      "exercises": [
-        {
-          "exname": "Exercise name",
-          "min": 0,
-          "sec": 0,
-          "sound": "Whistle"
-        }
-      ]
-    },
-    {
-      "name": "Name",
-      "repetitions": 1,
-      "totalmin": 0,
-      "totalsec": 0,
-      "exercises": [
-        {
-          "exname": "Exercise name",
-          "min": 0,
-          "sec": 0,
-          "sound": "Whistle"
-        }
-      ]
     }
   ],
   "sounds": [
@@ -103,5 +69,6 @@
     "8",
     "9",
     "10"
-  ]
+  ],
+  "viewAlt":true
 }
