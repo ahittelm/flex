@@ -1,6 +1,7 @@
 {  
-    "name":"Name",
-    "repetitions":1,
-    "totalmin": 0,
-    "totalsec": 0
+  "name": "Friyay",
+  "repetitions": "1",
+  "exercises":[],
+  "totalmin": "0",
+  "totalsec": "0"
 }
