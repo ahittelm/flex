@@ -83,6 +83,7 @@ app.post('/editworkout/:id', function(req, res){
 	})
 });
 
+
 app.post('/editworkout/:id/:exercise/delete', function(req, res){
 	data.workout[req.params.id].exercises.splice(req.params.exercise,1);
 
