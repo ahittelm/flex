@@ -2,7 +2,7 @@
   "workout": [
     {
       "name": "Friyay",
-      "repetitions": "2",
+      "repetitions": 2,
       "exercises": [
         {
           "exname": "Squats",
@@ -28,7 +28,7 @@
     },
     {
       "name": "Legs",
-      "repetitions": "2",
+      "repetitions": 2,
       "exercises": [
         {
           "exname": "Squats",
