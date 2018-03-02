@@ -54,12 +54,12 @@ function cancel() {
 	<div id="innerProgressBar">		  
 </div>
 <div class="custombtns">
-	<button type="button" id="timerButtonPause" onclick="pause()" class="btn btn-secondary btn-lg">Pause</button>
-	<button type="button" id="timerButtonPlay" onclick="play()" style="display:none" class="btn btn-secondary btn-lg">Play</button>
-	<button type="button" id="timerButtonCancel" onclick="cancel()" class="btn btn-secondary btn-lg">Cancel</button>
 	{{#if data}}
 	<button type="button" style="display: none" id="timerButtonStartOver" onclick="startover()" class="btn btn-secondary btn-lg">Restart</button>
 	{{/if}}
+	<button type="button" id="timerButtonPause" onclick="pause()" class="btn btn-secondary btn-lg">Pause</button>
+	<button type="button" id="timerButtonPlay" onclick="play()" style="display:none" class="btn btn-secondary btn-lg">Play</button>
+	<button type="button" id="timerButtonCancel" onclick="cancel()" class="btn btn-secondary btn-lg">Cancel</button>
 </div>
 </br>
 <!-- <small id="currsets"></small>
@@ -205,24 +205,18 @@ function myTimer() {
 			if(data)
 			{
 				$("#timerButtonStartOver").show();
-				document.getElementById("timerButtonCancel").style.display = "none";
-
 			}
 			else
 			{
 				$("#timerButtonStartOver").hide();
-				$("#timerButtonCancel").text("Exit");
 			}
-
+			$("#timerButtonCancel").text("Exit");
 		}
 	}
 }
 
 function startover(){
-	currtt = -1;
-	index = -1;
-	myVar = setInterval(myTimer,1000);
-	initialize(); 
+	window.location.reload();
 }
 
 
