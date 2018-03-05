@@ -451,6 +451,7 @@ button#addbtn.btn.btn-lg{
     padding-bottom: 0px;
     margin-top: 5px;
     margin-bottom: 10px;
+    margin-left: 5px;
     font-size: 16px;
     box-shadow: 0px 2px 4px 0px #00000020;
 }
@@ -478,8 +479,10 @@ button#savebtn.btn.btn-lg{
     padding-bottom: 0px;
     margin-top: 5px;
     margin-bottom: 10px;
+    margin-left: 50px;
     font-size: 16px;
     box-shadow: 0px 2px 4px 0px #00000020;
+    float: right;
 }
 a.dropdown-item{
     background-color: #f5f5f5;
@@ -600,3 +603,5 @@ button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle{
 #listElem{
     padding-top: 2px;
 }
+
+

@@ -28,20 +28,26 @@
 
   	<large> <!--10 min. --></large></br></br>
 	<div class="editingButtonsDiv">Exercises
-		<div class="editingButtons">
-			<!-- <form action="/editworkout/{{id}}" id="addingExercise" method="POST"> -->
-			<form id="addExercise">
-				<button class="btn btn-lg" id="addbtn" aria-label="Left Align">
-			  		<span class="glyphicon glyphicon-plus"  aria-hidden="true"></span>
-				</button>
-			</form>
-		</div>
-		<div class="editingButtons">
-			<form  id="saveExercise" >
-				<button class="btn btn-lg" id="savebtn" aria-label="Left Align">
-			  		<span class="glyphicon glyphicon-check" aria-hidden="true"></span>
-				</button>
-			</form>
+		<div class="row">
+			<div class="column">
+				<div class="editingButtons">
+					<!-- <form action="/editworkout/{{id}}" id="addingExercise" method="POST"> -->
+					<form id="addExercise">
+						<button class="btn btn-lg" id="addbtn" aria-label="Left Align">
+					  		<span class="glyphicon glyphicon-plus"  aria-hidden="true"></span>
+						</button>
+					</form>
+				</div>
+			</div>
+			<div class="column">
+				<div class="editingButtons">
+					<form  id="saveExercise" >
+						<button class="btn btn-lg" id="savebtn" aria-label="Left Align">
+					  		<span class="glyphicon glyphicon-check" aria-hidden="true"></span>
+						</button>
+					</form>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -66,14 +72,14 @@
 		  					<input type="text" name="time" id="min-{{@index}}" class="form-control-lg time-unit" value="{{this.min}}" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
 						</div>
 					</div>
-					<div class="w-100"></div>
+					<div class="w-20"></div>
 				    <div class="col-1">
 				    	<h4> Seconds: </h4>
 				    	<div class="form-group time-text-box">
 		  					<input type="text" name="time" id="sec-{{@index}}" class="form-control-lg time-unit" value="{{this.sec}}" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
 						</div>
 					</div>
-  					<div class="w-100"></div>
+  					<div class="w-20"></div>
 				    <div class="col-1">
 				    	<h4>Sound:</h4>
 						<div class="dropdown">
