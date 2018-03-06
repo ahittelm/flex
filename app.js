@@ -52,6 +52,7 @@ app.get('/', index.view);
 app.get('/workout', workout.view);
 app.get('/settings', settings.view);
 app.get('/library', library.view);
+app.get('/libraryAlt', library.viewAlt);
 app.get('/stats', stats.view);
 app.get('/timer', timer.view);
 app.get('/add', add.addFriend);
