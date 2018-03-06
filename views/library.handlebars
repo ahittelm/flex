@@ -107,6 +107,11 @@
 <!--SCRIPTS-->
 
 <script type="text/javascript">
+	$("#addbtn").click(function(){
+		gtag('create', 'UA-114946810-1', 'auto');
+		gtag('send', 'event', 'add', 'click');
+	});
+
 	function addWorkout(val) {
 		document.getElementById("libraryForm").submit();
 //		location.href = "/editworkout/".concat(val);
