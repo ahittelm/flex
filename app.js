@@ -64,12 +64,12 @@ app.get('/editworkoutAlt/:id', editworkout.viewAlt);
 // app.get('/custom/:id', custom.view);
 
 
-app.post('/library/:viewAlt', function(req, res){
+app.post('/library', function(req, res){
 	data.workout.push(newWorkout);
 	jsonfile.writeFile('./exercises.json', data, function(err){
 		if(err)
 			console.error(err);
-		if(req.params.viewAlt)
+		if(data.viewAlt)
 			res.redirect("/libraryAlt");
 		else
 			res.redirect("/library");
@@ -87,7 +87,11 @@ app.post('/library/:id/delete', function(req, res){
 	jsonfile.writeFile('./exercises.json', data, function(err){
 		if(err)
 			console.error(err);
-		res.redirect("library");
+		console.log(req.params.viewAlt);
+		if(data.viewAlt)
+			res.redirect("/libraryAlt");
+		else
+			res.redirect("/library");
 	})
 });
 
@@ -120,7 +124,10 @@ app.post('/editworkout/:id/save', function(req, res){
 	jsonfile.writeFile('./exercises.json', data, function(err){
 		if(err)
 			console.error(err);
-		res.redirect("/library");
+		if(data.viewAlt)
+			res.redirect("/libraryAlt");
+		else
+			res.redirect("/library")
 	})
 
 });

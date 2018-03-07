@@ -133,7 +133,11 @@
 
 	function gotolibrary()
 	{
-		location.href = "../library";
+		{{#if data}}
+			location.href = "../libraryAlt";
+		{{else}}
+			location.href = "../library";
+		{{/if}}
 	}
 
 	$("sound-item").click(function(){
@@ -179,7 +183,11 @@
 		workout.totalsec = sec;
 
 		$.post(window.location.pathname + "/save", {workout:workout}, function(){
+			{{#if data}}
+				window.location = '/libraryAlt';
+			{{else}}
 				window.location = '/library';
+			{{/if}}
 		});
 	});
 

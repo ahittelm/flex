@@ -58,7 +58,11 @@ p {
 <body>
 <script>
 function cancel() {
-	location.href = "../library"
+	{{#if data}}
+		location.href = '/libraryAlt';
+	{{else}}
+		location.href = '/library';
+	{{/if}}	
 }
 </script>
   

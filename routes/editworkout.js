@@ -6,14 +6,13 @@ var newExercise = require('../newExercise.json');
 exports.view = function(req, res){
   var workout = data.workout[req.params.id];
   var sounds = data.sounds;
-  var dataViewAlt = !data.viewAlt;
-  res.render('editworkout', {workout: workout, id:req.params.id, sounds:sounds, data: dataViewAlt});
+  var alt = data.viewAlt;
+  res.render('editworkout', {workout: workout, id:req.params.id, sounds:sounds, data: alt});
 };
 
 exports.viewAlt = function(req, res){
   var workout = data.workout[req.params.id];
   var sounds = data.sounds;
-  var dataViewAlt = !data.viewAlt;
   res.render('editworkout', {workout: workout, id:req.params.id, sounds:sounds, data: dataViewAlt});  
 };
 
