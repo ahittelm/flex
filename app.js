@@ -64,12 +64,15 @@ app.get('/editworkoutAlt/:id', editworkout.viewAlt);
 // app.get('/custom/:id', custom.view);
 
 
-app.post('/library', function(req, res){
+app.post('/library/:viewAlt', function(req, res){
 	data.workout.push(newWorkout);
 	jsonfile.writeFile('./exercises.json', data, function(err){
 		if(err)
 			console.error(err);
-		res.redirect("/library");
+		if(req.params.viewAlt)
+			res.redirect("/libraryAlt");
+		else
+			res.redirect("/library");
 	})
 });
 
