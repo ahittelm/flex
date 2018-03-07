@@ -59,11 +59,11 @@
 <form id="libraryForm" action="/library" method="POST">
 <body>
 	<h3>Workout
-			<button type="button" class="btn btn-lg" id="addbtn" aria-label="Left Align">
+			<button type="button" class="btn btn-lg" onclick="addWorkout({{workout.length}})" id="addbtn" aria-label="Left Align">
 				{{#if data}}
 	  			    Add
 	  			{{else}}
-	  				<span class="glyphicon glyphicon-plus" onclick="addWorkout({{workout.length}})" aria-hidden="true"></span>
+	  				<span class="glyphicon glyphicon-plus"  aria-hidden="true"></span>
 	  			{{/if}}
 	  		</button>
 	</h3>
@@ -107,14 +107,11 @@
 <!--SCRIPTS-->
 
 <script type="text/javascript">
-	$("#addbtn").click(function(){
-		gtag('create', 'UA-114946810-1', 'auto');
-		gtag('send', 'event', 'add', 'click');
-	});
-
 	function addWorkout(val) {
+		//gtag('create', 'UA-114946810-1', 'auto');
+		//gtag('send', 'event', 'add', 'click');
+		ga('send', 'event','add', 'click');
 		document.getElementById("libraryForm").submit();
-//		location.href = "/editworkout/".concat(val);
 	}
 	function startWorkout() {
 		location.href = "custom"
