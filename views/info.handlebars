@@ -18,21 +18,22 @@
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
     <link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/info.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
 	<style>
 	@import url('https://fonts.googleapis.com/css?family=Karla');
 	</style>
 	<!-- this is a comment in HTML -->
 	<div class="header" id="myHeader">
-  <h2>My Header</h2>
+  <h2><a href="/library">
+			
+			<i class="material-icons" onclick="back()"> chevron_left</i>
+		</a>
+		App Information</h2>
 </div>
 
-	<nav class="navbar navbar-toggleable-md navbar-light" id="navigation">
-	  	<div class="container-fluid">
-	  		  <a id="title">Info</a>
-		</div>
-	</nav>
-	
+
 <script>
 	function home() {
 		location.href = "info"
@@ -52,13 +53,13 @@
 		</a>
 		</p>
 	</br>
-		<p class="exercise"> A workout application created with the purpose of seamless exercise, regulated by sound. </p>
-
+		<p class="exercise"> A workout application created <p></p>with the purpose of seamless exercise,<p></p> regulated by sound. </p>
+		<br></br>
 		<a href="/tutorial">
-			<button type="button" class="tutorial-btn" id="tutorial-btn" onclick="tutorial()" aria-label="Left Align">Tutorial</button>
+			<center><button type="button" class="tutorial-btn" id="tutorial-btn" onclick="tutorial()">Tutorial</button></center>
 		</a>
 		<a href="/">
-			<button type="button" class="logout-btn" id="logout-btn" onclick="logout()" aria-label="Left Align">Logout</button>
+			<center><button type="button" class="logout-btn" id="logout-btn" onclick="logout()" >Logout</button></center>
 		</a>
 	  </li>
 	</ul>
@@ -75,6 +76,9 @@
 
 	function logout() {
 		location.href = "/"
+	}
+	function back() {
+		location.href = "/library"
 	}
 	function tutorial() {
 		location.href = "/tutorial"
