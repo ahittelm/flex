@@ -96,7 +96,7 @@ a{
     height: 33px;
     font-size: 12px;
     font-weight: 100;
-    color: #3F4A4F
+    color: #3F4A4F;
     background-color: #white;
     border: 2px solid #651fff;
     border-radius: 25px;
@@ -690,7 +690,8 @@ h2{
 }
 
 /* Add rounded corners to the top left and the top right corner of the image */
-.card-img {
+
+.card-e img {
     border-radius: 5px 5px 0 0;
     overflow: hidden;
 }
