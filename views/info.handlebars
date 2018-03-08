@@ -16,22 +16,23 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/info.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
 
 	<style>
 	@import url('https://fonts.googleapis.com/css?family=Karla');
 	</style>
 	<!-- this is a comment in HTML -->
 	<div class="header" id="myHeader">
-  <h2><a href="/library">
-			
-			<i class="material-icons" onclick="back()"> chevron_left</i>
-		</a>
-		App Information</h2>
-</div>
+	 	<h2 class="container-fluid">
+	  	<a href="/library">
+				<i class="material-icons" id = "infoicon" onclick="back()"> chevron_left</i>
+			App Information
+			</a>
+		</h2>
+	</div>
 
 
 <script>
@@ -45,24 +46,25 @@
 <body>
 </form>
 
-	<div class="exercise">
-	<ul class="list-group" id="workoutList">
-	  <li class="list-group-item justify-content-between">
-	  	<p class="workoutname"> Background <small class="durationText"> <!-- 5 min. --></small	
+
+
+	<div class="card">
+	  <div class="container-1">
+	    <p class="workoutname"> Background <small class="durationText"> <!-- 5 min. --></small	
 	  		<a href="/info">
 		</a>
 		</p>
 	</br>
-		<p class="exercise"> A workout application created <p></p>with the purpose of seamless exercise,<p></p> regulated by sound. </p>
+		<div class="exercise-summary">
+		<p class="exercise"> A workout application created with the purpose of seamless exercise, regulated by sound. </p>
+		</div>
 		<br></br>
 		<a href="/tutorial">
 			<center><button type="button" class="tutorial-btn" id="tutorial-btn" onclick="tutorial()">Tutorial</button></center>
 		</a>
 		<a href="/">
 			<center><button type="button" class="logout-btn" id="logout-btn" onclick="logout()" >Logout</button></center>
-		</a>
-	  </li>
-	</ul>
+	  </div>
 	</div>
 		
 

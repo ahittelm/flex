@@ -231,7 +231,11 @@ body{
 
      font-size: 15px;
      margin-top: 10px;
+}
 
+li.list-group-item.justify-content-between{
+    margin: 10px;
+  
 }
 
 .glyphicon{
@@ -552,4 +556,44 @@ button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle{
 }
 .editingButtonsDiv{
     overflow:hidden;
+}
+
+i.material-icons{
+  float: left;
+  padding-left: 10px;
+}
+
+
+.header {
+  padding-top: 20px;
+  margin: 0px;
+  height: 65px;
+  background: #fffff;
+  color: #37474F;
+  text-align: center;
+  float: inherit;
+  box-shadow: 0px 1px 2px 0px #00000020;
+}
+
+
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+i#accnt-icon.material-icons{
+    float: right;
 }
