@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
 /* applies to anything of class "example-class-selector" */
 .example-class-selector {
      margin-top: 2em;
@@ -123,22 +125,50 @@ a{
     font-size: 50px;
 }
 
+.card{
+    box-shadow: 0 0px 5px 0 rgba(0,0,0,0.2);
+    border-radius: 10px; 
+    transition: 0.3s;
+    max-width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 
 #currtime{
-    background-color: #ffffff;
-    border: #ffffff;
-    border radius: 25px;
+    background-color: #2186F7;
+   /* border-color: #2186F7;*/
+    border-radius: 10px;
+    border: 2px solid #2186F7;
     box-shadow: 0px 3px 6px 0px #00000020;
+    font-size: 25px;
+    color:  #ffffff;
+    padding: 10px;
+    width:90%;
+    position: sticky;
+    left:9%;
+    margin-top: 15px;
+    font-family: Karla;
+}
+
+
+#currexercise{
+    background-color: #ffffff;
+   /* border: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px 0px #00000020;*/
     font-size: 25px;
     color: #3F4A4F;
     padding: 10px;
 }
 
-#currexercise, #upnext{
+#upnext{
     background-color: #ffffff;
-    border: #ffffff;
-    border radius: 25px;
-    box-shadow: 0px 3px 6px 0px #00000020;
+  /*  border: #ffffff;
+    border-radius: 25px;*/
+  /*  box-shadow: 0px 3px 6px 0px #00000020;*/
     font-size: 25px;
     color: #3F4A4F;
     padding: 10px;
@@ -323,7 +353,7 @@ h3{
      background-color: white;
      height: 50px;
      width: 100%;
-     margin-top: 20px;
+   /*  margin-top: 10px;*/
      box-shadow: 0px 2px 5px 0px #00000020;
 }
 
@@ -353,17 +383,47 @@ h3{
     padding-left: 20px;
 }
 
-#timerButtonPause, #timerButtonPlay, #timerButtonCancel, #timerButtonStartOver{
+#timerButtonStartOver{
     width: 100px;
     height: 46px;
     font-size: 20px;
-    color: #ffffff;
-    background-color: #651fff;
-    border: 2px solid #651fff;
-    border-radius: 25px;
+    /*color: #ffffff;*/
+/*    background-color: #651fff;*/
+    border: 2px solid #2186F7;
+    border-radius: 10px;
     box-shadow: 0px 2px 3px 0px #00000020;
-    margin-right: 10px;
+  /*  margin-right: 10px;*/
     margin-top:10px;
+     background: #ffffff;
+   color: #2186F7;
+}
+#timerButtonCancel{
+    width: 75%;
+    height: 46px;
+    font-size: 20px;
+    /*color: #ffffff;*/
+/*    background-color: #651fff;*/
+    border: 2px solid #2186F7;
+    border-radius: 10px;
+    box-shadow: 0px 2px 3px 0px #00000020;
+    /*margin-right: 10px;*/
+    margin-top:10px;
+    background: #ffffff;
+    color: #2186F7;
+}
+
+#timerButtonPause, #timerButtonPlay{
+    width: 75%;
+   height: 46px;
+   font-size: 20px;
+   color: white;
+   background: linear-gradient(#00BCD4, #2979FF);
+  /* margin-bottom: 10px;*/
+  /* margin-right: 10px;*/
+   margin-top:-30px;
+   border-style: none;
+   border-radius: 10px;
+   box-shadow: 0px 2px 3px 0px #00000020;
 }
 
 /*#timerButtonPlay{
