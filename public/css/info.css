@@ -212,7 +212,7 @@ a{
 
 body{
      font-family: 'Karla', sans-serif;
-     margin: 30px;
+     margin: 0px;
      background-color: #FCFCFC;
 }
 
@@ -231,6 +231,11 @@ body{
 
      font-size: 15px;
      margin-top: 10px;
+
+}
+
+li.list-group-item.justify-content-between{
+    margin: 30px;
 
 }
 
@@ -362,31 +367,6 @@ h3{
     margin-top:10px;
 }
 
-/*#timerButtonPlay{
-    width: 150px;
-    height: 50px;
-    font-size: 24px;
-    color: #ffffff;
-    background-color: #651fff;
-    border: 2px solid #651fff;
-    border-radius: 25px;
-    box-shadow: 0px 2px 3px 0px #00000020;
-    margin-right: 10px;
-    margin-top: 5px;
-}
-
-#timerButtonCancel{
-    width: 150px;
-    height: 50px;
-    font-size: 24px;
-    color: #3F4A4F;
-    background-color: white;
-    border: 2px solid #651fff;
-    border-radius: 25px;
-    box-shadow: 0px 2px 3px 0px #00000020;
-    margin-right: 10px;
-    margin-top: 5px;
-}*/
 
 
 input.form-control-lg.name-text-box{
@@ -423,40 +403,6 @@ input.form-control-lg.time-unit{
 .dropdown-item a:focus {
     background-color: black!important;
 }
-
-/*button#dropdownMenuButton2.btn.btn-secondary.dropdown-toggle{
-    background-color: #f5f5f5;
-    font-size: 16px;
-    color: #263238;
-    border: 2px solid #f5f5f5;
-    float: right;
-}
-
-button#dropdownMenuButton2.btn.btn-secondary.dropdown-toggle:hover{
-    background-color: #651fff;
-    color: #ffffff;
-    font-size: 16px;
-    border: 2px solid #f5f5f5;
-    float: right;
-}*/
-
-/*div.dropdown-menu{
-    background-color: #f5f5f5;
-    font-size: 16px;
-    color: #263238;
-    border: 2px solid #f5f5f5;
-    float: right;
-    width: 80px;
-
-}
-
-a#unitDrop.dropdown-item:hover{
-    background-color: #651fff;
-    color: #ffffff;
-    font-size: 16px;
-    border: 2px solid #f5f5f5;
-    float: right;
-}*/
 
 button#save-workout-btn{
     width: 150px;
@@ -552,4 +498,73 @@ button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle{
 }
 .editingButtonsDiv{
     overflow:hidden;
+}
+
+.header {
+  padding-top: 20px;
+  margin: 0px;
+  height: 65px;
+  background: #fffff;
+  color: #37474F;
+  text-align: center;
+  float: inherit;
+  box-shadow: 0px 1px 2px 0px #00000020;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+p.workoutname{
+  text-align: center;
+}
+
+p.exercise{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  max-width: 100%;
+  text-align: center;
+}
+
+button#tutorial-btn.tutorial-btn{
+   background: linear-gradient(#00BCD4, #2979FF);
+   color: white;
+   width: 100%;
+   height: 50px;
+   margin-bottom: 10px;
+   font-size: 20px;
+}
+
+button#logout-btn.logout-btn{
+   background: #ffffff;
+   color: #2186F7;
+   border: 3px solid #2186F7;
+   width: 100%;
+   height: 50px;
+   font-size: 20px;
+}
+
+button#back-btn.back-btn{
+  float: left;
+  padding-left: 10px;
+}
+
+i.material-icons{
+  float: left;
+  padding-left: 10px;
 }
