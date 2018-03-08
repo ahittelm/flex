@@ -24,10 +24,15 @@
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+<<<<<<< HEAD
   	 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
      rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/index.css" rel="stylesheet">
+=======
+    <link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/index.css" rel="stylesheet">
+>>>>>>> d3ffefbda603ecdfc6fff30e9197b7bf54e5bc10
 	 
 	<nav class="navbar navbar-toggleable-md navbar-light" id="navigation">
 	  	<div class="container-fluid">
@@ -46,36 +51,44 @@
 		  <label for="pwd">Password:</label>
 		  <input type="password" class="form-control" id="pwd">
 		  <br/>
+<<<<<<< HEAD
 
 		 <!--  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"
 		  onclick="submitFBClicked()" id="submit" >
 		</fb:login-button> -->
+=======
+>>>>>>> d3ffefbda603ecdfc6fff30e9197b7bf54e5bc10
 		  <button class="btn" onclick="submitClicked()" id="submit">Submit</button>
 		  <br></br>
 		  <br>
+			<fb:login-button scope="public_profile,email" onlogin="window.location='/library'">
+			</fb:login-button>
 		</br>
 		</div>
 
 
 		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="/bootstrap.min.js"></script>
-		<script src="../routes/index.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+		<!-- <script src="../index.js"></script> -->
 		{{> facebook}}
-		<script src="/js/facebook.js"></script>
+		<!-- <script src="/js/facebook.js"></script> -->
+
 	</body>
 	<script type="text/javascript" href="index"></script>
+<<<<<<< HEAD
 	<script>
 		function submitClicked(){
 		location.href = "/library";
 		};
 	</script>
 
+=======
+>>>>>>> d3ffefbda603ecdfc6fff30e9197b7bf54e5bc10
 	<script>
-		function submitFBClicked(){
-			location.href = "/library";
+		function submitClicked(){
+			location.href = "library";
 		};
-	</script> 
-
+	</script>
 
 <!-- SCRIPT -->
 

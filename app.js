@@ -10,7 +10,11 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var info = require('./routes/info');
+<<<<<<< HEAD
 var tutorial = require('./routes/tutorial');
+=======
+var userprofile = require('./routes/userprofile');
+>>>>>>> d3ffefbda603ecdfc6fff30e9197b7bf54e5bc10
 var workout = require('./routes/workout');
 var settings = require('./routes/settings');
 var library = require('./routes/library');
@@ -52,7 +56,11 @@ if ('development' == app.get('env')) {
 
 app.get('/', index.view);
 app.get('/info', info.view);
+<<<<<<< HEAD
 app.get('/tutorial', tutorial.view);
+=======
+app.get('/userprofile', userprofile.view);
+>>>>>>> d3ffefbda603ecdfc6fff30e9197b7bf54e5bc10
 app.get('/workout', workout.view);
 app.get('/settings', settings.view);
 app.get('/library', library.view);
