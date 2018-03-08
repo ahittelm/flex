@@ -1,3 +1,8 @@
+$(document).ready(function() {
+  checkLoginState();
+});
+
+
 function checkLoginState() {
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
@@ -22,6 +27,7 @@ function changeUser(response) {
   console.log(response);
   $('.facebookLogin').hide();
   $('#name').text(response.name);
+  $('#fname').text(response.name);
   $('#photo').attr("src", response.picture.data.url);
 
 }

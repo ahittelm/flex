@@ -1,19 +1,13 @@
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1958284051104370',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v2.8'
-    });
-      
-    FB.AppEvents.logPageView();
+$(document).ready(function(){
+  checkLoginStatus();
+})
 
 
+function checkLoginState() {
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
   });
-
+}
 
 function statusChangeCallback(response) {
   console.log('Facebook login status changed.');
@@ -38,16 +32,3 @@ function changeUser(response) {
 
 }
 
-
-
-      
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>

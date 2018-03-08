@@ -10,6 +10,7 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var info = require('./routes/info');
+var userprofile = require('./routes/userprofile');
 var workout = require('./routes/workout');
 var settings = require('./routes/settings');
 var library = require('./routes/library');
@@ -51,6 +52,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', index.view);
 app.get('/info', info.view);
+app.get('/userprofile', userprofile.view);
 app.get('/workout', workout.view);
 app.get('/settings', settings.view);
 app.get('/library', library.view);

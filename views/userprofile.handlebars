@@ -1,0 +1,111 @@
+<html>
+<head>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-114946810-1');
+	</script>
+
+	<title>User Profile</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/info.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Karla');
+	</style>
+	<!-- this is a comment in HTML -->
+	<!-- <div class="header" id="myHeader">
+		<h2>My Header</h2>
+	</div> -->
+
+	<!-- <nav class="navbar navbar-toggleable-md navbar-light" id="navigation">
+		<div class="container-fluid">
+			<a id="title">User Profile</a>
+		</div>
+	</nav> -->
+	<div class="header" id="myHeader">
+  		<h2>
+  			<a href="/library">
+				<i class="material-icons" onclick="back()"> chevron_left</i>
+			</a>
+			User Profile
+		</h2>
+	</div>
+
+	<script>
+		function home() {
+			location.href = "userprofile"
+		}
+	</script>
+
+</head>
+
+	<form id="libraryForm" action="/userprofile" method="POST">
+<body>
+	</form>
+	<div class="card">
+	  <img id="photo" src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" alt="Avatar" style="width:100%; max-height: 50%;">
+	  <div class="container-1">
+	    <h1 id="name" style="text-align: center;"><b>Name</b></h1> 
+	  </div>
+	</div>
+	<div class="row">
+		<div class="column left">
+			<h2 class="facebookLogin">
+				Connect with Facebook &amp; Create a Profile!
+			</h2>
+		</div>
+
+<!-- 		<div class="column right">
+			<fb:login-button class="facebookLogin" scope="public_profile,email" onlogin="checkLoginState();">
+			</fb:login-button>
+		</div> -->
+	</div>
+	<!-- <div class="userbackbtn">
+		<button class="btn" onclick="submitClicked()" id="submit">Back</button>
+	</div> -->
+
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+<!-- 	<script src="/index.js"></script> -->
+	{{> facebook}}
+<!-- 	<script src="/js/facebook.js"></script> -->
+</body>
+
+
+<!--SCRIPTS-->
+
+<script type="text/javascript">
+
+	function logout() {
+		location.href = "/"
+	}
+	function tutorial() {
+		location.href = "/tutorial"
+	}
+	function refresh() {
+		location.href = "/userprofile"
+	}
+</script>
+
+<!-- <script>
+	function submitClicked(){
+		location.href = "library";
+	};
+</script> -->
+
+<!-- </form>
+--></html>

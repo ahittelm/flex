@@ -12,13 +12,6 @@ exports.view = function(req, res){
 // };
 
 
-function submitFBClicked() {
-	// your code here
-	$("#submit").click(function () {
-		console.log(login.account);
-	});
-}
-
 function submitClicked() {
 	// your code here
 	$("#submit").click(function () {
