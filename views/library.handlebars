@@ -1,19 +1,5 @@
 <html>
 <head>
-	<!-- Google Analytics Content Experiment code -->
-	<script>function utmx_section(){}function utmx(){}(function(){var
-	k='170665669-1',d=document,l=d.location,c=d.cookie;
-	if(l.search.indexOf('utm_expid='+k)>0)return;
-	function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-	indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-	length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-	'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-	'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-	'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-	valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-	'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-	</script><script>utmx('url','A/B');</script>
-	<!-- End of Google Analytics Content Experiment code -->
 
 
 <script>
@@ -33,17 +19,16 @@
 
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
-<<<<<<< HEAD
-  	  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  	  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/index.css" rel="stylesheet">
-=======
+
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/index.css" rel="stylesheet">
->>>>>>> d3ffefbda603ecdfc6fff30e9197b7bf54e5bc10
+
 
 	<style>
 	@import url('https://fonts.googleapis.com/css?family=Karla');
@@ -62,7 +47,9 @@
 			</a>
 			<a href="/library">
 			Flex </a>
+			<a href="/userprofile">
 			<i class="material-icons" id="accnt-icon" >account_circle</i>
+			</a>
 		</h2>
 	</div>
 </head>
@@ -75,7 +62,7 @@
 </head>
 <form id="libraryForm" action="/library" method="POST">
 <body>
-	<h1 style="text-align: center;"><i>Welcome <text id="name">Username</text>!</i></h1>
+	<h1 class="fbname" style="text-align: center;"><i>Welcome, <text id="name">Username</text>!</i></h1>
 	<br>
 
 	<h3>Workout
@@ -89,11 +76,10 @@
 	</h3>
 </form>
 
-	{{#each workout}}
+<!-- 	{{#each workout}}
 	<div class="exercise">
 	  <ul class="list-group" id="workoutList">
-	  <li class="list-group-item justify-content-between">
-	  	<p class="workoutname"> {{name}} <small class="durationText"> <!-- 5 min. --></small>
+	  <li class="list-group-item justify-content-between"></small>
 	  		<a href="/library">
 			<form action="/library/{{@index}}/delete" id="deletingWorkout" method="POST">
 				 <button type="submit" class="col-1 close deletebtn" aria-label="Close">
@@ -118,7 +104,61 @@
 	  </li>
 	  </ul>
 		
-	{{/each}}
+	{{/each}} -->
+
+	{{#each workout}}
+	
+		<!-- <div class="nostart"> -->
+	<div class="card-e">
+		<div class="row-1">
+	<ul class="list-group">
+	  <li class="bulletpoint">
+				<!--DELTETE BUTTON-->
+				<a href="/library">
+					<form action="/library/{{@index}}/delete" id="deletingWorkout" method="POST">
+						 <button type="submit" class="col-1 close deletebtn" aria-label="Close">
+						  	<span aria-hidden="true">&times;</span>
+						 </button>
+					</form>
+				</a>
+
+				<!--EDIT BUTTON-->
+				<a href="/editworkout/{{@index}}">
+					<button type="button" class="edit-button" id="editbtn" aria-label="Left Align">
+				  		<p>Edit</p>
+					</button>	
+				</a>
+
+				<!---WORKOUT NAME-->
+				<div class="workout-name">
+					{{name}} 
+				</div>
+				
+			</div> <!-- closerow-1 -->
+
+			<div class="exerciselist">
+				{{#each this.exercises}}
+					<p class="exercise"> {{exname}} </p>
+				{{/each}}
+			</div>
+
+			<!--START BUTTON-->
+		<div class="row-1">
+			<a href="/custom/{{@index}}">
+				<button type="button" class="start-button" id="start-btn" onclick="startWorkout()">
+					Start
+				</button>
+			</a>
+		</div>
+		</div> <!-- close nostart -->
+
+		
+
+		</li>
+	  </ul>
+{{/each}}
+	<!-- </div> --> <!-- close card-e -->
+
 <script src="https://code.jquery.com/jquery.js"></script>
 		<script src="/js/bootstrap.min.js"></script>
 		<!-- <script src="../routes/index.js"></script> -->

@@ -6,118 +6,120 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
-    <link href="/css/bootstrap.css" rel="stylesheet">
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">	
+	<link href="/css/bootstrap.css" rel="stylesheet">
 	<link href="/css/editworkout.css" rel="stylesheet">
 	
-	<nav class="navbar navbar-toggleable-md navbar-light" id="navigation">
-	  	<div class="container-fluid">
-	  		  <a id="title">flex</a>
-		</div>
-	</nav>
+	<div class="header" id="myHeader">
+	 	<h2 class="container-fluid">
+			<h2>Flex</h2>
+		</h2>
+	</div>
 
 </head>
 
 <body>
-	<h3>Workout Name:<h3> <input class="form-control input-lg" id="workout-name" value="{{workout.name}}" name="name" type="text">
-	
-	<button class="btn btn-lg" id="cancelbtn" onclick="gotolibrary()" aria-label="Left Align">Cancel</button>
+	<div class="container">
+		
+			<button class="btn btn-lg" id="cancelbtn" onclick="gotolibrary()">Cancel</button>
 
-  	<large> <!--10 min. --></large></br></br>
-	<div class="editingButtonsDiv">Exercises
-		<div class="row">
-			<div class="column">
-				<div class="editingButtons">
-					<!-- <form action="/editworkout/{{id}}" id="addingExercise" method="POST"> -->
-					<form id="addExercise">
-						<button class="btn btn-lg" id="addbtn" aria-label="Left Align">
-					  		<span class="glyphicon glyphicon-plus"  aria-hidden="true"></span>
-						</button>
-					</form>
-				</div>
-			</div>
-			<div class="column">
-				<div class="editingButtons">
-					<form  id="saveExercise" >
-						<button class="btn btn-lg" id="savebtn" aria-label="Left Align">
-					  		<span class="glyphicon glyphicon-check" aria-hidden="true"></span>
-						</button>
-					</form>
-				</div>
-			</div>
-		</div>
+			<form  id="saveExercise" >
+				<button class="btn btn-lg" id="savebtn" aria-label="Left Align">Save
+				</button>
+			</form>
+
 	</div>
 
-    {{#each workout.exercises}}
-    <div class="exercise">
+	<div class="wrkname">
+		<h3>Workout Name:</h3> 
+	</div>
+
+	<input class="form-control input-lg" id="workout-name" value="{{workout.name}}" name="name" type="text">
+	
+	
+
+	<large> <!--10 min. --></large></br></br>
+	<div class="container editingButtonsDiv">
+		<form id="addExercise">
+			<div class="addexercise">
+				Exercises
+				<button class="btn btn-lg" id="addbtn" aria-label="Left Align">
+					<span class="glyphicon glyphicon-plus"  aria-hidden="true"></span>
+				</button>
+			</div>
+		</form>
+	</div>
+
+	{{#each workout.exercises}}
+	<div class="exercise">
 		<div class="container">
 			<div class="container-fluid" id="individual-exercise">
 				<div class="row">
-				    <div class="col-11 form-group name-text-box">
-		  				<input type="text" name="exname" id="exname-{{@index}}" class="form-control-lg name-text-box" value="{{this.exname}}"> 
+					<div class="col-11 form-group name-text-box">
+						<input type="text" name="exname" id="exname-{{@index}}" class="form-control-lg name-text-box" value="{{this.exname}}"> 
 					</div>
 					<form action="/editworkout/{{../id}}/{{@index}}/delete" id="deletingExercise" method="POST">
-						 <button type="submit" class="col-1 close deletebtn" aria-label="Close">
-						  	<span aria-hidden="true">&times;</span>
-						 </button>
+						<button type="submit" class="col-1 close deletebtn" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
 					</form>
 				</div>
 				<div class="row">
-				    <div class="col-1 time-text-box">
-				    	<h4> Minutes: </h4>
-				    	<div class="form-group time-text-box">
-		  					<input type="text" name="time" id="min-{{@index}}" class="form-control-lg time-unit" value="{{this.min}}" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+					<div class="col-1 time-text-box">
+						<h4> Minutes: </h4>
+						<div class="form-group time-text-box">
+							<input type="text" name="time" id="min-{{@index}}" class="form-control-lg time-unit" value="{{this.min}}" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
 						</div>
 					</div>
 					<div class="w-20"></div>
-				    <div class="col-1">
-				    	<h4> Seconds: </h4>
-				    	<div class="form-group time-text-box">
-		  					<input type="text" name="time" id="sec-{{@index}}" class="form-control-lg time-unit" value="{{this.sec}}" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+					<div class="col-1">
+						<h4> Seconds: </h4>
+						<div class="form-group time-text-box">
+							<input type="text" name="time" id="sec-{{@index}}" class="form-control-lg time-unit" value="{{this.sec}}" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
 						</div>
 					</div>
-  					<div class="w-20"></div>
-				    <div class="col-1">
-				    	<h4>Sound:</h4>
+					<div class="w-20"></div>
+					<div class="col-1">
+						<h4>Sound:</h4>
 						<div class="dropdown">
-						  <button class="btn btn-secondary dropdown-toggle sound-{{@index}}" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{this.sound}}</button>
-						  	<ul class="dropdown-menu" id="dropdown-content" name="sound" aria-labelledby="dropdownMenuButton2">
+							<button class="btn btn-secondary dropdown-toggle sound-{{@index}}" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{this.sound}}</button>
+							<ul class="dropdown-menu" id="dropdown-content" name="sound" aria-labelledby="dropdownMenuButton2">
 <!-- 						  {{#each ../sounds}}
 						  	<li class="dropdown-item" id="listElem"><button id="soundElem">{{this}}</button></li>
-						  {{/each}} -->
-						  		<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Blaster</button></li>
-								<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Confident</button></li>	
-								<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Definite</button></li>
-								<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Ding Ding</button></li>
-						  		<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Glass</button></li>
-								<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Pluck</button></li>
-						  		<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Spring</button></li>
-								<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Squeaks</button></li>
-						  		<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Unconvinced</button></li>
-								<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Whistle</button></li>
-						  	</ul>
-					</div>
-				    <div class="divider"/></div>
-				    <div class="col-1">
-					</div>
+						  	{{/each}} -->
+						  	<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Blaster</button></li>
+						  	<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Confident</button></li>	
+						  	<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Definite</button></li>
+						  	<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Ding Ding</button></li>
+						  	<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Glass</button></li>
+						  	<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Pluck</button></li>
+						  	<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Spring</button></li>
+						  	<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Squeaks</button></li>
+						  	<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Unconvinced</button></li>
+						  	<li class="dropdown-item" id="listElem" onclick="updateSound({{@index}}, this)"><button class="soundElem">Whistle</button></li>
+						  </ul>
+						</div>
+						<div class="divider"/></div>
+						<div class="col-1">
+						</div>
 
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-{{/each}}
-{{#if data}}
-<div class="repetition-box">
-<h3>Repetitions</h3>
-	<div class="form-group time-text-box">
-			<input type="text" name="repetitions" id="reps" class="form-control-lg time-unit" value="{{workout.repetitions}}" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
-	</div>
-</div>
-{{/if}}
-</br>
+		{{/each}}
+		{{#if data}}
+		<div class="repetition-box">
+			<h3>Repetitions</h3>
+			<div class="form-group time-text-box">
+				<input type="text" name="repetitions" id="reps" class="form-control-lg time-unit" value="{{workout.repetitions}}" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+			</div>
+		</div>
+		{{/if}}
+	</br>
 </br>
 </br>
 </br>
@@ -128,15 +130,15 @@
 
 	function updateSound(index, param)
 	{
-     	$(".sound-"+index).text(param.innerText);
+		$(".sound-"+index).text(param.innerText);
 	}
 
 	function gotolibrary()
 	{
 		{{#if data}}
-			location.href = "../libraryAlt";
+		location.href = "../libraryAlt";
 		{{else}}
-			location.href = "../library";
+		location.href = "../library";
 		{{/if}}
 	}
 
@@ -184,9 +186,9 @@
 
 		$.post(window.location.pathname + "/save", {workout:workout}, function(){
 			{{#if data}}
-				window.location = '/libraryAlt';
+			window.location = '/libraryAlt';
 			{{else}}
-				window.location = '/library';
+			window.location = '/library';
 			{{/if}}
 		});
 	});
@@ -214,7 +216,7 @@
 
 			workout.exercises.push(currex);
 		}
-			
+
 		var currex2 = {};
 
 		currex2.exname = "Exercise Name";
@@ -230,7 +232,7 @@
 		workout.totalsec = sec;
 
 		$.post(window.location.pathname, {workout:workout}, function(){
-				window.location = '/editworkout/{{id}}';				
+			window.location = '/editworkout/{{id}}';				
 		});	
 	});		
 	
@@ -240,7 +242,7 @@
 
 <script href="./routes/addworkout.js" type="text/javascript"></script> 
 <script>
- </script>
+</script>
 
 <script>
 

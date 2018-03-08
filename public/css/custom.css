@@ -89,7 +89,6 @@ a{
     float: right;
     margin-right: 10px;
     margin-top: 5px;
-
 }
 
 .edit-btn{
@@ -114,8 +113,9 @@ a{
 
 #editBtn{
      padding: 5px;
-     color:white;
-     background-color: black;
+     color:#2186F7;
+     background-color: white;
+     font-size: 14px
 }
 
 #navigationBar{  
@@ -230,11 +230,12 @@ body{
      padding-right: 30px;
 
      font-size: 15px;
-     margin-top: 10px;
 }
 
 li.list-group-item.justify-content-between{
-    margin: 30px;
+    margin-bottom: 10px;
+    margin: 10px;
+  
 }
 
 .glyphicon{
@@ -304,7 +305,8 @@ li.list-group-item.justify-content-between{
 
 h3{
     font-size:24px;
-    color: #3F4A4F;
+    color: #3F4A4f;
+    margin-left: 15px;
 }
 
 .stats{
@@ -317,7 +319,7 @@ h3{
 
 
 #outerProgressBar{
-     border: 2px solid #651fff;
+     border: 2px solid #2186F7;
      background-color: white;
      height: 50px;
      width: 100%;
@@ -327,9 +329,8 @@ h3{
 
 #innerProgressBar{
      text-align: left;
-     border: 2px solid #651fff;
-     background-color: #651fff;
-     height: 48px;
+     background: linear-gradient(to right, #00BDD6 , #2579FF);
+     height: 46px;
      width:0%;
      margin-bottom: 15;
 }
@@ -365,6 +366,31 @@ h3{
     margin-top:10px;
 }
 
+/*#timerButtonPlay{
+    width: 150px;
+    height: 50px;
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #651fff;
+    border: 2px solid #651fff;
+    border-radius: 25px;
+    box-shadow: 0px 2px 3px 0px #00000020;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+#timerButtonCancel{
+    width: 150px;
+    height: 50px;
+    font-size: 24px;
+    color: #3F4A4F;
+    background-color: white;
+    border: 2px solid #651fff;
+    border-radius: 25px;
+    box-shadow: 0px 2px 3px 0px #00000020;
+    margin-right: 10px;
+    margin-top: 5px;
+}*/
 
 
 input.form-control-lg.name-text-box{
@@ -401,6 +427,40 @@ input.form-control-lg.time-unit{
 .dropdown-item a:focus {
     background-color: black!important;
 }
+
+/*button#dropdownMenuButton2.btn.btn-secondary.dropdown-toggle{
+    background-color: #f5f5f5;
+    font-size: 16px;
+    color: #263238;
+    border: 2px solid #f5f5f5;
+    float: right;
+}
+
+button#dropdownMenuButton2.btn.btn-secondary.dropdown-toggle:hover{
+    background-color: #651fff;
+    color: #ffffff;
+    font-size: 16px;
+    border: 2px solid #f5f5f5;
+    float: right;
+}*/
+
+/*div.dropdown-menu{
+    background-color: #f5f5f5;
+    font-size: 16px;
+    color: #263238;
+    border: 2px solid #f5f5f5;
+    float: right;
+    width: 80px;
+
+}
+
+a#unitDrop.dropdown-item:hover{
+    background-color: #651fff;
+    color: #ffffff;
+    font-size: 16px;
+    border: 2px solid #f5f5f5;
+    float: right;
+}*/
 
 button#save-workout-btn{
     width: 150px;
@@ -498,6 +558,13 @@ button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle{
     overflow:hidden;
 }
 
+i.material-icons{
+  float: left;
+  padding-left: 10px;
+  color: #2186F7;
+}
+
+
 .header {
   padding-top: 20px;
   margin: 0px;
@@ -508,6 +575,8 @@ button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle{
   float: inherit;
   box-shadow: 0px 1px 2px 0px #00000020;
 }
+
+
 
 /* Page content */
 .content {
@@ -526,73 +595,197 @@ button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle{
   padding-top: 102px;
 }
 
-p.workoutname{
-  text-align: center;
+i#accnt-icon.material-icons{
+    float: right;
+    color: #2186F7;
 }
+=======
 
-p.exercise{
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  max-width: 100%;
-  text-align: center;
-}
-
-button#tutorial-btn.tutorial-btn{
-   background: linear-gradient(#00BCD4, #2979FF);
-   color: white;
-   width: 80%;
-   height: 50px;
-   margin-bottom: 10px;
-   font-size: 20px;
-   border-style: none;
-}
-
-button#logout-btn.logout-btn{
-   background: #ffffff;
-   color: #2186F7;
-   border: 3px solid #2186F7;
-   width: 80%;
-   height: 50px;
-   font-size: 20px;
-}
-
-button#back-btn.back-btn{
-  float: left;
-  padding-left: 10px;
-}
-
-i.material-icons{
-  float: left;
-  padding-left: 10px;
-}
-
-.exercise-summary{
-    word-wrap: break-word;
-}
-
-
+/*-----------USER PROFILE------------*/
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 4px; /* 5px rounded corners */
     transition: 0.3s;
-    margin: 10px;
+    max-width: 100%;
+    margin-top: 15px;
+    margin-bottom: 50px;
 }
 
 /* Add some padding inside the card container */
-div.container-1 {
-    padding-bottom: 20px;
-    padding-top: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 15px;
+.container-1 {
+    padding: 2px 16px;
 }
 
+.userbackbtn {
+    margin-top: 20px;
+}
 
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.left {
+  width: 75%;
+}
+
+.right {
+  width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+h1{
+    margin-top: 20px;
+
+}
 
 h2{
     font-family: 'Space Mono', monospace;
     font-weight: 900;
     color: #37474F;
+}
+
+.fbname{
+    font-family: 'Space Mono', monospace;
+    font-size: 2em;
+    color: #2186F7;
+    border: #2186F7 2px solid;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 8px;
+}
+
+/*-----------USER PROFILE------------*/
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 4px; /* 5px rounded corners */
+    transition: 0.3s;
+    max-width: 100%;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+/* Add some padding inside the card container */
+.container-1 {
+    padding: 2px 16px;
+}
+
+.userbackbtn {
+    margin-top: 20px;
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.left {
+  width: 75%;
+}
+
+.right {
+  width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+.card-e {
+    box-shadow: 0 0px 5px 0 rgba(0,0,0,0.2);
+    border-radius: 10px; 
+    transition: 0.3s;
+    max-width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.start-button{
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 100;
+    color: white;
+    background: linear-gradient(to right, #00BDD6 , #2579FF);
+    border-radius:0px 0px 10px 10px;
+    border: none;
+    letter-spacing: 4px;
+}
+
+.edit-button{
+    width: 60px;
+    height: 38px;
+    font-size: 12px;
+    font-weight: 100;
+ /*   color: #3F4A4F;*/
+    background: white;
+    border: 3px solid #2579FF;
+    float: right;
+
+}
+
+.exerciselist{
+    margin-top: 10px;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.workout-name{
+    font-size: 24px;
+    font-weight: bold;
+    color: #3F4A4F;
+    padding-left: 20px;
+}
+
+.bulletpoint{
+    color: #fcfcfc;
+}
+
+span.glyphicon.glyphicon-plus::before{
+    color: #2186F7;
+}
+
+button#addbtn.btn.btn-lg{
+    background-color: #fcfcfc;
+}
+
+h3{
+    text-align: center;
+    font-family: Space Mono;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #2579FF;
+    border: 2px solid #2579ff;
+    padding: 10px;
+    margin-right: 15px;
 }

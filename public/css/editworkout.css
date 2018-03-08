@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
 /* applies to anything of class "example-class-selector" */
 .example-class-selector {
      margin-top: 2em;
@@ -44,7 +45,7 @@ a{
 #title{
      font: bold;
      font-size: 30px;
-     color: #651fff;
+     color: #2579FF;
      font-weight: bold;
      text-align: left;
      float:left;
@@ -78,8 +79,8 @@ a{
     font-size: 12px;
     font-weight: 100;
     color: white;
-    background-color: #651FFF;
-    border: 2px solid #651fff;
+    background-color: #2579FF;
+    border: 2px solid #2579FF;
     border-radius: 25px;
     box-shadow: 0px 2px 3px 0px #00000020;
     float: right;
@@ -95,7 +96,7 @@ a{
     font-weight: 100;
     color: #3F4A4F
     background-color: #white;
-    border: 2px solid #651fff;
+    border: 2px solid #2579FF;
     border-radius: 25px;
     box-shadow: 0px 2px 3px 0px #00000020;
     float: right;
@@ -257,7 +258,7 @@ body{
     font-size: 25px;
     color: #3F4A4F;
     background-color: white;
-    border: 2px solid #651fff;
+    border: 2px solid #2579FF;
     border-radius: 25px;
     box-shadow: 0px 2px 3px 0px #00000020;
     margin-right: 10px;
@@ -269,8 +270,8 @@ body{
     height: 46px;
     font-size: 24px;
     color: #ffffff;
-    background-color: #651fff;
-    border: 2px solid #651fff;
+    background-color: #2579FF;
+    border: 2px solid #2579FF;
     border-radius: 25px;
     box-shadow: 0px 2px 3px 0px #00000020;
     margin-right: 10px;
@@ -290,7 +291,7 @@ body{
 }
 
 h3{
-    font-size:24px;
+    font-size:20px;
     color: #3F4A4F;
 }
 
@@ -304,7 +305,7 @@ h3{
 
 
 #outerProgressBar{
-     border: 2px solid #651fff;
+     border: 2px solid #2579FF;
      background-color: white;
      height: 50px;
      width: 100%;
@@ -315,8 +316,8 @@ h3{
 
 #innerProgressBar{
      text-align: left;
-     border: 2px solid #651fff;
-     background-color: #651fff;
+     border: 2px solid #2579FF;
+     background-color: #2579FF;
      height: 48px;
      width:0%;
      margin-bottom: 20px;
@@ -332,8 +333,8 @@ h3{
     background-color: #ffffff;
     border-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0px 2px 6px 0px #00000020;
-    margin-bottom: 10px;
+    box-shadow: 0px 0px 6px 0px #00000040;
+    margin-bottom: 15px;
     padding-top: 20px;
     padding-bottom: 40px;
     padding-right: 30px;
@@ -357,8 +358,8 @@ h3{
     height: 46px;
     font-size: 24px;
     color: #ffffff;
-    background-color: #651fff;
-    border: 2px solid #651fff;
+    background-color: #2579FF;
+    border: 2px solid #2579FF;
     border-radius: 25px;
     box-shadow: 0px 2px 3px 0px #00000020;
     margin-right: 10px;
@@ -370,8 +371,8 @@ h3{
     height: 50px;
     font-size: 24px;
     color: #ffffff;
-    background-color: #651fff;
-    border: 2px solid #651fff;
+    background-color: #2579FF;
+    border: 2px solid #2579FF;
     border-radius: 25px;
     box-shadow: 0px 2px 3px 0px #00000020;
     margin-right: 10px;
@@ -384,7 +385,7 @@ h3{
     font-size: 24px;
     color: #3F4A4F;
     background-color: white;
-    border: 2px solid #651fff;
+    border: 2px solid #2579FF;
     border-radius: 25px;
     box-shadow: 0px 2px 3px 0px #00000020;
     margin-right: 10px;
@@ -393,85 +394,88 @@ h3{
 
 
 input.form-control-lg.name-text-box{
-    background-color: #f5f5f5;
-    border: 2px solid #f5f5f5;
+    background-color: #f4f4f4;
+    border: 1px #fcfcfc solid;
+    padding-left: 5px;
     margin-left: 16px;
     height: 40px;
     font-size: 18px;
 }
 
 input.form-control-lg.time-unit{
-    background-color: #f5f5f5;
-    border: 2px solid #f5f5f5;
+    background-color: #f4f4f4;
+    border: 2px solid #f4f4f4;
     height: 40px;
     font-size: 18px;
 }
 
 button#dropdownMenuButton1.btn.btn-secondary.dropdown-toggle{
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     font-size: 16px;
     color: #263238;
-    border: 2px solid #f5f5f5;
+    border: 2px solid #00BCD4;
     float: right;
     margin-right: 10px;
     width: 80px;
 }
 
 button#dropdownMenuButton1.btn.btn-secondary.dropdown-toggle:hover{
-    background-color: #651fff;
+    background-color: #00BCD4;
     font-size: 16px;
     color: #ffffff;
-    border: 2px solid #f5f5f5;
+    border: 2px solid #00BCD4;
     float: right;
     margin-right: 10px;
     width: 80px;
 }
 
 button#dropdownMenuButton2.btn.btn-secondary.dropdown-toggle{
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     font-size: 16px;
     color: #263238;
-    border: 2px solid #f5f5f5;
+    border: 2px solid #00BCD4;
     float: right;
 }
 
 button#dropdownMenuButton2.btn.btn-secondary.dropdown-toggle:hover{
-    background-color: #651fff;
+    background-color: #00BCD4;
     color: #ffffff;
     font-size: 16px;
     float: right;
 }
 
 button#addbtn.btn.btn-lg{
-    background-color: #651fff;
-    color: #ffffff;
-    padding-left: 15px;
+    background-color: #fcfcfc;
+    color: #2579FF;
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 0px;
     margin-top: 5px;
     margin-bottom: 10px;
-    margin-left: 5px;
     font-size: 16px;
-    box-shadow: 0px 2px 4px 0px #00000020;
 }
 
 button#cancelbtn.btn.btn-lg{
-    background-color: #9E9E9E;
-    color: #ffffff;
+/*    background-color: #9E9E9E;*/
+    color: #2579FF;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 5px;
-    padding-bottom: 0px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     margin-top: 5px;
     margin-bottom: 10px;
     float: right;
     font-size: 16px;
     box-shadow: 0px 2px 4px 0px #00000020;
+ /*   color: #3F4A4F;*/
+    background: white;
+    border: 2px solid #2579FF;
+    float: left;
+    position: absolute;
 }
 
 button#savebtn.btn.btn-lg{
-    background-color: #651fff;
+ /*   background-color: #2579FF;
     color: #ffffff;
     padding-left: 15px;
     padding-right: 15px;
@@ -482,7 +486,27 @@ button#savebtn.btn.btn-lg{
     margin-left: 50px;
     font-size: 16px;
     box-shadow: 0px 2px 4px 0px #00000020;
+    float: right;*/
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
     float: right;
+    font-size: 16px;
+    box-shadow: 0px 2px 4px 0px #00000020;
+ /*   color: #3F4A4F;*/
+   /* border: 3px solid #2579FF;*/
+    position: sticky;
+    font-weight: 100;
+    background: linear-gradient(to right, #00BDD6 , #2579FF);
+/*    border-radius:0px 0px 15px 15px;*/
+    border-style: none;
+    width: 68%;
+    font-family: Karla;
+     letter-spacing: 4px;
 }
 a.dropdown-item{
     background-color: #f5f5f5;
@@ -494,7 +518,7 @@ a.dropdown-item{
 
 
 #sound-item:hover{
-    background-color: #651fff!important;
+    background-color: #2579FF!important;
     color: #ffffff;
     font-size: 16px;
     border: 2px solid #f5f5f5;
@@ -503,7 +527,7 @@ a.dropdown-item{
 }
 
 #sound-item:focus{
-    background-color: #651fff!important;
+    background-color: #2579FF!important;
     color: #ffffff;
     font-size: 16px;
     border: 2px solid #f5f5f5;
@@ -514,7 +538,7 @@ a.dropdown-item{
 button#save-workout-btn{
     width: 150px;
     height: 40px;
-    background-color: #651fff;
+    background-color: #2579FF;
     border-radius: 25px;
     font-size: 20px;
     color: #ffffff;
@@ -533,9 +557,9 @@ label{
 button#submit.btn{
     width: 150px;
     height: 40px;
-    background-color: #651fff;
+    background-color: #2579FF;
     color: #ffffff;
-    border: #651fff 2px solid;  
+    border: #2579FF 2px solid;  
     font-size: 16px;
     border-radius: 25px;
 }
@@ -593,7 +617,7 @@ button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle{
 }
 
 .dropdown-item:hover{
-    background-color: #651fff;
+    background-color: #00BCD4;
     color: #ffffff;
     font-size: 16px;
     border: 2px solid #f5f5f5;
@@ -604,4 +628,30 @@ button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle{
     padding-top: 2px;
 }
 
+.wrkname{
+    margin-top: 20px;
+}
+h2{
+    font-family: 'Space Mono', monospace;
+    font-weight: 900;
+    color: #37474F;
+}
 
+.header {
+  padding-top: 20px;
+  margin: 0px;
+  height: 65px;
+  background: #fffff;
+  color: #37474F;
+  text-align: center;
+  float: inherit;
+  box-shadow: 0px 1px 2px 0px #00000020;
+  margin: -30px;
+  margin-bottom: 15px;
+
+}
+
+.addexercise{
+    position: sticky;
+    font-size: 20px;
+}
