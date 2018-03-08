@@ -27,13 +27,13 @@
 		  <label for="pwd">Password:</label>
 		  <input type="password" class="form-control" id="pwd">
 		  <br/>
+
+		  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"
+		  onclick="submitFBClicked()" id="submit" >
+		</fb:login-button>
 		  <button class="btn" onclick="submitClicked()" id="submit">Submit</button>
 		  <br></br>
 		  <br>
-			<fb:login-button 
-			  scope="public_profile,email"
-			  onlogin="checkLoginState();">
-			</fb:login-button>
 		</br>
 		</div>
 
@@ -42,15 +42,21 @@
 		<script src="/bootstrap.min.js"></script>
 		<script src="../routes/index.js"></script>
 		{{> facebook}}
-		<script src="../public/js/facebook.js"></script>
-
+		<script src="/js/facebook.js"></script>
 	</body>
 	<script type="text/javascript" href="index"></script>
+	<!--//<script>
+		//function submitClicked(){
+		//	location.href = "/library";
+		//};
+	//</script> -->
+
 	<script>
-		function submitClicked(){
-			location.href = "library";
+		function submitFBClicked(){
+			location.href = "/library";
 		};
-	</script>
+	</script> 
+
 
 <!-- SCRIPT -->
 

@@ -7,6 +7,7 @@
 
   gtag('config', 'UA-114946810-1');
 </script>
+
 	<title>Flex</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +17,7 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
     <link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/index.css" rel="stylesheet">
+	<link href="css/info.css" rel="stylesheet">
 
 	<style>
 	@import url('https://fonts.googleapis.com/css?family=Karla');
@@ -32,44 +33,22 @@
 </head>
 <script>
 	function home() {
-		location.href = "library"
+		location.href = "info"
 	}
 </script>
     
 </head>
-<form id="libraryForm" action="/library" method="POST">
+<form id="libraryForm" action="/info" method="POST">
 <body>
-	<h1 id="name">Username</h1>
-	<br>
-
-	<h3>Workout
-			<button type="button" class="btn btn-lg" id="addbtn" aria-label="Left Align">
-	  			<span class="glyphicon glyphicon-plus" onclick="addWorkout({{workout.length}})" aria-hidden="true"></span>
-	  		</button>
-	</h3>
 </form>
 
 	{{#each workout}}
 	<div class="exercise">
 	  <ul class="list-group" id="workoutList">
 	  <li class="list-group-item justify-content-between">
-	  	<p class="workoutname"> {{name}} <small class="durationText"> <!-- 5 min. --></small>
-	  		<a href="/library">
-			<form action="/library/{{@index}}/delete" id="deletingWorkout" method="POST">
-				 <button type="submit" class="col-1 close deletebtn" aria-label="Close">
-				  	<span aria-hidden="true">&times;</span>
-				 </button>
-			</form>
-		</a>
-		<a href="/custom/{{@index}}">
-			<button type="button" class="start-btn" id="start-btn" onclick="startWorkout()" aria-label="Left Align">Start</button>
+	  	<p class="workoutname"> {{name}} <small class="durationText"> <!-- 5 min. --></small	  		<a href="/info">
 		</a>
 		</p>
-		<a href="/editworkout/{{@index}}">
-			<button type="button" class="edit-btn" id="editbtn" aria-label="Left Align">
-		  		<p>Edit</p>
-			</button>	
-		</a>
 	</br>
 	
 		{{#each this.exercises}}
@@ -79,11 +58,7 @@
 	  </ul>
 		
 	{{/each}}
-<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="/bootstrap.min.js"></script>
-		<script src="../routes/index.js"></script>
-		{{> facebook}}
-		<script src="/js/facebook.js"></script>
+
 
 </body>
 
@@ -102,7 +77,7 @@
 		location.href = "/editworkout/".concat(val);
 	}
 	function refresh() {
-		location.href = "library"
+		location.href = "/info"
 	}
 </script>
 <!-- </form>
