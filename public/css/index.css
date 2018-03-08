@@ -672,7 +672,8 @@ h2{
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 4px; /* 5px rounded corners */
+    border-radius: 4px; 
+    border: none;/* 5px rounded corners */
     transition: 0.3s;
     max-width: 100%;
     margin-top: 15px;
@@ -689,7 +690,11 @@ h2{
 }
 
 /* Add rounded corners to the top left and the top right corner of the image */
+<<<<<<< HEAD
 .card-e img {
+=======
+.card-img {
+>>>>>>> 206d235f915ce7ebf464c3e85cba6911c309de2d
     border-radius: 5px 5px 0 0;
     overflow: hidden;
 }
