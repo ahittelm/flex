@@ -542,7 +542,7 @@ p.exercise{
 button#tutorial-btn.tutorial-btn{
    background: linear-gradient(#00BCD4, #2979FF);
    color: white;
-   width: 80%;
+   width: 90%;
    height: 50px;
    margin-bottom: 10px;
    font-size: 20px;
@@ -553,7 +553,7 @@ button#logout-btn.logout-btn{
    background: #ffffff;
    color: #2186F7;
    border: 3px solid #2186F7;
-   width: 80%;
+   width: 90%;
    height: 50px;
    font-size: 20px;
 }
@@ -595,4 +595,10 @@ h2{
     font-family: 'Space Mono', monospace;
     font-weight: 900;
     color: #37474F;
+}
+
+#step-photo{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width:40%
 }

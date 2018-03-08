@@ -29,38 +29,40 @@
      rel="stylesheet">
 
     <link href="/css/bootstrap.css" rel="stylesheet">
-	<link href="/css/index.css" rel="stylesheet">
+	<link href="/css/login.css" rel="stylesheet">
 
 	 
-	<nav class="navbar navbar-toggleable-md navbar-light" id="navigation">
-	  	<div class="container-fluid">
-	  		  <a id="title">flex</a>
-		</div>
-	</nav>
+	<div class="header" id="myHeader">
+	 	<h2 class="container-fluid">
+			<h2>Flex</h2>
+		</h2>
+	</div>
 
 </head>  
 
 	<body>
+
 		<div class="form-group">
 		  <label for="usr">Username:</label>
 		  <input type="user" class="form-control" id="usr">
-		</div>
-		<div class="form-group">
+
+
 		  <label for="pwd">Password:</label>
 		  <input type="password" class="form-control" id="pwd">
 		  <br/>
 
-
-		 <!--  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"
-		  onclick="submitFBClicked()" id="submit" >
-		</fb:login-button> -->
 		  <button class="btn" onclick="submitClicked()" id="submit">Submit</button>
 		  <br></br>
 		  <br>
 			<fb:login-button scope="public_profile,email" onlogin="window.location='/library'">
 			</fb:login-button>
-		</br>
 		</div>
+
+		 <!--  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"
+		  onclick="submitFBClicked()" id="submit" >
+		</fb:login-button> -->
+		</br>
+
 
 
 		<script src="https://code.jquery.com/jquery.js"></script>
