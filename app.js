@@ -54,6 +54,7 @@ app.get('/info', info.view);
 app.get('/workout', workout.view);
 app.get('/settings', settings.view);
 app.get('/library', library.view);
+app.get('/libraryAlt', library.viewAlt);
 app.get('/stats', stats.view);
 app.get('/timer', timer.view);
 app.get('/add', add.addFriend);
@@ -70,7 +71,10 @@ app.post('/library', function(req, res){
 	jsonfile.writeFile('./exercises.json', data, function(err){
 		if(err)
 			console.error(err);
-		res.redirect("/library");
+		if(data.viewAlt)
+			res.redirect("/libraryAlt");
+		else
+			res.redirect("/library");
 	})
 });
 
@@ -85,7 +89,11 @@ app.post('/library/:id/delete', function(req, res){
 	jsonfile.writeFile('./exercises.json', data, function(err){
 		if(err)
 			console.error(err);
-		res.redirect("library");
+		console.log(req.params.viewAlt);
+		if(data.viewAlt)
+			res.redirect("/libraryAlt");
+		else
+			res.redirect("/library");
 	})
 });
 
@@ -118,7 +126,10 @@ app.post('/editworkout/:id/save', function(req, res){
 	jsonfile.writeFile('./exercises.json', data, function(err){
 		if(err)
 			console.error(err);
-		res.redirect("/library");
+		if(data.viewAlt)
+			res.redirect("/libraryAlt");
+		else
+			res.redirect("/library")
 	})
 
 });

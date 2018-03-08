@@ -7362,6 +7362,10 @@ button.bg-dark:focus {
   clip-path: none;
 }
 
+.w-20{
+  width: 20% !important;
+}
+
 .w-25 {
   width: 25% !important;
 }
