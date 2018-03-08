@@ -8,7 +8,7 @@
   gtag('config', 'UA-114946810-1');
 </script>
 
-	<title>Flex</title>	
+	<title>Info</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -23,14 +23,16 @@
 	@import url('https://fonts.googleapis.com/css?family=Karla');
 	</style>
 	<!-- this is a comment in HTML -->
+	<div class="header" id="myHeader">
+  <h2>My Header</h2>
+</div>
 
 	<nav class="navbar navbar-toggleable-md navbar-light" id="navigation">
 	  	<div class="container-fluid">
-	  		  <a id="title">flex</a>
+	  		  <a id="title">Info</a>
 		</div>
 	</nav>
 	
-</head>
 <script>
 	function home() {
 		location.href = "info"
@@ -42,22 +44,26 @@
 <body>
 </form>
 
-	{{#each workout}}
 	<div class="exercise">
-	  <ul class="list-group" id="workoutList">
+	<ul class="list-group" id="workoutList">
 	  <li class="list-group-item justify-content-between">
-	  	<p class="workoutname"> {{name}} <small class="durationText"> <!-- 5 min. --></small	  		<a href="/info">
+	  	<p class="workoutname"> Background <small class="durationText"> <!-- 5 min. --></small	
+	  		<a href="/info">
 		</a>
 		</p>
 	</br>
-	
-		{{#each this.exercises}}
-		<p class="exercise"> {{exname}} </p>
-		{{/each}}
+		<p class="exercise"> A workout application created with the purpose of seamless exercise, regulated by sound. </p>
+
+		<a href="/tutorial">
+			<button type="button" class="tutorial-btn" id="tutorial-btn" onclick="tutorial()" aria-label="Left Align">Tutorial</button>
+		</a>
+		<a href="/">
+			<button type="button" class="logout-btn" id="logout-btn" onclick="logout()" aria-label="Left Align">Logout</button>
+		</a>
 	  </li>
-	  </ul>
+	</ul>
+	</div>
 		
-	{{/each}}
 
 
 </body>
@@ -66,15 +72,12 @@
 <!--SCRIPTS-->
 
 <script type="text/javascript">
-	function addWorkout(val) {
-		document.getElementById("libraryForm").submit();
-//		location.href = "/editworkout/".concat(val);
+
+	function logout() {
+		location.href = "/"
 	}
-	function startWorkout() {
-		location.href = "custom"
-	}
-	function editWorkout(val) {
-		location.href = "/editworkout/".concat(val);
+	function tutorial() {
+		location.href = "/tutorial"
 	}
 	function refresh() {
 		location.href = "/info"
