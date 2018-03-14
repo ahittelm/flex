@@ -25,6 +25,9 @@
 
   gtag('config', 'UA-114946810-1');
 </script>
+
+<script src="speakClient.js"></script>
+
 	<title>Timer</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,7 +68,7 @@
 	}
 	</script>
 
-	<h3> Let's Start!</h3>
+	<h3> {{workout.name}}</h3>
 
 	<div class="card">
 		<!---CURRENT EXERCISE TIMER-->
@@ -304,7 +307,13 @@
 
 	function playAudio() { 
 		document.getElementById("audio").src = "../audio/" + exercises[index-1][3] + ".mp3";
-	    audio.play(); 
+	    audio.play();
+
+	    setTimeout(function(){
+		   	var msg = new SpeechSynthesisUtterance(exercises[index][0]);
+			window.speechSynthesis.speak(msg);
+	    }, 1000);
+
 	} 
 	</script>
 
