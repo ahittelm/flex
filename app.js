@@ -79,9 +79,9 @@ app.post('/library', function(req, res){
 	jsonfile.writeFile('./exercises.json', data, function(err){
 		if(err)
 			console.error(err);
-		if(data.viewAlt)
-			res.redirect("/libraryAlt");
-		else
+		// if(data.viewAlt)
+		// 	res.redirect("/libraryAlt");
+		// else
 			res.redirect("/library");
 	})
 });
@@ -97,10 +97,10 @@ app.post('/library/:id/delete', function(req, res){
 	jsonfile.writeFile('./exercises.json', data, function(err){
 		if(err)
 			console.error(err);
-		console.log(req.params.viewAlt);
-		if(data.viewAlt)
-			res.redirect("/libraryAlt");
-		else
+		// console.log(req.params.viewAlt);
+		// if(data.viewAlt)
+		// 	res.redirect("/libraryAlt");
+		// else
 			res.redirect("/library");
 	})
 });
@@ -134,9 +134,9 @@ app.post('/editworkout/:id/save', function(req, res){
 	jsonfile.writeFile('./exercises.json', data, function(err){
 		if(err)
 			console.error(err);
-		if(data.viewAlt)
-			res.redirect("/libraryAlt");
-		else
+		// if(data.viewAlt)
+		// 	res.redirect("/libraryAlt");
+		// else
 			res.redirect("/library")
 	})
 
