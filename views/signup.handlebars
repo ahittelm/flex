@@ -27,6 +27,7 @@
 	<body>
 
 		<div class="form-group">
+		  <h5 id="acctsaved">Account Saved!</h5>
 		  <label >New Account</label> </br>
 		  <label for="usr">New Username:</label>
 		  <input type="user" class="form-control" id="newusr">
@@ -40,7 +41,7 @@
 		  <button class="btn" onclick="cancel()" id="submit">Submit</button>
 		</form>
 
-		  <button class="btn" onclick="cancel()" id="signup">Cancel</button>
+		  <button class="btn" onclick="cancel()" id="signup">Return to login</button>
 		  <br></br>
 		  <br>
 			<fb:login-button scope="public_profile,email" onlogin="window.location='/library'">
@@ -61,6 +62,8 @@
 	<script type="text/javascript" href="index"></script>
 
 	<script>
+		$("#acctsaved").hide();
+
 		$("#addNewUser").submit(function(e){
 			var newUsername = $("#newusr").val();
 			var newPassword = $("#newpwd").val();
@@ -72,9 +75,11 @@
 					window.location = '/';				
 				});	
 			}
+			$("#acctsaved").show();
 		});
 
 		function cancel(){
+			$("#acctsaved").hide();
 			location.href = "/";
 		}
 	</script>
