@@ -20,9 +20,11 @@ var stats = require('./routes/stats');
 var timer = require('./routes/timer');
 var add = require('./routes/add');
 var custom = require('./routes/custom');
+var signup = require('./routes/signup');
 var editworkout = require('./routes/editworkout');
 
 var data = require('./exercises.json');
+var login = require('./login.json');
 var newExercise = require('./newExercise.json');
 var newWorkout = require('./newWorkout.json');
 // Example route
@@ -65,6 +67,7 @@ app.get('/library', library.view);
 app.get('/libraryAlt', library.viewAlt);
 app.get('/stats', stats.view);
 app.get('/timer', timer.view);
+app.get('/signup', signup.view);
 app.get('/add', add.addFriend);
 //app.get('/custom', custom.view);
 app.get('/custom/:id', custom.view);
@@ -79,16 +82,24 @@ app.post('/library', function(req, res){
 	jsonfile.writeFile('./exercises.json', data, function(err){
 		if(err)
 			console.error(err);
-		// if(data.viewAlt)
-		// 	res.redirect("/libraryAlt");
-		// else
-			res.redirect("/library");
+		res.redirect("/library");
 	})
 });
 
+//adding username/password
+app.post('/signup/:username/:password', function(req, res){
+	var addUser = {};
+	addUser.username = req.params.username;
+	addUser.password = req.params.password;
+	login.account.push(addUser);
+	jsonfile.writeFile('./login.json', login, function(err){
+		if(err)
+			console.error(err);
+		res.redirect("/");
+	})
+});
 
 app.post('/library/:id/delete', function(req, res){
-	console.log("ONO" + req.params.id);
 	if(req.params.id == 0)
 		data.workout.shift();
 	else
@@ -97,11 +108,7 @@ app.post('/library/:id/delete', function(req, res){
 	jsonfile.writeFile('./exercises.json', data, function(err){
 		if(err)
 			console.error(err);
-		// console.log(req.params.viewAlt);
-		// if(data.viewAlt)
-		// 	res.redirect("/libraryAlt");
-		// else
-			res.redirect("/library");
+		res.redirect("/library");
 	})
 });
 

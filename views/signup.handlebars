@@ -1,0 +1,83 @@
+<html>
+<head>
+	<title>Workout</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+  	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+  	 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+     rel="stylesheet">
+
+    <link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/login.css" rel="stylesheet">
+
+	 
+	<div class="header" id="myHeader">
+	 	<h2 class="container-fluid">
+			<h2>Flex</h2>
+		</h2>
+	</div>
+
+</head>  
+
+	<body>
+
+		<div class="form-group">
+		  <label >New Account</label> </br>
+		  <label for="usr">New Username:</label>
+		  <input type="user" class="form-control" id="newusr">
+
+
+		  <label for="pwd">New Password:</label>
+		  <input type="password" class="form-control" id="newpwd">
+		  <br/>
+		
+		<form id="addNewUser">
+		  <button class="btn" onclick="cancel()" id="submit">Submit</button>
+		</form>
+
+		  <button class="btn" onclick="cancel()" id="signup">Cancel</button>
+		  <br></br>
+		  <br>
+			<fb:login-button scope="public_profile,email" onlogin="window.location='/library'">
+			</fb:login-button>
+		</div>
+
+		 <!--  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"
+		  onclick="submitFBClicked()" id="submit" >
+		</fb:login-button> -->
+		</br>
+
+
+
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="/js/bootstrap.min.js"></script>
+
+	</body>
+	<script type="text/javascript" href="index"></script>
+
+	<script>
+		$("#addNewUser").submit(function(e){
+			var newUsername = $("#newusr").val();
+			var newPassword = $("#newpwd").val();
+			var finalUser = '/'+newUsername + '/' + newPassword;
+
+			if(newUsername.localeCompare('') != 0 && newPassword.localeCompare('') != 0)
+			{	
+				$.post(window.location.pathname + finalUser, function(){
+					window.location = '/';				
+				});	
+			}
+		});
+
+		function cancel(){
+			location.href = "/";
+		}
+	</script>
+
+
+</html>
