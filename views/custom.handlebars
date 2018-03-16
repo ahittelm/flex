@@ -167,10 +167,8 @@
 		{
 			++index;
 
-			if(index != 0)
-			{
-				playAudio();
-			}
+			playAudio();
+
 			if(index >= exercises.length)
 			{
 				end = true;
@@ -188,19 +186,15 @@
 					sec = exercises[index][2];
 					currtt = min * 60 + sec;
 					origtt = currtt;
+
 					animate();
 				}
-
-
 			}
-
 		}
 
 	    if(!end) {
 	    	/* setting the page */
 	    	document.getElementById("currexercise").innerHTML = "<b>" + exercises[index][0] + "</b>";
-
-
 
 		    document.getElementById("currtime").innerHTML = "<b>" + min + "</b> min " + "<b>" + sec + "</b> s </br>";
 		    // document.getElementById("currsets").innerHTML = "<b>" + reps + "</b> sets left";
@@ -242,6 +236,7 @@
 
 		    /* updating time */
 		  	currtt -= increment;
+		  	
 		    animate();
 		}
 		else{
@@ -293,9 +288,17 @@
 
 	//ANIMATION
 	function animate(){
-	    $("#innerProgressBar").animate({
-	        width: (1-((currtt+1)/(origtt+1))) * 100 +'%'
+		var progressBar = (1-((currtt+1)/(origtt+1))) * 100;
+	 	$("#innerProgressBar").animate({
+	        width:  progressBar +'%'
 	    });
+		// if(+progressBar == 0)
+  //       {
+  //       	setTimeout(function(){
+  //       		console.log("HENLO");
+  //       	}, 1000);
+
+  //       }
 	}
 
 
@@ -304,15 +307,29 @@
 	var audio = document.getElementById("audio"); 
 
 	function playAudio() { 
-		document.getElementById("audio").src = "../audio/" + exercises[index-1][3] + ".mp3";
-	    audio.play();
+		if(index != exercises.length)
+		{
+			document.getElementById("audio").src = "../audio/" + exercises[index][3] + ".mp3";
+		    audio.play();
+		}
 
 	    setTimeout(function(){
-		   	var msg = new SpeechSynthesisUtterance(exercises[index][0]);
-			window.speechSynthesis.speak(msg);
+	    	if(index != exercises.length)
+	    	{	
+			   	var msg = new SpeechSynthesisUtterance(exercises[index][0]);
+				window.speechSynthesis.speak(msg);
+			}
 	    }, 1000);
-
 	} 
+
+	function pause2(ms){
+	   var start1 = new Date().getTime();
+	   var end1 = start1;
+	   while(end1 < start1 + ms) {
+	     end1 = new Date().getTime();
+	  }
+	}
+
 	</script>
 
 </body>

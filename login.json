@@ -1,9 +1,1 @@
-{
-  "account":
-  [
-    {
-      "username": "student",
-      "password": "wearecool"
-    }
-  ]
-}
+{"account":[{"username":"student","password":"wearecool"},{"username":"121","password":"23"},{"username":"34324","password":"132432"},{"username":"wrw324","password":"341324"},{"username":"23422","password":"3432"},{"username":"1","password":"1"},{"username":"13214","password":"132432"},{"username":"234132","password":"213432"},{"username":"234132","password":"13432"},{"username":"1234","password":"32143223"}]}

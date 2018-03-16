@@ -14,7 +14,6 @@
 	'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
 	</script><script>utmx('url','A/B');</script> -->
 	<!-- End of Google Analytics Content Experiment code -->
-
 	
 	<title>Workout</title>	
 	<meta charset="utf-8">
@@ -43,10 +42,17 @@
 	<body>
 
 		<div class="form-group">
+
 			<center><img src ="images/login.png" class="img-responsive" id="login-photo" alt="Step 6"></center>
 		  	<!-- <div class="userfont"> -->
 			  <label for="usr">Username:</label>
 			  <input type="user" class="form-control" id="usr">
+=======
+		  <center><img src ="images/login.png" class="img-responsive" id="login-photo" alt="Step 6"></center>
+		  <h5 id="incorrectpwd">Username or password incorrect! Please re-enter or sign-up below.</h5>
+		  <label for="usr">Username:</label>
+		  <input type="user" class="form-control" id="usr">
+
 
 
 			  <label for="pwd">Password:</label>
@@ -54,7 +60,12 @@
 			  <br/>
 	<!-- 		</div> -->
 
+
 		  <button class="btn" onclick="submitClicked()" id="submit">Log In</button>
+
+		  <button class="btn" onclick="submitClicked()" id="submit">Submit</button>
+		  <button class="btn" onclick="signup()" id="signup">Sign-Up</button>
+
 		  <br></br>
 		  <br>
 			<fb:login-button scope="public_profile,email" onlogin="window.location='/library'">
@@ -78,20 +89,41 @@
 	<script type="text/javascript" href="index"></script>
 
 	<script>
+		$("#incorrectpwd").hide();
+
 		function submitClicked(){
-		location.href = "/library";
+			//var username = $("#usr").val();
+			var username = $("#usr").val();
+			var password = $("#pwd").val();
+
+			var valid = false;
+			{{#each login}}
+				if("{{this.username}}" == username && "{{this.password}}" == password)
+				{
+					location.href = "/library";
+					valid = true;
+				}
+			{{/each}}
+
+			if(!valid)
+			{
+				$("#incorrectpwd").show();
+				console.log("INVALID");
+			}
+
+		};
+
+		function signup(){
+			$("#incorrectpwd").hide();
+
+			location.href = "/signup";
 		};
 	</script>
 
-	<script>
-		function submitClicked(){
-			location.href = "library";
-		};
-	</script>
 
 <!-- SCRIPT -->
-
-	<!-- 	// for(int i = 0; i < Object.keys(data.account).length; i++)
+<!-- 
+		// for(int i = 0; i < Object.keys(data.account).length; i++)
 		// 	if(document.getElementById("usr").value == data.account.username)
 		// 	{
 		// 		if(document.getElementById("pwd").value == data.account.password)
