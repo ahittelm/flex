@@ -819,3 +819,17 @@ div.form-group{
 .userfont{
     font-family: 'Karla';
 }
+
+#incorrectpwd{
+    text-align: center;
+    color: red;
+}
+
+.accnt{
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-control{
+    width: 90%;
+}
