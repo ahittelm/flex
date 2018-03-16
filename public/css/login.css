@@ -806,3 +806,10 @@ div.form-group{
     margin-left: 25px;
     margin-top: 15px;
 }
+
+#login-photo{
+    width: 70%;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
